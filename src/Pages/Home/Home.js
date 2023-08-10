@@ -6,12 +6,18 @@ import { HomePageSection2, keyFeatures, whyHandover } from "../../utils/Data";
 import { Formik, Form, Field } from 'formik';
 
 const Home = () => {
+    const initialValues ={
+        option:"",
+        user_name:"",
+        email_address:"",
+        description:""
+    }
     return (
         <section className='handover-homepage'>
             <Container fluid className="p-0">
                 <Container style={{ maxWidth: "1800px", position: "relative" }}>
                     {/*  ------------------------header ---------------------------------------*/}
-                    <Header />
+                    <Header page_name="home"/>
 
                     {/*  ------------------------First Section ---------------------------------------*/}
                     <div style={{ marginTop: "100px" }} >
@@ -234,7 +240,7 @@ const Home = () => {
                         <div className='handover-small-section col-md-6 d-flex flex-column p-5'>
                             <h5 className="mb-4">REQUEST FORM</h5>
                             <Formik
-                            // initialValues={initialValues}
+                            initialValues={initialValues}
                             // validationSchema={userValidationSchema}
                             // onSubmit={handleSubmit}
                             >
@@ -242,30 +248,32 @@ const Home = () => {
                                     <Form className="contact-us-form d-flex flex-column gap-3">
                                         <div className="d-flex flex-column">
                                             <label for="option">Choose a option</label>
-                                            <select name="option" id="option" className='custom-form-input'>
+                                            <select name="option" id="option" className='custom-form-input' onChange={(event)=>setFieldValue("option",event.target.value)}>
                                                 <option value="volvo">Volvo</option>
                                                 <option value="saab">Saab</option>
                                                 <option value="mercedes">Mercedes</option>
                                                 <option value="audi">Audi</option>
                                             </select>
+                                            {errors.option && <div className="form-error">{errors.option}</div>}
+
                                         </div>
 
                                         <div className="d-flex flex-column">
-                                            <label className="form-label" htmlFor="username"> User Name</label>
-                                            <Field id="full_name"
+                                            <label className="form-label" htmlFor="user_name"> User Name</label>
+                                            <Field id="user_name"
                                                 type="text" placeholder="Enter User Name"
-                                                name="username"
+                                                name="user_name"
                                                 className="custom-form-input" />
-                                            {errors.username && <div className="form-error">{errors.username}</div>}
+                                            {errors.user_name && <div className="form-error">{errors.user_name}</div>}
                                         </div>
 
                                         <div className="d-flex flex-column">
-                                            <label className="form-label" htmlFor="email"> Email</label>
-                                            <Field id="email"
+                                            <label className="form-label" htmlFor="email_address"> Email</label>
+                                            <Field id="email_address"
                                                 type="email" placeholder="Enter Enter"
-                                                name="email"
+                                                name="email_address"
                                                 className="custom-form-input" />
-                                            {errors.email && <div className="form-error">{errors.email}</div>}
+                                            {errors.email_address && <div className="form-error">{errors.email_address}</div>}
                                         </div>
 
                                         <div className="d-flex flex-column">
