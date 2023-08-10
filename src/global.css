@@ -1,0 +1,103 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.handover-button {
+    width: 200px;
+    background-color: #F48120 !important;
+    border: none !important;
+    padding: 15px;
+}
+
+
+.menu_item ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu_item ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+
+.handover-main-heading {
+    font-size: 2.8rem;
+    font-weight: 900;
+    padding: 0px;
+    margin: 0px;
+}
+
+.search-box {
+    background: #ffffff;
+    width: fit-content
+}
+
+.handover-small-section {
+    box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
+    -webkit-box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
+    -moz-box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
+    background: #ffffff;
+    border-radius: 11px;
+}
+
+.map_div {
+    -webkit-box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
+    -moz-box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
+    box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
+    background: #0d6efd;
+    width: 360px;
+    padding: 20px;
+    position: relative;
+    color: #ffffff;
+    border-radius: 11px;
+
+}
+
+.custom-form-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #dadada;
+    outline: none;
+}
+
+.footer-menu-item ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer-menu-item li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 300;
+
+}
+
+.homeover-section {
+    padding: 100px;
+}
+
+.second-section-heading {
+    max-width: 700px;
+    font-size: 2.6rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+    .homeover-section {
+        padding: 15px;
+    }
+
+    .second-section-heading {
+        font-size: 1.5rem;
+    }
+}
