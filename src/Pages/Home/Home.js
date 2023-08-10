@@ -20,7 +20,8 @@ const Home = () => {
                     <Header page_name="home"/>
 
                     {/*  ------------------------First Section ---------------------------------------*/}
-                    <div style={{ marginTop: "100px" }} >
+                    <div className='bg' style={{ marginTop: "100px" }} >
+                        {/* <img src='./main_bg.svg'></img> */}
                         <p style={{ color: "#F6911E" }} className="handover-main-heading">All Delivery</p>
                         <p className="handover-main-heading">Solutions In One</p>
                         <p className="handover-main-heading">Place You</p>
@@ -125,8 +126,8 @@ const Home = () => {
                                         <p>PINCODES</p>
                                     </div>
                                 </div>
-                                <img width="320px" src="./dashed-line.png" alt="DashedLine" />
-                                <div style={{ position: "absolute", transform: "rotate('90deg')" }}><img width="320px" src="./dashed-line.png" alt="DashedLine" /></div>
+                                <img className='dash' width="320px" src="./dash.png" alt="DashedLine" />
+                                {/* <div style={{ position: "absolute", transform: "rotate('90deg')" }}><img width="320px" src="./dashed-line.png" alt="DashedLine" /></div> */}
                                 <div className='d-flex  justify-content-between'>
                                     <div>
                                         <h2>84370+</h2>

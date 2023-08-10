@@ -16,6 +16,11 @@ const Footer = () => {
                         adipiscing elit. Eget nisl nunc quam ac sed turpis volutpat.
                         Cursus sed massa non nisi, placerat.
                     </p>
+                    <ul className="media">
+                        <li><a href="https://www.facebook.com/HandoverDelivery" ><img src="./facebook.png"></img></a></li>
+                        <li><a href="https://twitter.com/"><img src="./twitter.png"></img></a></li>
+                        <li><a href="https://www.instagram.com/handover.in/"><img src="./insta.png"></img></a></li>
+                    </ul>
                 </div>
                 <div className="d-flex flex-column gap-3 col-md-2" >
                     <p>Customer Service</p>
