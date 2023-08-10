@@ -1,7 +1,7 @@
 import { Container, Button } from 'react-bootstrap';
 import CategoryItem from "../Home/Component/CategoryItem";
-import Header from './Component/Header';
-import Footer from './Component/Footer';
+import Header from "../../Components/Header";
+import Footer from '../../Components/Footer';
 import { HomePageSection2, keyFeatures, whyHandover } from "../../utils/Data";
 import { Formik, Form, Field } from 'formik';
 
