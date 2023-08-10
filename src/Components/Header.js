@@ -17,7 +17,7 @@ const Header = ({page_name}) => {
                 <li><Link to="">BLOGS</Link></li>
             </ul>
             {page_name === "home" && <Button className='handover-button'>EMPLOYEE LOGIN</Button>}
-            {page_name === "delivery_fee" && <Button className='rounded-pill handover-button' >Cities We Serve</Button>}
+            {(page_name === "delivery_fee" || page_name === "delivery_fee_form") && <Button className='rounded-pill handover-button' >Cities We Serve</Button>}
         </div>
     )
 }
