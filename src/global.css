@@ -5,6 +5,23 @@
 
 }
 
+.bg{
+    background-image: url(C:\Users\kanha\OneDrive\Desktop\HandOver\handover_website\public\main_bg.svg);
+    width: 1443.923px;
+    height: 780.273px;
+    flex-shrink: 0;
+}
+
+.dash{
+    position: absolute;
+    top: 44px;
+}
+
+.media{
+    display: flex;
+    gap: 7px;
+}
+
 .handover-button {
     width: 200px;
     background-color: #F48120 !important;
