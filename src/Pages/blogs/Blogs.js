@@ -8,7 +8,8 @@ import React from 'react';
 const blogs = () => {
   return (
     <section className='Handover_blogpage'>
-        <Container>
+        <Container fluid>
+          
             
                 {/* ---------------------------Header--------------------------- */}
                 <Header />

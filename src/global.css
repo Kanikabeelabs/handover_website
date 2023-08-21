@@ -5,11 +5,14 @@
 
 }
 
+.header{
+    position: relative;
+    z-index: 1234;
+}
 .bg{
     background-image: url(C:\Users\kanha\OneDrive\Desktop\HandOver\handover_website\public\main_bg.svg);
     width: 1443.923px;
     height: 780.273px;
-    flex-shrink: 0;
 }
 
 .dash{
@@ -23,12 +26,17 @@
 }
 
 .handover-button {
-    width: 200px;
+    min-width: 200px;
     background-color: #F48120 !important;
     border: none !important;
     padding: 15px;
 }
 
+.handover-button-type-2{
+    background-color: #ffffff !important;
+    border:1px solid rgb(246 246 246) !important;
+    color:#000000!important;
+}
 
 .menu_item ul {
     list-style-type: none;
@@ -82,6 +90,7 @@
     border-radius: 5px;
     border: 1px solid #dadada;
     outline: none;
+    width: 100%;
 }
 
 .footer-menu-item ul {
@@ -117,4 +126,33 @@
     .second-section-heading {
         font-size: 1.5rem;
     }
+}
+
+.delivery-fee-form{
+    position: fixed;
+    background: #ffffff;
+    height: 100vh;
+    width: 350px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    top:0;
+}
+
+.delivery-fee-form-first-section{
+    border:1px solid #dadada;
+    border-radius:11px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.delivery-fee-second-form{
+    position: fixed;
+    bottom: 10px;
+    left: 370px;
 }

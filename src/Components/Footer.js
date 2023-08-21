@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
     return (<>
         <div style={{
@@ -25,25 +25,25 @@ const Footer = () => {
                 <div className="d-flex flex-column gap-3 col-md-2" >
                     <p>Customer Service</p>
                     <ul className='d-flex flex-column gap-1'>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About us</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Contact US</a></li>
+                        <li><Link to="">Home</Link></li>
+                        <li><Link to="">About us</Link></li>
+                        <li><Link to="">Blog</Link></li>
+                        <li><Link to="">Contact US</Link></li>
                     </ul>
                 </div>
                 <div className="d-flex flex-column gap-3 col-md-2" >
                     <p>Customer Service</p>
                     <ul className='d-flex flex-column gap-1'>
-                        <li><a href="">Food delivery</a></li>
-                        <li><a href="">Parcel delivery</a></li>
+                        <li><Link to="">Food delivery</Link></li>
+                        <li><Link to="">Parcel delivery</Link></li>
                     </ul>
                 </div>
                 <div className="d-flex flex-column gap-3 col-md-2" >
                     <p>Links</p>
                     <ul className='d-flex flex-column gap-1'>
-                        <li><a href="">Pricing</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">FAQ</a></li>
+                        <li><Link to="">Pricing</Link></li>
+                        <li><Link to="">Services</Link></li>
+                        <li><Link to="">FAQ</Link></li>
                     </ul>
                 </div>
             </Container>
