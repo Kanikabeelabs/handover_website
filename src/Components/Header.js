@@ -7,7 +7,7 @@ const Header = ({ page_name }) => {
         <div className='header menu_item p-2 d-flex flex-wrap align-items-center justify-content-around gap-2' >
             <div className="col-md-3">
                 <Link to="/">
-                    <img src="./handover-logo.png" alt="HandOverLogo" />
+                    <img src="./handover_logo.png" alt="HandOverLogo" />
                 </Link>
             </div>
             <ul className='d-flex flex-wrap col-md-6 justify-content-around gap-2'>

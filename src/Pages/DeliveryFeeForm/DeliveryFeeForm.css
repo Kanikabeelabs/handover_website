@@ -5,11 +5,12 @@
 }
 
 .FormDiv{
-    position: fixed;
+    /* position: fixed;
     width: 100%;
     min-height: 100vh;
     top: 100px;
-    z-index: 7;
+    z-index: 7; */
+    /* margin-top:100px; */
     display: flex;
     flex-direction: column;
     gap:10px;
@@ -91,7 +92,7 @@
 }
 
 .pickup-outer-div{
-    max-width: 630px;
+    /* max-width: 630px; */
     /* height: 656px;
     flex-shrink: 0; */
     border-radius: 16px;
@@ -112,7 +113,8 @@
 .div8{
     display: flex;
     gap: 8px;
-    /* margin-top: 26.21px; */
+    padding:10px;
+    align-items: center;
 }
 
 .img{

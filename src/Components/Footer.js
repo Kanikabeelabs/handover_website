@@ -8,7 +8,7 @@ const Footer = () => {
         }}>
             <Container className="footer-menu-item p-5 d-flex gap-3 justify-content-between flex-wrap" style={{ maxWidth: "1800px" }}>
                 <div className="d-flex flex-column gap-3 col-md-2"  >
-                    <div><img src="./handover-logo.png" alt="HandOverLogo" /></div>
+                    <div><img src="./handover_logo_footer.png" alt="HandOverLogo" /></div>
                     <p style={{
                         fontWeight: "300",
                         maxWidth: "300px"
@@ -17,9 +17,10 @@ const Footer = () => {
                         Cursus sed massa non nisi, placerat.
                     </p>
                     <ul className="media">
-                        <li><a href="https://www.facebook.com/HandoverDelivery" ><img src="./facebook.png"></img></a></li>
-                        <li><a href="https://twitter.com/"><img src="./twitter.png"></img></a></li>
-                        <li><a href="https://www.instagram.com/handover.in/"><img src="./insta.png"></img></a></li>
+                        <li><a href="https://www.facebook.com/HandoverDelivery" >
+                            <img src="./facebook.png" alt="Facebook"></img></a></li>
+                        <li><a href="https://twitter.com/"><img src="./twitter.png" alt="Twitter"></img></a></li>
+                        <li><a href="https://www.instagram.com/handover.in/"><img src="./insta.png" alt="Instagram"></img></a></li>
                     </ul>
                 </div>
                 <div className="d-flex flex-column gap-3 col-md-2" >
