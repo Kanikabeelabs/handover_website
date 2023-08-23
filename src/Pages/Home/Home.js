@@ -16,20 +16,21 @@ const Home = () => {
     }
     return (
         <section className='handover-homepage'>
-            <Container fluid className="p-0">
+            <Container fluid className="p-0" >
                 {/*  ------------------------header ---------------------------------------*/}
-                <Container fluid style={{ background: "green" }} >
+                <Container fluid  style={{ backgroundImage: `url("./main_website.png")`,
+                 backgroundSize: 'cover'}}>
                     <Header page_name="home" />
 
                     {/*  ------------------------First Section ---------------------------------------*/}
-                    <Container style={{ marginTop: "100px", maxWidth: '1800px' }} >
-                        {/* <img src='./main_website.png' alt="main_banner"></img> */}
+                    <Container style={{ marginTop: "100px", maxWidth: '1600px' ,postion:"relative"}} >
+                        
                         <p style={{ color: "#F6911E" }} className="handover-main-heading">All Delivery</p>
                         <p className="handover-main-heading">Solutions In One</p>
                         <p className="handover-main-heading">Place You</p>
                         <p style={{
                             color: "#3C3C3C",
-                            width: "400px",
+                            maxWidth: "400px",
                             fontWeight: "300"
                         }}> Lorem ipsum is simply dummpy text of the printing and typesetting industry</p>
                         <div className='search-box-section d-flex align-items-center'>
@@ -43,9 +44,25 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className='video-section d-flex gap-5 mt-4 pb-3' style={{ flexWrap: 'wrap' }}>
-                            <iframe width="320" title="video1" height="240" src="https://www.youtube.com/embed/XWZwQM_Tssw" frameborder="0" allowfullscreen></iframe>
-                            <iframe width="320" height="240" title="video2" src="https://www.youtube.com/embed/XWZwQM_Tssw" frameborder="0" allowfullscreen></iframe>
+                        <div className='video-section d-flex gap-3 mt-4 pb-3' style={{ flexWrap: 'wrap'}}>
+                            <iframe width="250" title="video1" height="200" src="https://www.youtube.com/embed/XWZwQM_Tssw" frameborder="0" allowfullscreen></iframe>
+                            <iframe width="250" height="200" title="video2" src="https://www.youtube.com/embed/XWZwQM_Tssw" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div className='handover-shadow-div p-2 d-none d-md-block' 
+                            style={{width:"200px",position:"absolute",top:"100px",right:"150px"}}> 
+                            <div className='d-flex gap-2 align-items-center'><img src="./object_icon.png" alt="Object Icon" /> 
+                            <h5>Fast Delivery</h5>
+                            </div>
+                            <p className='m-0 p-0'>Lorem Ipsum is simply dummy text</p>
+                        </div>
+
+                        <div className='handover-shadow-div p-2 d-none d-md-block' style={{width:"200px",
+                            position:"absolute",top:"400px",left:"870px"}}> 
+                            <div className='d-flex gap-2 align-items-center'><img src="./location_icon.png" alt="Location Icon" /> 
+                            <h5>Location</h5>
+                            </div>
+                            <p className='m-0 p-0'>Lorem Ipsum is simply dummy text</p>
                         </div>
                     </Container>
                 </Container>
@@ -149,8 +166,9 @@ const Home = () => {
                 <NoticeSection />
 
                 {/*  ------------------------Contact Us Section ---------------------------------------*/}
-                <div className='handover-contact-us-section pt-5 pb-5'>
-                    <Container className="d-flex justify-content-between flex-wrap" style={{ maxWidth: "1400px" }}>
+                <Container className='handover-contact-us-section pt-5 pb-5'>
+                    <Container className="row" style={{ 
+                        maxWidth: "1400px",margin:"0px" }}>
                         <div className='col-md-6 d-flex flex-column align-items-end'>
                             <img src="./contact_us.png" alt="ContactUs" width="100%" />
                         </div>
@@ -204,8 +222,8 @@ const Home = () => {
                                         </div>
 
                                         <div className='d-flex justify-content-center gap-4'>
-                                            <Button variant="secondary">Cancel</Button>
-                                            <Button variant="primary">Submit</Button>
+                                            <Button variant="secondary" className='cancel-button'>Cancel</Button>
+                                            <Button variant="primary" style={{width:"50%"}}>Submit</Button>
                                         </div>
                                     </Form>
                                 )}
@@ -213,7 +231,7 @@ const Home = () => {
                         </div>
 
                     </Container>
-                </div>
+                </Container>
                 <Footer />
             </Container >
 

@@ -105,7 +105,7 @@ const AboutUs = () => {
       {/* Location Section */}
       <Container fluid className="p-0 d-flex flex-column align-items-center justify-content-center">
         <h3 className='mt-4 mb-4 fw-bold'>Our Offices</h3>
-        <div className='d-flex flex-row flex-wrap gap-2 align-items-center justify-content-center'>
+        <div className='d-flex flex-row flex-wrap gap-1 align-items-center justify-content-center'>
           {[1, 2, 3, 4, 5].map((item, index) => {
             return (<LocationItem key={index} />)
           })}
