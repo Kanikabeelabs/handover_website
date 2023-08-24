@@ -1,6 +1,6 @@
 export const HeaderMenu = [
     { id: 1, menu_name: "DELIVERY FEE", link_url: "/delivery-fee" },
-    { id: 2, menu_name: "RETAILER", link_url: "" },
+    { id: 2, menu_name: "RETAILER", link_url: "/retailer" },
     { id: 3, menu_name: "DELIVERY PARTNERS", link_url: "" },
     { id: 4, menu_name: "ABOUT US", link_url: "/about-us" },
     { id: 5, menu_name: "BLOGS", link_url: "" }

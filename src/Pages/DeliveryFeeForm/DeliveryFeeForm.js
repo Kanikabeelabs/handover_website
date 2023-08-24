@@ -1,6 +1,5 @@
 import { Container ,Button } from "react-bootstrap";
 import Header from "../../Components/Header";
-import styles from "./DeliveryFeeForm.css";
 import { Formik, Form, Field } from 'formik';
 
 const DeliveryFeeForm = () => {
@@ -17,11 +16,12 @@ const DeliveryFeeForm = () => {
         <Header page_name="delivery_fee_form"/>
         <Container fluid className="p-0">
             <div style={{minHeight:"100vh",background:"green"}}>
+                dfdf
             </div>
             <div className="FormDiv">
                 <div className="pickup-outer-div">
                     <div className="div8">
-                        <img className="img" src="./img.svg"></img>
+                        <img src="./back_arrow.png" alt=" Arrow" width="20px" height="20px"></img>
                         <text className="fee m-2">Delivery Fee</text>
                     </div>
                     <hr className="m-0"></hr>
@@ -51,7 +51,7 @@ const DeliveryFeeForm = () => {
                                         
                                         <div className="d-flex gap-2  ">
                                             <select name="option" id="option" className='custom-form-input w-49' onChange={(event)=>setFieldValue("product_category",event.target.value)}>
-                                                <option value="volvo">Product Category </option>
+                                                <option value="volvo">Product List </option>
                                                 <option value="saab">Saab</option>
                                                 <option value="mercedes">Mercedes</option>
                                                 <option value="audi">Audi</option>
@@ -67,18 +67,12 @@ const DeliveryFeeForm = () => {
 
                                         <div className="d-flex gap-2  ">
                                             <select name="option" id="option" className='custom-form-input w-49' onChange={(event)=>setFieldValue("product_category_3",event.target.value)}>
-                                                <option value="volvo">Product Category </option>
-                                                <option value="saab">Saab</option>
-                                                <option value="mercedes">Mercedes</option>
-                                                <option value="audi">Audi</option>
-                                            </select>
-                                            <select name="option" id="option" className='custom-form-input w-49' onChange={(event)=>setFieldValue("item_weight",event.target.value)}>
                                                 <option value="volvo">Item Weight </option>
                                                 <option value="saab">Saab</option>
                                                 <option value="mercedes">Mercedes</option>
                                                 <option value="audi">Audi</option>
                                             </select>
-
+                
                                         </div>
                                      
                                         <div className="d-flex flex-column">
@@ -101,15 +95,14 @@ const DeliveryFeeForm = () => {
 
                 </div>
 
-                <div className="pickup-outer-div p-5">
-                    <iframe width="390" height="240" src="https://www.youtube.com/embed/XWZwQM_Tssw" frameborder="0" allowfullscreen></iframe>
+                <div className="pickup-outer-div p-4">
+                    <iframe width="375" 
+                    height="240" 
+                    title="delivery_free_form_video"
+                    src="https://www.youtube.com/embed/XWZwQM_Tssw" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
             
-
-            {/* <div className="last">
-                <img className="lastimg" src="./img2.svg"></img>
-            </div> */}
         </Container>
     </section>
      
