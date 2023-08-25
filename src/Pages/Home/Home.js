@@ -5,17 +5,44 @@ import NoticeSection from '../../Components/NoticeSection';
 import Header from "../../Components/Header";
 import Footer from '../../Components/Footer';
 import { HomePageSection2, keyFeatures, whyHandover } from "../../utils/Data";
+import {contactUsSchemaValidation} from "../../utils/Validations";
+import { postRequest } from '../../utils/ApiRequest';
 import { Formik, Form, Field } from 'formik';
-
 const Home = () => {
     const initialValues = {
         option: "",
         user_name: "",
         email_address: "",
+        mobile:"",
         description: ""
     }
+
+    const handleSubmit = async(values,{resetForm}) =>{
+        let formData = new FormData();
+        formData = {
+            name:values.user_name,
+            email:values.email_address,
+            description:values.description,
+            mobile:values.mobile,
+            option:values.option
+            
+        }
+        try {
+            let response = await postRequest("/api/v1/contactus", formData);
+            alert("You have successfully submitted the form");
+            resetForm();
+        } catch (err) {
+            console.log(err)
+        }
+
+
+    }
+
+    const handleCancel = (resetForm) => {
+        resetForm();
+    }
     return (
-        <section className='handover-homepage'>
+        <section className='handover-homepage'> 
             <Container fluid className="p-0" >
                 {/*  ------------------------header ---------------------------------------*/}
                 <Container fluid  style={{ backgroundImage: `url("./main_website.png")`,
@@ -45,8 +72,8 @@ const Home = () => {
                         </div>
 
                         <div className='video-section d-flex gap-3 mt-4 pb-3' style={{ flexWrap: 'wrap'}}>
-                            <iframe width="250" title="video1" height="200" src="https://www.youtube.com/embed/XWZwQM_Tssw" frameborder="0" allowfullscreen></iframe>
-                            <iframe width="250" height="200" title="video2" src="https://www.youtube.com/embed/XWZwQM_Tssw" frameborder="0" allowfullscreen></iframe>
+                            <iframe width="250" title="video1" height="200" src="https://www.youtube.com/embed/AaldFQmUjPA" frameBorder="0" allowFullScreen></iframe>
+                            <iframe width="250" height="200" title="video2" src="https://www.youtube.com/embed/IO79wiKGTEc" frameBorder="0" allowFullScreen></iframe>
                         </div>
 
                         <div className='handover-shadow-div p-2 d-none d-md-block' 
@@ -176,18 +203,22 @@ const Home = () => {
                             <h5 className="mb-4">REQUEST FORM</h5>
                             <Formik
                                 initialValues={initialValues}
-                            // validationSchema={userValidationSchema}
-                            // onSubmit={handleSubmit}
+                                validationSchema={contactUsSchemaValidation}
+                                onSubmit={handleSubmit}
                             >
-                                {({ errors, setFieldValue }) => (
+                                {({ errors, values,setFieldValue ,resetForm}) => (
                                     <Form className="contact-us-form d-flex flex-column gap-3">
                                         <div className="d-flex flex-column">
-                                            <label for="option">Choose a option</label>
-                                            <select name="option" id="option" className='custom-form-input' onChange={(event) => setFieldValue("option", event.target.value)}>
-                                                <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="mercedes">Mercedes</option>
-                                                <option value="audi">Audi</option>
+                                            <label htmlFor="option">Choose a option</label>
+                                            <select name="option" 
+                                                id="option" className='custom-form-input' 
+                                                onChange={(event) => setFieldValue("option", event.target.value)}
+                                                value={values.option}>
+                                                <option value="">Choose an Option</option>
+                                                <option value="delivery_partner">Delivery Partner</option>
+                                                <option value="retailer">Retailer</option>
+                                                <option value="customer">Customer</option>
+                                                <option value="other">Other</option>
                                             </select>
                                             {errors.option && <div className="form-error">{errors.option}</div>}
 
@@ -205,10 +236,19 @@ const Home = () => {
                                         <div className="d-flex flex-column">
                                             <label className="form-label" htmlFor="email_address"> Email</label>
                                             <Field id="email_address"
-                                                type="email" placeholder="Enter Enter"
+                                                type="email" placeholder="Enter email address"
                                                 name="email_address"
                                                 className="custom-form-input" />
                                             {errors.email_address && <div className="form-error">{errors.email_address}</div>}
+                                        </div>
+
+                                        <div className="d-flex flex-column">
+                                            <label className="form-label" htmlFor="mobile"> Mobile Number</label>
+                                            <Field id="mobile"
+                                                type="text" placeholder="Enter mobile number"
+                                                name="mobile"
+                                                className="custom-form-input" />
+                                            {errors.mobile && <div className="form-error">{errors.mobile}</div>}
                                         </div>
 
                                         <div className="d-flex flex-column">
@@ -222,8 +262,8 @@ const Home = () => {
                                         </div>
 
                                         <div className='d-flex justify-content-center gap-4'>
-                                            <Button variant="secondary" className='cancel-button'>Cancel</Button>
-                                            <Button variant="primary" style={{width:"50%"}}>Submit</Button>
+                                            <Button variant="secondary" className='cancel-button' type="button" onClick={()=>handleCancel(resetForm)}>Cancel</Button>
+                                            <Button variant="primary" type="submit" style={{width:"50%"}}>Submit</Button>
                                         </div>
                                     </Form>
                                 )}

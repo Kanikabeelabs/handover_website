@@ -7,13 +7,40 @@ import LocationItem from "../Components/LocationItem";
 import { Formik, Form, Field } from 'formik';
 // import { useState } from 'react';
 import {DeliveryPartnersData} from "../utils/Data";
+import {contactUsSchemaValidation} from "../utils/Validations";
+import { postRequest } from '../utils/ApiRequest';
 const Retailer = () =>{
-    const initialValues = {
+     const initialValues = {
         option: "",
         user_name: "",
-        mobile_number:"",
         email_address: "",
+        mobile:"",
         description: ""
+    }
+
+    const handleSubmit = async(values,{resetForm}) =>{
+        let formData = new FormData();
+        formData = {
+            name:values.user_name,
+            email:values.email_address,
+            description:values.description,
+            mobile:values.mobile,
+            option:values.option
+            
+        }
+        try {
+            let response = await postRequest("/api/v1/contactus", formData);
+            alert("You have successfully submitted the form");
+            resetForm();
+        } catch (err) {
+            console.log(err)
+        }
+
+
+    }
+
+    const handleCancel = (resetForm) => {
+        resetForm();
     }
     const DeliveryPartnerItems = ({img_url,heading ,description,link}) =>{
       return( <div
@@ -47,23 +74,27 @@ const Retailer = () =>{
                                         <h5 className="mb-4">GET IN TOUCH</h5>
                                         <Formik
                                             initialValues={initialValues}
-                                        // validationSchema={userValidationSchema}
-                                        // onSubmit={handleSubmit}
+                                            validationSchema={contactUsSchemaValidation}
+                                            onSubmit={handleSubmit}
                                         >
-                                            {({ errors, setFieldValue }) => (
+                                            {({ errors,values, setFieldValue,resetForm }) => (
                                                 <Form className=" d-flex flex-column  gap-3">
                                                     <div className="row">
-                                                        <div className="d-flex flex-column col-md-6 col-12">
-                                                            <label htmlFor="option" className='mb-2'>Choose a option</label>
-                                                            <select name="option" id="option" className='custom-form-input' onChange={(event) => setFieldValue("option", event.target.value)}>
-                                                                <option value="volvo">Volvo</option>
-                                                                <option value="saab">Saab</option>
-                                                                <option value="mercedes">Mercedes</option>
-                                                                <option value="audi">Audi</option>
-                                                            </select>
-                                                            {errors.option && <div className="form-error">{errors.option}</div>}
+                                                    <div className="d-flex flex-column col-md-6 col-12">
+                                                        <label htmlFor="option">Choose a option</label>
+                                                        <select name="option" 
+                                                            id="option" className='custom-form-input mt-2' 
+                                                            onChange={(event) => setFieldValue("option", event.target.value)}
+                                                            value={values.option}>
+                                                            <option value="">Choose an Option</option>
+                                                            <option value="delivery_partner">Delivery Partner</option>
+                                                            <option value="retailer">Retailer</option>
+                                                            <option value="customer">Customer</option>
+                                                            <option value="other">Other</option>
+                                                        </select>
+                                                        {errors.option && <div className="form-error">{errors.option}</div>}
 
-                                                        </div>
+                                                    </div>
 
                                                         <div className="d-flex flex-column col-md-6 col-12">
                                                             <label className="form-label" htmlFor="user_name"> User Name</label>
@@ -77,12 +108,12 @@ const Retailer = () =>{
                                                     
                                                     <div className="row">
                                                         <div className="d-flex flex-column col-md-6 col-12">
-                                                        <label className="form-label" htmlFor="mobile_number"> Mobile Number</label>
-                                                        <Field id="mobile_number"
+                                                        <label className="form-label" htmlFor="mobile"> Mobile Number</label>
+                                                        <Field id="mobile"
                                                             type="text" placeholder="Enter Mobile Number"
-                                                            name="mobile_number"
+                                                            name="mobile"
                                                             className="custom-form-input" />
-                                                        {errors.mobile_number && <div className="form-error">{errors.mobile_number}</div>}
+                                                        {errors.mobile && <div className="form-error">{errors.mobile}</div>}
                                                         </div>
 
                                                         <div className="d-flex flex-column col-md-6 col-12">
@@ -106,8 +137,8 @@ const Retailer = () =>{
                                                     </div>
 
                                                     <div className='d-flex justify-content-center gap-4'>
-                                                        <Button variant="secondary" className='cancel-button'>Cancel</Button>
-                                                        <Button variant="primary" style={{width:"50%"}}>Submit</Button>
+                                                        <Button variant="secondary" className='cancel-button' type="button" onClick={()=>handleCancel(resetForm)}>Cancel</Button>
+                                                        <Button variant="primary" type="submit" style={{width:"50%"}}>Submit</Button>
                                                     </div>
                                                 </Form>
                                             )}

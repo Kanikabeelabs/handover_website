@@ -173,3 +173,8 @@
 .map-marker {
     font-size: 24px;
   }
+
+.form-error{
+    color:red;
+    text-transform: capitalize;
+}

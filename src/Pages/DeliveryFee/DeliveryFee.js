@@ -1,8 +1,8 @@
 import { Container, Button } from 'react-bootstrap';
 import Header from "../../Components/Header";
 import { Formik, Form, Field } from 'formik';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useState } from 'react';
-import GoogleMapReact from 'google-map-react';
 
 const DeliveryFee = () => {
     const [manualLocation, setManualLocation] = useState(false);
@@ -14,7 +14,7 @@ const DeliveryFee = () => {
         district: "",
         pincode: ""
     }
-    const MapMarker = () => <div className="map-marker">📍</div>; // Custom marker component
+    // const MapMarker = () => <div className="map-marker">📍</div>; // Custom marker component
 
     const DeliveryFeeSecondFormDiv = ({ heading, desc, data }) => {
         return (<div style={{ borderRadius: "11px", minHeight: "150px", width: "250px", background: "#ffffff" }}>
@@ -123,8 +123,20 @@ const DeliveryFee = () => {
 
                      </div>
                     <div className="col-9" style={{  height: '100vh' }}>
-                        <GoogleMapReact
-                            bootstrapURLKeys={{ key: 'AIzaSyD19UbJ_4GCrhQpiuL1O_4oDYN8qamjdlE' }} // Replace with your API key
+                    {/* <MapContainer center={[latitude,longitude]} zoom={2} style={{ height: '100vh' }}>
+                        <TileLayer
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        />
+                        <Marker position={[latitude, longitude]}>
+                            <Popup>
+                            A popup for the marker.
+                            </Popup>
+                        </Marker>
+                    </MapContainer> */}
+                        <img src="./background_map.png" alt="Map" width="100%" height="796px" />
+                        {/* <GoogleMapReact
+                            bootstrapURLKeys={{ key: '' }} // Replace with your API key
                             defaultCenter={{
                                 lat: latitude,
                                 lng: longitude
@@ -136,15 +148,14 @@ const DeliveryFee = () => {
                             defaultZoom={12}
                         >
                             <MapMarker lat={latitude} lng={longitude} /> 
-                            {/* Place your custom marker here */}
-                        </GoogleMapReact>
+                        </GoogleMapReact> */}
                     </div>
                  </div>
-                {/* <div className='delivery-fee-second-form d-flex gap-3'>
+                <div className='delivery-fee-second-form d-flex gap-3'>
                     <DeliveryFeeSecondFormDiv />
                     <DeliveryFeeSecondFormDiv />
                     <DeliveryFeeSecondFormDiv />
-                </div> */}
+                </div>
                
             </Container>
             

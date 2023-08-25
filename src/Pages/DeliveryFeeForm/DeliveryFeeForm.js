@@ -96,10 +96,9 @@ const DeliveryFeeForm = () => {
                 </div>
 
                 <div className="pickup-outer-div p-4 mt-4 d-flex align-items-center justify-content-center">
-                    <iframe width="375" 
-                    height="240" 
-                    title="delivery_free_form_video"
-                    src="https://www.youtube.com/embed/XWZwQM_Tssw" frameborder="0" allowfullscreen></iframe>
+                <iframe width="375" title="video1" 
+                height="249" src="https://www.youtube.com/embed/AaldFQmUjPA" frameBorder="0" allowFullScreen></iframe>
+
                 </div>
             </div>
             </Container>
