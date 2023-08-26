@@ -7,7 +7,7 @@ const Header = ({ page_name }) => {
         <div className='header menu_item p-2 d-flex flex-wrap align-items-center justify-content-around gap-2' >
             <div className="col-md-3">
                 <Link to="/">
-                    <img src="./handover-logo.png" alt="HandOverLogo" />
+                    <img src="./handover_logo.png" alt="HandOverLogo" />
                 </Link>
             </div>
             <ul className='d-flex flex-wrap col-md-6 justify-content-around gap-2'>
@@ -18,7 +18,8 @@ const Header = ({ page_name }) => {
                     )
                 })}
             </ul>
-            {(page_name === "home" || page_name === "about-us") && <Button className='handover-button'>EMPLOYEE LOGIN</Button>}
+            {(page_name === "home" || page_name === "about-us" || 
+            page_name === "delivery_partner" || page_name === "retailer") && <Button className='handover-button'>EMPLOYEE LOGIN</Button>}
             {(page_name === "delivery_fee" || page_name === "delivery_fee_form") && <Button className='rounded-pill handover-button' >Cities We Serve</Button>}
         </div >
     )
