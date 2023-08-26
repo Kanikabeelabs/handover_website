@@ -14,12 +14,15 @@ const DeliveryFeeForm = () => {
     }
     return (<section className="handover-delivery-fee-form">
         <Header page_name="delivery_fee_form"/>
-        <Container fluid  style={{background:"green",padding:"100px"}}>
+        <Container fluid style={{ backgroundImage: `url("./background_map.png")`,
+                 backgroundSize: 'cover'}}>
+            <Container style={{maxWidth:"500px",margin:"0px auto" ,padding:"50px 0px"}}>
             <div className="FormDiv">
                 <div className="pickup-outer-div">
-                    <div className="div8">
+                    <div className="d-flex gap-2 align-items-center" style={{padding:"20px"}}>
                         <img src="./back_arrow.png" alt=" Arrow" width="20px" height="20px"></img>
-                        <text className="fee m-2">Delivery Fee</text>
+                        <h4 className="m-0">Delivery Fee</h4>
+                        {/* <text className="fee m-2">Delivery Fee</text> */}
                     </div>
                     <hr className="m-0"></hr>
                     <div className="p-5">
@@ -82,8 +85,8 @@ const DeliveryFeeForm = () => {
                                         </div>
 
                                         <div className='d-flex justify-content-center gap-4'>
-                                            <Button className="cancel w-50 rounded-pill p-3 ">Cancel</Button>
-                                            <Button className="submit w-50 rounded-pill p-3">Submit</Button>
+                                            <Button className="cancel w-50  p-3" style={{background:"#E3E1E1",border:"none",color:"#000000"}}>Cancel</Button>
+                                            <Button className="submit w-50  p-3" style={{background:"#F48120",border:"none"}}>Submit</Button>
                                         </div>
                                     </Form>
                                 )}
@@ -92,14 +95,14 @@ const DeliveryFeeForm = () => {
 
                 </div>
 
-                <div className="pickup-outer-div p-4">
-                    <iframe width="375" 
-                    height="240" 
-                    title="delivery_free_form_video"
-                    src="https://www.youtube.com/embed/XWZwQM_Tssw" frameborder="0" allowfullscreen></iframe>
+                <div className="pickup-outer-div p-4 mt-4 d-flex align-items-center justify-content-center">
+                <iframe width="375" title="video1" 
+                height="249" src="https://www.youtube.com/embed/AaldFQmUjPA" frameBorder="0" allowFullScreen></iframe>
+
                 </div>
             </div>
-            
+            </Container>
+           
         </Container>
     </section>
      
