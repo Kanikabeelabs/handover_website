@@ -22,13 +22,8 @@ const Home = () => {
                     <Header page_name="home" />
 
                     {/*  ------------------------First Section ---------------------------------------*/}
-<<<<<<< HEAD
                     <div className='bg' style={{ marginTop: "100px" }} >
                         {/* <img className='mainimg' src='./main_bg.svg'></img> */}
-=======
-                    <Container style={{ marginTop: "100px", maxWidth: '1800px' }} >
-                        {/* <img src='./main_website.png' alt="main_banner"></img> */}
->>>>>>> 19435d0d4f381a2fe8c380d44ecffe639a8973b5
                         <p style={{ color: "#F6911E" }} className="handover-main-heading">All Delivery</p>
                         <p className="handover-main-heading">Solutions In One</p>
                         <p className="handover-main-heading">Place You</p>
@@ -52,8 +47,8 @@ const Home = () => {
                             <iframe width="320" title="video1" height="240" src="https://www.youtube.com/embed/XWZwQM_Tssw" frameborder="0" allowfullscreen></iframe>
                             <iframe width="320" height="240" title="video2" src="https://www.youtube.com/embed/XWZwQM_Tssw" frameborder="0" allowfullscreen></iframe>
                         </div>
+                    </div>
                     </Container>
-                </Container>
 
                 <Container style={{ maxWidth: "1800px", position: "relative" }}>
                     {/*  ------------------------Second Section ---------------------------------------*/}
@@ -220,9 +215,10 @@ const Home = () => {
                     </Container>
                 </div>
                 <Footer />
-            </Container >
+            </Container>
 
-        </section >)
+        </section>
+    )
 }
 
 export default Home;

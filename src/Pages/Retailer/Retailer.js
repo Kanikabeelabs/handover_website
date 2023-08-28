@@ -2,7 +2,7 @@
 import { Container,Button } from 'react-bootstrap';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
-import "./retailer.css";
+import "./Retailer.css";
 import { Formik, Form, Field } from 'formik';
 // import { useState } from 'react';
 
