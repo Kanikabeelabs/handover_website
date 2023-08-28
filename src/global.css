@@ -131,6 +131,11 @@
     .second-section-heading {
         font-size: 1.5rem;
     }
+    .contact-us-form-div{
+        position:relative !important;
+        top:0px;
+        margin-bottom: 150px !important;
+    }
 }
 
 .delivery-fee-form {
@@ -153,11 +158,31 @@
     gap: 20px;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
 }
 
 .delivery-fee-second-form {
     position: fixed;
     bottom: 10px;
-    left: 370px;
+    left: 470px;
+}
+
+.cancel-button{
+    background: #E3E1E1;
+    border: none;
+    color: black;
+    width: 50%;
+}
+
+.pickup-outer-div{
+    background-color: #ffffff;
+    border-radius: 11px;
+}
+
+.map-marker {
+    font-size: 24px;
+  }
+
+.form-error{
+    color:red;
+    text-transform: capitalize;
 }
