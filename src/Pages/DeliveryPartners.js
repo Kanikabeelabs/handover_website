@@ -30,6 +30,7 @@ const DeliveryPartners = () =>{
         }
         try {
             let response = await postRequest("/api/v1/contactus", formData);
+            console.log(response)
             alert("You have successfully submitted the form");
             resetForm();
         } catch (err) {
