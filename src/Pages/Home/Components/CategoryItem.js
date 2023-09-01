@@ -1,6 +1,6 @@
 const CategoryItem = ({ imgURL, heading, desc }) => {
     return (<div
-        className="handover-shadow-div p-5 d-flex flex-column 
+        className="handover-shadow-div details p-5 d-flex flex-column 
         align-items-center 
         justify-content-center"
         style={{ width: "340px", zIndex: "984" }}>

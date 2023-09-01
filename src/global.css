@@ -75,6 +75,16 @@
     -moz-box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
     background: #ffffff;
     border-radius: 11px;
+
+}
+
+.details:hover{
+    /* background-color: green; */
+    transform: scale(1.2);
+}
+
+.details2:hover{
+    background-color: #0d6efd;
 }
 
 .map_div {
