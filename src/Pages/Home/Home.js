@@ -217,7 +217,7 @@ const Home = () => {
                         print, and publishing industries for previewing <br></br>layouts and visual mockups.
                     </p>
                     <h5 className='mt-3'>Download the Handover Mobile App For Free</h5>
-                    <a href="" className='mt-3'>
+                    <a href="https://play.google.com/store/apps/details?id=com.handover.retailer" className='mt-3'>
                         <img src="./playstore.png" alt="PlayStore"/>
                     </a>
                 </Container>
