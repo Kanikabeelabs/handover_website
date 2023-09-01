@@ -9,6 +9,14 @@
     position: relative;
     z-index: 1234;
 }
+<<<<<<< HEAD
+.bg{
+    background-image: url(C:\Users\kanha\OneDrive\Desktop\HandOver\handover_website\public\main_bg.svg);
+    width: 1443.923px;
+    height: 780.273px;
+}
+=======
+>>>>>>> 19435d0d4f381a2fe8c380d44ecffe639a8973b5
 
 
 
@@ -67,6 +75,16 @@
     -moz-box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
     background: #ffffff;
     border-radius: 11px;
+
+}
+
+.details:hover{
+    /* background-color: green; */
+    transform: scale(1.2);
+}
+
+.details2:hover{
+    background-color: #0d6efd;
 }
 
 .map_div {

@@ -12,9 +12,11 @@ const Footer = () => {
                     <p style={{
                         fontWeight: "300",
                         maxWidth: "300px"
-                    }}>Lorem ipsum dolor amet, consectetur
-                        adipiscing elit. Eget nisl nunc quam ac sed turpis volutpat.
-                        Cursus sed massa non nisi, placerat.
+                    }}>HANDOVER MOBILITY PRIVATE LIMITED <br/>
+                        U52219DL2023PTC412868 <br/>
+                        216-A, IV/F, L/S GAUTAM NAGAR New Delhi <br/>
+                        Delhi 110049<br/>
+                        Contact – 093113 39816
                     </p>
                     <ul className="media">
                         <li><a href="https://www.facebook.com/HandoverDelivery" >
