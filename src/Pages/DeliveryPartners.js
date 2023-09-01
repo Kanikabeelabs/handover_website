@@ -61,12 +61,12 @@ const DeliveryPartners = () =>{
      <Container fluid className="p-0">
             <Header page_name="delivery_partner" />
                 {/* First Section */}
-                <Container fluid className="p-0" style={{minHeight:"780px"}}>
+                <Container fluid className="p-0" style={{minHeight:"800px"}}>
                     <Container fluid  className="d-flex justify-content-center p-0"   
                         style={{background:"#0d6efd",minHeight:"500px",position:"relative"}}>
                         <div className="contact-us-form-div" style={{position:"absolute",top:"100px"}} >
-                        <h1 className='fw-bold' style={{color:"#ffffff"}}>Get In <span style={{color:'#F6911E'}}>Touch</span></h1>
-                        <p style={{width:"300px",color:"#ffffff"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <h1 className='fw-bold' style={{color:"#ffffff"}}>Every Mile Earns <span style={{color:'#F6911E'}}>You!</span></h1>
+                        <p style={{width:"300px",color:"#ffffff"}}>Maximise your earnings by choosing multiple locations for order pick-ups. It will help you earn more.</p>
                         <div className="handover-shadow-div p-3 d-flex  flex-wrap">
                             <div className='col-md-5 col-12 d-flex '>
                                 <img src="./contact_us.png" alt="ContactUs" width="100%" />
@@ -184,8 +184,8 @@ const DeliveryPartners = () =>{
                 <HandOverStatistics/>
                 {/* Careers */}
                 <Container  className="p-0 d-flex flex-column gap-2 align-items-center " style={{position:"relative"}}>
-                    <h3 className='mt-4 mb-4 fw-bold'>Our Careers</h3>
-                    <p>Lorem ipsum dolor sit amet . The graphic and typographic operators know this well, in reality.</p>
+                    <h3 className='mt-4 mb-4 fw-bold'>Careers @Handover</h3>
+                    <p>Besides offering a promising ‘Delivery Partner’ job, Handover, as a brand, has many more opportunities up for grabs. These could be in operations, finance, technology, etc. So, if you know how to deliver multiple tasks and are a problem-solver, we would like to talk to you! Send your resume now!</p>
                      <div className='mt-2'>
                         <div style={{width:"100%"}}>
                             <img src="./career_banner.png" alt="Career Banner" style={{width:"100%"}}/>

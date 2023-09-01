@@ -6,7 +6,7 @@ import HandOverStatistics from "../Components/HandOverStatistics";
 import LocationItem from "../Components/LocationItem";
 import { Formik, Form, Field } from 'formik';
 // import { useState } from 'react';
-import {DeliveryPartnersData} from "../utils/Data";
+import {RetailersData} from "../utils/Data";
 import {contactUsSchemaValidation} from "../utils/Validations";
 import { postRequest } from '../utils/ApiRequest';
 const Retailer = () =>{
@@ -60,12 +60,12 @@ const Retailer = () =>{
      <Container fluid className="p-0">
             <Header page_name="retailer" />
                 {/* First Section */}
-                <Container fluid className="p-0" style={{minHeight:"780px"}}>
+                <Container fluid className="p-0" style={{minHeight:"800px"}}>
                     <Container fluid  className="d-flex justify-content-center p-0"   
                         style={{background:"#0d6efd",minHeight:"500px",position:"relative"}}>
                         <div className="contact-us-form-div" style={{position:"absolute",top:"100px"}} >
-                        <h1 className='fw-bold' style={{color:"#ffffff"}}>Get In <span style={{color:'#F6911E'}}>Touch</span></h1>
-                        <p style={{width:"300px",color:"#ffffff"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <h1 className='fw-bold' style={{color:"#ffffff"}}>More Orders, <span style={{color:'#F6911E'}}>More Business Await You!</span></h1>
+                        <p style={{width:"300px",color:"#ffffff"}}>Our impressive delivery services help businesses get orders from both new & existing customers. Now, it’s your turn to gain a healthy business through us.</p>
                         <div className="handover-shadow-div p-3 d-flex  flex-wrap">
                             <div className='col-md-5 col-12 d-flex '>
                                 <img src="./contact_us.png" alt="ContactUs" width="100%" />
@@ -150,11 +150,11 @@ const Retailer = () =>{
                     
                 </Container>
                  {/* Second Section */}
-                <div className='d-flex flex-column align-items-center justify-content-center'>
-                    <h1>Handover में Delivery Partner बनने के फायदे</h1>
+                <div className='d-flex py-3 flex-column align-items-center justify-content-center'>
+                    <h1>Handover से जुड़ने के फायदें </h1>
                     <div className='row' style={{width:"100%"}}>
                         <div className='d-flex flex-column gap-3 align-items-center col-md-4 col-12 '>
-                            {DeliveryPartnersData.slice(0,3).map((item,index)=>{
+                            {RetailersData.slice(0,3).map((item,index)=>{
                                 return(<DeliveryPartnerItems 
                                     key={item.id}
                                     img_url={item.img_url}
@@ -168,7 +168,7 @@ const Retailer = () =>{
                                 <img src="./smartphone.png" alt="SmartPhone" width="100%"/></div>
                         </div>
                         <div className='d-flex flex-column gap-3 align-items-center col-md-4 col-12 '>
-                            {DeliveryPartnersData.slice(3,7).map((item,index)=>{
+                            {RetailersData.slice(3,7).map((item,index)=>{
                                 return(<DeliveryPartnerItems 
                                     key={item.id}
                                     img_url={item.img_url}
@@ -183,8 +183,8 @@ const Retailer = () =>{
                 <HandOverStatistics/>
                 {/* Careers */}
                 <Container  className="p-0 d-flex flex-column gap-2 align-items-center " style={{position:"relative"}}>
-                    <h3 className='mt-4 mb-4 fw-bold'>Our Careers</h3>
-                    <p>Lorem ipsum dolor sit amet . The graphic and typographic operators know this well, in reality.</p>
+                    <h3 className='mt-4 mb-4 fw-bold'>Careers @Handover</h3>
+                    <p>Besides offering a promising ‘Delivery Partner’ job, Handover, as a brand, has many more opportunities up for grabs. These could be in operations, finance, technology, etc. So, if you know how to deliver multiple tasks and are a problem-solver, we would like to talk to you! Send your resume now!</p>
                      <div className='mt-2'>
                         <div style={{width:"100%"}}>
                             <img src="./career_banner.png" alt="Career Banner" style={{width:"100%"}}/>
