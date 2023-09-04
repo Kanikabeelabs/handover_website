@@ -113,8 +113,7 @@
 .div8{
     display: flex;
     gap: 8px;
-    padding:10px;
-    align-items: center;
+    /* margin-top: 26.21px; */
 }
 
 .img{

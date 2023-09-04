@@ -4,9 +4,8 @@ import Retailer from "./Pages/Retailer";
 import DeliveryPartners from "./Pages/DeliveryPartners";
 import DeliveryFee from "./Pages/DeliveryFee/DeliveryFee";
 import DeliveryFeeForm from "./Pages/DeliveryFeeForm/DeliveryFeeForm";
-import Aboutus from "./Pages/Aboutus/Aboutus";
-
 import "./global.css";
+import Aboutus from "./Pages/Aboutus/Aboutus";
 
 function App() {
   return (

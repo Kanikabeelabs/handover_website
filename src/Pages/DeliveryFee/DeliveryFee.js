@@ -1,19 +1,19 @@
 import { Container, Button } from 'react-bootstrap';
 import Header from "../../Components/Header";
 import { Formik, Form, Field } from 'formik';
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
+import { getRequest } from '../../utils/ApiRequest';
 const DeliveryFee = () => {
-    const [manualLocation, setManualLocation] = useState(false);
-    const [latitude, setLatitude] = useState(28.6130176);
-    const [longitude, setLongitude] = useState(77.2308992);
+    const [manualLocation, setManualLocation] = useState(true);
+    const [state, setState] = useState([]);
+    // const [latitude, setLatitude] = useState(28.6130176);
+    // const [longitude, setLongitude] = useState(77.2308992);
     const initialValues = {
         country: "",
         state: "",
         district: "",
         pincode: ""
     }
-    // const MapMarker = () => <div className="map-marker">📍</div>; // Custom marker component
 
     const DeliveryFeeSecondFormDiv = ({ heading, desc, data }) => {
         return (<div style={{ borderRadius: "11px", minHeight: "150px", width: "250px", background: "#ffffff" }}>
@@ -34,10 +34,10 @@ const DeliveryFee = () => {
             // Get current position
             navigator.geolocation.getCurrentPosition(
                 position => {
-                    setLatitude(position.coords.latitude);
-                    setLongitude(position.coords.longitude);
-                    // console.log(position.coords.latitude)
-                    // console.log(position.coords.longitude)
+                    // setLatitude(position.coords.latitude);
+                    // setLongitude(position.coords.longitude);
+                    console.log(position.coords.latitude)
+                    console.log(position.coords.longitude)
 
                 },
                 error => {
@@ -49,6 +49,16 @@ const DeliveryFee = () => {
             console.log('Geolocation is not supported by this browser.');
         }
     }
+
+    useEffect(() => {
+        const getState = async () => {
+            let response = await getRequest('/api/v1/map/states');
+            if (response.status === 200)
+                setState(response?.data?.data);
+        }
+        getState();
+    }, []);
+
     return (
         <section className='delivery-fee-section'>
             <Header page_name="delivery_fee" />
@@ -74,9 +84,10 @@ const DeliveryFee = () => {
                                         <div className="d-flex flex-column">
                                             <select name="option" id="option" className='custom-form-input'>
                                                 <option value="">Country</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="mercedes">Mercedes</option>
-                                                <option value="audi">Audi</option>
+                                                {state.map((item, index) => {
+                                                    return (
+                                                        <option key={index} value={item}>{item}</option>)
+                                                })}
                                             </select>
                                             {errors.country && <div className="form-error">{errors.country}</div>}
 
