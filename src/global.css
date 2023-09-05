@@ -5,17 +5,14 @@
 
 }
 
-.header {
+/* .header {
     position: relative;
     z-index: 1234;
 }
 
-
-
-.dash {
     position: absolute;
     top: 44px;
-}
+} */
 
 .media {
     display: flex;
@@ -70,12 +67,12 @@
 
 }
 
-.details:hover{
+.details:hover {
     /* background-color: green; */
     transform: scale(1.2);
 }
 
-.details2:hover{
+.details2:hover {
     background-color: #0d6efd;
 }
 
@@ -85,7 +82,7 @@
     box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
     background: #0d6efd;
     width: 360px;
-    padding: 20px;
+    padding: 30px;
     position: relative;
     color: #ffffff;
     border-radius: 11px;
@@ -125,19 +122,8 @@
     font-weight: 700;
 }
 
-@media only screen and (max-width: 600px) {
-    .homeover-section {
-        padding: 15px;
-    }
-
-    .second-section-heading {
-        font-size: 1.5rem;
-    }
-    .contact-us-form-div{
-        position:relative !important;
-        top:0px;
-        margin-bottom: 150px !important;
-    }
+.opportunity-div {
+    margin-left: 100px;
 }
 
 .delivery-fee-form {
@@ -168,23 +154,51 @@
     left: 470px;
 }
 
-.cancel-button{
+.cancel-button {
     background: #E3E1E1;
     border: none;
     color: black;
     width: 50%;
 }
 
-.pickup-outer-div{
+.pickup-outer-div {
     background-color: #ffffff;
     border-radius: 11px;
 }
 
 .map-marker {
     font-size: 24px;
-  }
+}
 
-.form-error{
-    color:red;
+.form-error {
+    color: red;
     text-transform: capitalize;
+}
+
+.website-header {
+    padding: 0px 100px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .homeover-section {
+        padding: 15px;
+    }
+
+    .second-section-heading {
+        font-size: 1.5rem;
+    }
+
+    .contact-us-form-div {
+        position: relative !important;
+        top: 0px;
+        margin-bottom: 150px !important;
+    }
+
+    .opportunity-div {
+        margin-left: 0px !important;
+    }
+
+    .website-header {
+        padding: 10px !important;
+    }
 }
