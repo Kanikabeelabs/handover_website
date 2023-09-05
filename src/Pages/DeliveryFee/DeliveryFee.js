@@ -4,8 +4,9 @@ import { Formik, Form, Field } from 'formik';
 import { useState, useEffect } from 'react';
 import { getRequest } from '../../utils/ApiRequest';
 const DeliveryFee = () => {
-    const [manualLocation, setManualLocation] = useState(true);
+    const [manualLocation, setManualLocation] = useState(false);
     const [state, setState] = useState([]);
+    const [district, setDistrict] = useState([]);
     // const [latitude, setLatitude] = useState(28.6130176);
     // const [longitude, setLongitude] = useState(77.2308992);
     const initialValues = {
@@ -59,6 +60,13 @@ const DeliveryFee = () => {
         getState();
     }, []);
 
+    const getDistrict = async (state) => {
+        let response = await getRequest(`/api/v1/map/districts?states=${state}`);
+        if (response.status === 200)
+            setDistrict(response?.data?.data);
+
+    }
+
     return (
         <section className='delivery-fee-section'>
             <Header page_name="delivery_fee" />
@@ -84,21 +92,21 @@ const DeliveryFee = () => {
                                         <div className="d-flex flex-column">
                                             <select name="option" id="option" className='custom-form-input'>
                                                 <option value="">Country</option>
-                                                {state.map((item, index) => {
-                                                    return (
-                                                        <option key={index} value={item}>{item}</option>)
-                                                })}
+                                                <option value="india">India</option>
                                             </select>
                                             {errors.country && <div className="form-error">{errors.country}</div>}
 
                                         </div>
 
                                         <div className="d-flex flex-column">
-                                            <select name="option" id="option" className='custom-form-input'>
+                                            <select name="option" id="option"
+                                                className='custom-form-input'
+                                                onChange={(e) => getDistrict(e.target.value)}>
                                                 <option value="">State</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="mercedes">Mercedes</option>
-                                                <option value="audi">Audi</option>
+                                                {state.map((item, index) => {
+                                                    return (
+                                                        <option key={index} value={item}>{item}</option>)
+                                                })}
                                             </select>
                                             {errors.state && <div className="form-error">{errors.state}</div>}
 
@@ -106,10 +114,10 @@ const DeliveryFee = () => {
 
                                         <div className="d-flex flex-column">
                                             <select name="option" id="option" className='custom-form-input'>
-                                                <option value="">Distric</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="mercedes">Mercedes</option>
-                                                <option value="audi">Audi</option>
+                                                <option value="">District</option>
+                                                {district.map((item) => {
+                                                    return (<option key={item._id} value={item.name}>{item.name}</option>)
+                                                })}
                                             </select>
                                             {errors.district && <div className="form-error">{errors.district}</div>}
 
