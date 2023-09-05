@@ -6,12 +6,12 @@ import LocationItem from '../../Components/LocationItem';
 import "./Aboutus.css";
 import { AboutUsCardItemData } from "../../utils/Data";
 import { useState } from 'react';
-const AboutUs = () => {
-  const [activeCard, setActiveCard] = useState(2);
+const Aboutus = () => {
+  const [activeCard, setActiveCard] = useState(0);
   const AboutUsCard = ({ id, imgURL, heading, desc }) => {
     return (<div
-      onClick={() => setActiveCard(id)}
-      className="handover-shadow-div p-4 d-flex flex-column 
+      // onClick={() => setActiveCard(id)}
+      className="handover-shadow-div details3 p-4 d-flex flex-column 
           align-items-center 
           justify-content-center"
       style={{
@@ -34,8 +34,8 @@ const AboutUs = () => {
           top: "10%",
           left: "10%"
         }}>
-          <h1 className='fw-bold'>About</h1>
-          <h1 className='fw-bold' style={{ color: "#F6911E" }}>Handover</h1>
+          <h1 className='fw-bold'>Handover</h1>
+          <h1 className='fw-bold' style={{ color: "#F6911E" }}>Your Delivery Partner</h1>
         </div>
         <div style={{ width: "100%" }}>
           <img src="./aboutus-banner.png" alt="About us banner" width="100%" />
@@ -47,7 +47,7 @@ const AboutUs = () => {
           <div className='col-md-3 d-flex flex-column flex-wrap gap-2 justify-content-center '>
             <h4 className='fw-bold'>About Us</h4>
             <p className='m-0 p-0' style={{ fontWeight: "300" }}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Handover is a low-cost, safe and reliable hyperlocal delivery service provider to businesses across 35 cities of India. It has expanded its logistics fleet by adding trucks, electric vehicles and 3-wheelers, in addition to 2-wheelers for delivery services. Backed by Kutumbh Care Group of Companies, Handover offers impressive last-mile logistics services to food, grocery, bakery, FMCG, pharmacy and heavy goods businesses, etc. It deploys trained staff to pick up and deliver orders to the destination.It all starts with businesses placing orders with Handover for delivery services. Once they place an order, we will send it to a delivery partner located near the place of order creation. The delivery partner will visit shops, restaurants, retail stores, etc. to pick up orders and deliver them to the customers.The process sounds too common! Then why only Handover? B’coz it has revived the interactions between businesses and customers that have taken the backseat now. E-commerce players have left their retail partners behind by interacting with the end users. This is where Handover makes a difference by allowing businesses to interact with users. On the Handover Business App, businesses can click on the ‘Call Customer’ icon to speak to their customers. They can even speak to Handover’s delivery partners by clicking on the ‘Call Rider’ icon. A clear and open communication is what we ensure.
             </p>
           </div>
           <div className='col-md-9 d-flex flex-wrap gap-2 justify-content-evenly' >{
@@ -119,4 +119,4 @@ const AboutUs = () => {
     </section>)
 }
 
-export default AboutUs;
+export default Aboutus;

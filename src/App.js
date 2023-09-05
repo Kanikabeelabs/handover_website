@@ -4,8 +4,6 @@ import Retailer from "./Pages/Retailer";
 import DeliveryPartners from "./Pages/DeliveryPartners";
 import DeliveryFee from "./Pages/DeliveryFee/DeliveryFee";
 import DeliveryFeeForm from "./Pages/DeliveryFeeForm/DeliveryFeeForm";
-
-import Blogs from "./Pages/Blogs/Blogs";
 import Aboutus from "./Pages/Aboutus/Aboutus";
 import "./global.css";
 
