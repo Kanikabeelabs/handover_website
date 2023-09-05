@@ -29,7 +29,7 @@ const Retailer = () =>{
             
         }
         try {
-            let response = await postRequest("/api/v1/contactus", formData);
+            let response = await postRequest("http://3.108.127.83:3001/api/v1/contactus", formData);
             alert("You have successfully submitted the form");
             resetForm();
         } catch (err) {

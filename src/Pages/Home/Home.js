@@ -28,7 +28,7 @@ const Home = () => {
             
         }
         try {
-            let response = await postRequest("/api/v1/contactus", formData);
+            let response = await postRequest("http://3.108.127.83:3001/api/v1/contactus", formData);
             alert("You have successfully submitted the form");
             resetForm();
         } catch (err) {
@@ -185,6 +185,16 @@ const Home = () => {
 
                             </div>
                         </div>
+
+                        <div className='main1'>
+                            <div className='div1'>Lorem ipsum is placeholder text commonly used in the<br /> graphic, print, and publishing industries for previewing<br /> layouts and visual mockups.</div>
+                            <div className='div2'>Download the Handover Mobile App For Free</div>
+                            <img className='imgee' src='./imgee.png'></img>
+                            <img className='logoo1' src='./logoo1.png'></img>
+                        </div>
+
+
+                        
 
                     </Container>
                 </div>

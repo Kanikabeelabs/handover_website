@@ -65,8 +65,8 @@ const DeliveryPartners = () =>{
                     <Container fluid  className="d-flex justify-content-center p-0"   
                         style={{background:"#0d6efd",minHeight:"500px",position:"relative"}}>
                         <div className="contact-us-form-div" style={{position:"absolute",top:"100px"}} >
-                        <h1 className='fw-bold' style={{color:"#ffffff"}}>Get In <span style={{color:'#F6911E'}}>Touch</span></h1>
-                        <p style={{width:"300px",color:"#ffffff"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <h1 className='fw-bold' style={{color:"#ffffff"}}>Every Mile <span style={{color:'#F6911E'}}>Earns You!</span></h1>
+                        <p style={{width:"300px",color:"#ffffff"}}>Maximise your earnings by choosing multiple locations for order pick-ups. It will help you earn more.</p>
                         <div className="handover-shadow-div p-3 d-flex  flex-wrap">
                             <div className='col-md-5 col-12 d-flex '>
                                 <img src="./contact_us.png" alt="ContactUs" width="100%" />
