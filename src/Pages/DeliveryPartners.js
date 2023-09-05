@@ -37,8 +37,6 @@ const DeliveryPartners = () => {
         } catch (err) {
             console.log(err)
         }
-
-
     }
 
     const handleCancel = (resetForm) => {
