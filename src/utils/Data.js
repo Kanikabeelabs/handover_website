@@ -3,7 +3,7 @@ export const HeaderMenu = [
     { id: 2, menu_name: "RETAILER", link_url: "/retailer" },
     { id: 3, menu_name: "DELIVERY PARTNERS", link_url: "/delivery-partner" },
     { id: 4, menu_name: "ABOUT US", link_url: "/about-us" },
-    { id: 5, menu_name: "BLOGS", link_url: "" }
+    { id: 5, menu_name: "BLOGS", link_url: "/blogs" }
 ]
 export const HomePageSection2 = [
     {
@@ -61,80 +61,92 @@ export const AboutUsCardItemData = [
 ]
 
 export const RetailersData = [
-    {    id:1,
-        img_url:"./delivery_partner_1.png",
-        heading:"आपके Customer रहेंगे हमारी On-time Delivery से खुश",
-        description:"Handover के Delivery Partners हैं Time के पक्के। वह आएंगे आपकी दुकान पर, सामान उठाएंगे और पंहुचा देंगे उसे आपके Customers के पास Time पर। On-time Delivery से आपके Customers रहेंगे आपसे खुश।",
-        link_url:""
+    {
+        id: 1,
+        img_url: "./delivery_partner_1.png",
+        heading: "आपके Customer रहेंगे हमारी On-time Delivery से खुश",
+        description: "Handover के Delivery Partners हैं Time के पक्के। वह आएंगे आपकी दुकान पर, सामान उठाएंगे और पंहुचा देंगे उसे आपके Customers के पास Time पर। On-time Delivery से आपके Customers रहेंगे आपसे खुश।",
+        link_url: ""
     },
-    {   id:2,
-        img_url:"./delivery_partner_2.png",
-        heading:"फिजूल Delivery खर्चों पर लगाए BREAK",
-        description:"भले ही आप अपनी मुस्कुराहट से अपने दर्द को छिपा रहे हो, लेकिन हम जानते हैं आप को कुछ दिक्कतें तो हैं। आपकी Salary वाली Delivery Force आप पर बोझ बन रही हैं। Delivery Time पर हो ना हो, Time पर Salary ज़रूर ले रहे हैं। Handover दे रहा हैं आपको Delivery Force सिर्फ Delivery Basis पर। इससे आप फिजूल खर्चों से बच सकेंगे।",
-        link_url:""
+    {
+        id: 2,
+        img_url: "./delivery_partner_2.png",
+        heading: "फिजूल Delivery खर्चों पर लगाए BREAK",
+        description: "भले ही आप अपनी मुस्कुराहट से अपने दर्द को छिपा रहे हो, लेकिन हम जानते हैं आप को कुछ दिक्कतें तो हैं। आपकी Salary वाली Delivery Force आप पर बोझ बन रही हैं। Delivery Time पर हो ना हो, Time पर Salary ज़रूर ले रहे हैं। Handover दे रहा हैं आपको Delivery Force सिर्फ Delivery Basis पर। इससे आप फिजूल खर्चों से बच सकेंगे।",
+        link_url: ""
     },
-    {   id:3,
-        img_url:"./delivery_partner_3.png",
-        heading:"हम करेंगे Delivery, आप बढ़ाए व्यापार",
-        description:"Delivery हम करेंगे On Time, देंगे आपको पल पल की Delivery Updates आपके दिए गए Mobile Number पर। इससे आप अपना पूरा  ध्यान व्यापार को बढ़ाने में लगा सकेंगे।।",
-        link_url:""
+    {
+        id: 3,
+        img_url: "./delivery_partner_3.png",
+        heading: "हम करेंगे Delivery, आप बढ़ाए व्यापार",
+        description: "Delivery हम करेंगे On Time, देंगे आपको पल पल की Delivery Updates आपके दिए गए Mobile Number पर। इससे आप अपना पूरा  ध्यान व्यापार को बढ़ाने में लगा सकेंगे।।",
+        link_url: ""
     },
-    {   id:4,
-        img_url:"./delivery_partner_4.png",
-        heading:"ज़्यादा से ज़्यादा Customers को आप कर पाएंगे Entertain",
-        description:"क्योंकि हमारे Delivery Partners हैं चप्पे चप्पे पर, आप अपनी Reach को काफी ज़्यादा बढ़ा सकते हैं हम से जुड़ कर। ज़्यादा Customers मतलब ज़्यादा Business।।",
-        link_url:""
+    {
+        id: 4,
+        img_url: "./delivery_partner_4.png",
+        heading: "ज़्यादा से ज़्यादा Customers को आप कर पाएंगे Entertain",
+        description: "क्योंकि हमारे Delivery Partners हैं चप्पे चप्पे पर, आप अपनी Reach को काफी ज़्यादा बढ़ा सकते हैं हम से जुड़ कर। ज़्यादा Customers मतलब ज़्यादा Business।।",
+        link_url: ""
     },
-    {   id:5,
-        img_url:"./delivery_partner_5.png",
-        heading:"हमारी Delivery Workforce है तैयार",
-        description:"आप हैं हमारे लिए ख़ास। आपको कोई दिक्कतें ना हो इसलिए हमने आपके लिए  Delivery Workforce तैयार तैयार रखी हैं।",
-        link_url:""
+    {
+        id: 5,
+        img_url: "./delivery_partner_5.png",
+        heading: "हमारी Delivery Workforce है तैयार",
+        description: "आप हैं हमारे लिए ख़ास। आपको कोई दिक्कतें ना हो इसलिए हमने आपके लिए  Delivery Workforce तैयार तैयार रखी हैं।",
+        link_url: ""
     },
-    {   id:6,
-        img_url:"./delivery_partner_6.png",
-        heading:"Delivery Service जल्द ही Start हो जाएगा",
-        description:"Handover के साथ आप तुरंत अपने Customers को Deliver कर पाएंगे। आप Handover App या हमारे Website पर आकर Register कर सकते हैं। Registration करने के लिए आपको अपना नाम, Mobile Number, Email ID Mention करना होगा Form पर।  Once Registration Done, Delivery is On!",
-        link_url:""
+    {
+        id: 6,
+        img_url: "./delivery_partner_6.png",
+        heading: "Delivery Service जल्द ही Start हो जाएगा",
+        description: "Handover के साथ आप तुरंत अपने Customers को Deliver कर पाएंगे। आप Handover App या हमारे Website पर आकर Register कर सकते हैं। Registration करने के लिए आपको अपना नाम, Mobile Number, Email ID Mention करना होगा Form पर।  Once Registration Done, Delivery is On!",
+        link_url: ""
     }
 ]
 
 
 export const DeliveryPartnersData = [
-    {    id:1,
-        img_url:"./delivery_partner_1.png",
-        heading:"अच्छी कमाई करने का मौका",
-        description:"डेढ़ सारे Orders से आपके पास कमाने के ज़्यादा मौके होंगे। जितनी Delivery उतनी कमाई। आप खुद के Boss हैं",
-        link_url:""
+    {
+        id: 1,
+        img_url: "./delivery_partner_1.png",
+        heading: "अच्छी कमाई करने का मौका",
+        description: "डेढ़ सारे Orders से आपके पास कमाने के ज़्यादा मौके होंगे। जितनी Delivery उतनी कमाई। आप खुद के Boss हैं",
+        link_url: ""
     },
-    {   id:2,
-        img_url:"./delivery_partner_2.png",
-        heading:"इस Freedom से आप बेहतर Delivery Performance दे पाएंगे",
-        description:"आपका Delivery सफर रहने वाला हैं 100% Interesting आप बीच बीच में Reels और Videos का भी लुत्फ़ उठा सकते हैं. मतलब काम और Entertainment साथ साथ।",
-        link_url:""
+    {
+        id: 2,
+        img_url: "./delivery_partner_2.png",
+        heading: "इस Freedom से आप बेहतर Delivery Performance दे पाएंगे",
+        description: "आपका Delivery सफर रहने वाला हैं 100% Interesting आप बीच बीच में Reels और Videos का भी लुत्फ़ उठा सकते हैं. मतलब काम और Entertainment साथ साथ।",
+        link_url: ""
     },
-    {   id:3,
-        img_url:"./delivery_partner_3.png",
-        heading:"Delivery होगी City के अंदर ही",
-        description:"हमे आपका ख्याल हैं। इसलिए हम आपको आपके शहर के ही Delivery Orders देंगे।",
-        link_url:""
+    {
+        id: 3,
+        img_url: "./delivery_partner_3.png",
+        heading: "Delivery होगी City के अंदर ही",
+        description: "हमे आपका ख्याल हैं। इसलिए हम आपको आपके शहर के ही Delivery Orders देंगे।",
+        link_url: ""
     },
-    {   id:4,
-        img_url:"./delivery_partner_4.png",
-        heading:"आप पा सकते हैं अच्छे Customer Rating",
-        description:"अच्छी Delivery Service देकर आप पा सकते हैं अच्छे Customers Rating जो आपके Career के लिए होगा फायदेमंद।",
-        link_url:""
+    {
+        id: 4,
+        img_url: "./delivery_partner_4.png",
+        heading: "आप पा सकते हैं अच्छे Customer Rating",
+        description: "अच्छी Delivery Service देकर आप पा सकते हैं अच्छे Customers Rating जो आपके Career के लिए होगा फायदेमंद।",
+        link_url: ""
     },
-    {   id:5,
-        img_url:"./delivery_partner_5.png",
-        heading:"आप Family Life का भी लुत्फ़ उठा सकते हैं",
-        description:"Hyperlocal Delivery से आपके पास Family और Friends दोनों के साथ Quality Time Spend करने का मौका रहेगा।",
-        link_url:""
+    {
+        id: 5,
+        img_url: "./delivery_partner_5.png",
+        heading: "आप Family Life का भी लुत्फ़ उठा सकते हैं",
+        description: "Hyperlocal Delivery से आपके पास Family और Friends दोनों के साथ Quality Time Spend करने का मौका रहेगा।",
+        link_url: ""
     },
-    {   id:6,
-        img_url:"./delivery_partner_6.png",
-        heading:"Delivery Service जल्द ही Start हो जाएगा",
-        description:"Hyperlocal Delivery से आपके पास Family और Friends दोनों के साथ Quality Time Spend करने का मौका रहेगा।",
-        link_url:""
+    {
+        id: 6,
+        img_url: "./delivery_partner_6.png",
+        heading: "Delivery Service जल्द ही Start हो जाएगा",
+        description: "Hyperlocal Delivery से आपके पास Family और Friends दोनों के साथ Quality Time Spend करने का मौका रहेगा।",
+        link_url: ""
     }
 ]

@@ -42,7 +42,7 @@ const Aboutus = () => {
         </div>
       </Container>
       {/* Second Section */}
-      <Container className="p-0">
+      <Container className="p-3">
         <div className='row mt-5 mb-5'>
           <div className='col-md-3 d-flex flex-column flex-wrap gap-2 justify-content-center '>
             <h4 className='fw-bold'>About Us</h4>
