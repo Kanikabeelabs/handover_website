@@ -6,7 +6,7 @@ import DeliveryFee from "./Pages/DeliveryFee/DeliveryFee";
 import DeliveryFeeForm from "./Pages/DeliveryFeeForm/DeliveryFeeForm";
 import "./global.css";
 import Aboutus from "./Pages/Aboutus/Aboutus";
-
+import Blogs from "./Pages/Blogs/Blogs";
 function App() {
   return (
     <BrowserRouter>
@@ -17,7 +17,7 @@ function App() {
         <Route path="/delivery-fee" element={<DeliveryFee />} />
         <Route path="/delivery-fee-form" element={<DeliveryFeeForm />} />
         <Route path="/about-us" element={<Aboutus />} />
-
+        <Route path="/blogs" element={<Blogs />} />
       </Routes>
     </BrowserRouter>
   );

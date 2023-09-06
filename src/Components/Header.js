@@ -18,6 +18,11 @@ const Header = ({ page_name }) => {
                     )
                 })}
             </ul>
+            
+            <a href="">
+            <img src="./whatsapp.png"></img>
+            </a>
+               
             {(page_name === "home" || page_name === "about-us" || 
             page_name === "delivery_partner" || page_name === "retailer") && <Button className='handover-button'>EMPLOYEE LOGIN</Button>}
             {(page_name === "delivery_fee" || page_name === "delivery_fee_form") && <Button className='rounded-pill handover-button' >Cities We Serve</Button>}

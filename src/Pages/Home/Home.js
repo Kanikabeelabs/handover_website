@@ -52,14 +52,16 @@ const Home = () => {
                     {/*  ------------------------First Section ---------------------------------------*/}
                     <Container style={{ marginTop: "100px", maxWidth: '1600px' ,postion:"relative"}} >
                         
-                        <p style={{ color: "#F6911E" }} className="handover-main-heading">One-stop Solution</p>
-                        <p className="handover-main-heading">for All Your</p>
-                        <p className="handover-main-heading">Delivery Needs</p>
+                        <p  className="handover-main-heading">Delivery Tension?</p>
+                        <div className="handover-main-heading-2 d-flex gap-2">
+                            <p style={{ color: "#F6911E" }} className="handover-main-heading  ">#Handover</p>
+                            <p className="handover-main-heading">Karo</p>
+                        </div>
                         <p style={{
                             color: "#3C3C3C",
                             maxWidth: "400px",
                             fontWeight: "300"
-                        }}> Be it food, grocery, cake or any other stuff, Handover delivers all on time!</p>
+                        }}> All delivery solutions in one place.</p>
                         <div className='search-box-section d-flex align-items-center flex-wrap'>
                             <div className='search-box p-2' >
                                 <img src="./location.png" alt="locationLogo" />
@@ -76,21 +78,21 @@ const Home = () => {
                             <iframe width="250" height="200" title="video2" src="https://www.youtube.com/embed/IO79wiKGTEc" frameBorder="0" allowFullScreen></iframe>
                         </div>
 
-                        <div className='handover-shadow-div p-2 d-none d-md-block' 
+                        {/* <div className='handover-shadow-div p-2 d-none d-md-block' 
                             style={{width:"200px",position:"absolute",top:"100px",right:"150px"}}> 
                             <div className='d-flex gap-2 align-items-center'><img src="./object_icon.png" alt="Object Icon" /> 
                             <h5>On-time Delivery</h5>
                             </div>
                             <p className='m-0 p-0'>Ensured via advanced route optimisation software</p>
-                        </div>
+                        </div> */}
 
-                        <div className='handover-shadow-div p-2 d-none d-md-block' style={{width:"200px",
+                        {/* <div className='handover-shadow-div p-2 d-none d-md-block' style={{width:"200px",
                             position:"absolute",top:"400px",left:"870px"}}> 
                             <div className='d-flex gap-2 align-items-center'><img src="./location_icon.png" alt="Location Icon" /> 
                             <h5>Location Detection</h5>
                             </div>
                             <p className='m-0 p-0'>Know where the shipment is at different points of time</p>
-                        </div>
+                        </div> */}
                     </Container>
                 </Container>
 
@@ -303,7 +305,7 @@ const Home = () => {
 
                                         <div className='d-flex justify-content-center gap-4'>
                                             <Button variant="secondary" className='cancel-button' type="button" onClick={()=>handleCancel(resetForm)}>Cancel</Button>
-                                            <Button variant="primary" type="submit" style={{width:"50%"}}>Submit</Button>
+                                            <Button variant="primary" type="submit" style={{width:"50%"}}>Send Message</Button>
                                         </div>
                                     </Form>
                                 )}

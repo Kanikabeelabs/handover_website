@@ -67,8 +67,8 @@ const DeliveryPartners = () =>{
                         <h1 className='fw-bold' style={{color:"#ffffff"}}>Every Mile Earns <span style={{color:'#F6911E'}}>You!</span></h1>
                         <p style={{width:"300px",color:"#ffffff"}}>Maximise your earnings by choosing multiple locations for order pick-ups. It will help you earn more.</p>
                         <div className="handover-shadow-div p-3 d-flex  flex-wrap">
-                            <div className='col-md-5 col-12 d-flex '>
-                                <img src="./contact_us.png" alt="ContactUs" width="100%" />
+                            <div style={{height:"300px"}} className='col-md-5 col-12 d-flex mt-5'>
+                                <img src="./delivery_partner_logo.png" alt="ContactUs" width="100%" />
                             </div>
                             <div className='col-md-7 col-12 d-flex flex-column p-3'>
                                         <h5 className="mb-4">GET IN TOUCH</h5>
@@ -80,7 +80,7 @@ const DeliveryPartners = () =>{
                                           {({ errors,values, setFieldValue,resetForm }) => (
                                                 <Form className=" d-flex flex-column  gap-3">
                                                     <div className="row">
-                                                    <div className="d-flex flex-column col-md-6 col-12">
+                                                    {/* <div className="d-flex flex-column col-md-6 col-12">
                                                         <label htmlFor="option">Choose a option</label>
                                                         <select name="option" 
                                                             id="option" className='custom-form-input mt-2' 
@@ -94,35 +94,59 @@ const DeliveryPartners = () =>{
                                                         </select>
                                                         {errors.option && <div className="form-error">{errors.option}</div>}
 
-                                                    </div>
+                                                    </div> */}
 
                                                         <div className="d-flex flex-column col-md-6 col-12">
-                                                            <label className="form-label" htmlFor="user_name"> User Name</label>
-                                                            <Field id="user_name"
-                                                                type="text" placeholder="Enter User Name"
-                                                                name="user_name"
+                                                        <label className="form-label" htmlFor="user_name">Name</label>
+                                                        <Field id="user_name"
+                                                            type="text" placeholder="Enter User Name"
+                                                            name="user_name"
+                                                            className="custom-form-input" />
+                                                        {errors.user_name && <div className="form-error">{errors.user_name}</div>}
+                                                        </div>
+
+                                                        <div className="d-flex flex-column col-md-6 col-12">
+                                                            <label className="form-label" htmlFor="mobile"> Mobile number</label>
+                                                            <Field id="mobile"
+                                                                type="text" placeholder="Enter Mobile Number"
+                                                                name="mobile"
                                                                 className="custom-form-input" />
-                                                            {errors.user_name && <div className="form-error">{errors.user_name}</div>}
+                                                            {errors.mobile && <div className="form-error">{errors.mobile}</div>}
                                                         </div>
                                                     </div> 
                                                     
                                                     <div className="row">
-                                                        <div className="d-flex flex-column col-md-6 col-12">
+                                                        {/* <div className="d-flex flex-column col-md-6 col-12">
                                                         <label className="form-label" htmlFor="mobile"> Mobile Number</label>
                                                         <Field id="mobile"
                                                             type="text" placeholder="Enter Mobile Number"
                                                             name="mobile"
                                                             className="custom-form-input" />
                                                         {errors.mobile && <div className="form-error">{errors.mobile}</div>}
+                                                        </div> */}
+
+                                                        <div className="d-flex flex-column col-md-6 col-12">
+                                                        <label className="form-label" htmlFor="user_name">City</label>
+                                                        <Field id="user_name"
+                                                            type="text" placeholder="Enter City Name"
+                                                            name="user_name"
+                                                            className="custom-form-input" />
+                                                        {errors.user_name && <div className="form-error">{errors.user_name}</div>}
                                                         </div>
 
                                                         <div className="d-flex flex-column col-md-6 col-12">
-                                                        <label className="form-label" htmlFor="email_address"> Email</label>
-                                                        <Field id="email_address"
-                                                            type="email" placeholder="Enter Email Address"
-                                                            name="email_address"
-                                                            className="custom-form-input" />
-                                                        {errors.email_address && <div className="form-error">{errors.email_address}</div>}
+                                                        <label htmlFor="option">Vehicle</label>
+                                                        <select name="option" 
+                                                            id="option" className='custom-form-input mt-2' 
+                                                            onChange={(event) => setFieldValue("option", event.target.value)}
+                                                            value={values.option}>
+                                                            <option value="">Select vehicle Name</option>
+                                                            <option value="delivery_partner">2-Wheelers</option>
+                                                            <option value="retailer">3-Wheelers</option>
+                                                            <option value="customer">4-Wheelers</option>
+                                                            <option value="other">Other</option>
+                                                        </select>
+                                                        {errors.option && <div className="form-error">{errors.option}</div>}
                                                         </div>
                                                     </div>
 
@@ -138,7 +162,7 @@ const DeliveryPartners = () =>{
 
                                                     <div className='d-flex justify-content-center gap-4'>
                                                         <Button variant="secondary" className='cancel-button' type="button" onClick={()=>handleCancel(resetForm)}>Cancel</Button>
-                                                        <Button variant="primary" type="submit" style={{width:"50%"}}>Submit</Button>
+                                                        <Button variant="primary" type="submit" style={{width:"50%"}}>Register</Button>
                                                     </div>
                                                 </Form>
                                             )}

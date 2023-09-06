@@ -5,7 +5,7 @@ import Footer from '../../Components/Footer';
 
 import React from 'react';
 
-const blogs = () => {
+const Blogs = () => {
   return (
     <section className='Handover_blogpage'>
         <Container fluid>
@@ -73,4 +73,4 @@ const blogs = () => {
   )
 }
 
-export default blogs
+export default Blogs
