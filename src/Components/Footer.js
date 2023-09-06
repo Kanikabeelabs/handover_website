@@ -49,6 +49,23 @@ const Footer = () => {
                         <li><Link to="">FAQ</Link></li>
                     </ul>
                 </div>
+                <div className="d-flex flex-column gap-3 col-md-2" >
+                    <p>Support</p>
+                    <ul className='d-flex flex-column gap-1'>
+                        <div className='div1'>
+                            <img className='imagee1' src="./imagee1.png"></img>
+                            <li><Link to="">handover123@gmail.com</Link></li>
+                        </div>    
+                        <div className='div2'>
+                            <img className='imagee2' src="./imagee2.png"></img>
+                            <li><Link to="">+83  837837897</Link></li>
+                        </div>    
+                        <div className='div3'>
+                                <img className='imagee3' src="./imagee3.png"></img>
+                                <img className='imagee4' src="./imagee4.png"></img>  
+                </div>    
+                    </ul>
+                </div>
             </Container>
         </div>
         <div style={{
