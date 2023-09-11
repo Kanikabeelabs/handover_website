@@ -150,3 +150,31 @@ export const DeliveryPartnersData = [
         link_url: ""
     }
 ]
+
+export const FAQ = [
+    {
+        id: 1,
+        heading: 'Is Handover Special? How?',
+        description: ' Yes, it is! Handover has made the entire delivery system cost-efficient and transparent by reviving interactions between businesses and their customers.'
+    },
+    {
+        id: 2,
+        heading: 'How Can Businesses Register with Handover?',
+        description: 'Businesses can register with Handover on its official website and app.'
+    },
+    {
+        id: 3,
+        heading: 'What is the Registration Process for Businesses with Handover?',
+        description: '<b>On Website</b> <br />Click on the ‘Retailers’ icon<br />Choose ‘Retailer’ from the drop-down<br />Mention your name, email address and mobile number, and click on ‘Send Message’<br />We will verify the details before registering your business for delivery services<br /><br /><b>On App</b><br />Download the Handover Business App from the Google Play Store<br />After giving location permission access and doing mobile number authentication, enter your name, the business name, the type of business, etc.<br />After successful verification of these details, we will get you registered for delivery services.'
+    },
+    {
+        id: 4,
+        heading: 'Do I Need to Recharge the Wallet for Delivery Services?',
+        description: 'Yes! Businesses must recharge their wallets for uninterrupted delivery services. Delivery charges are automatically deducted from the wallet.'
+    },
+    {
+        id: 5,
+        heading: 'How Do I Know My Wallet Recharge Status?',
+        description: ' Visit the ‘Recharge Wallet’ section on the Handover Business App to know the balance left for deliveries. '
+    }
+]
