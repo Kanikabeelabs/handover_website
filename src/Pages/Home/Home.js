@@ -45,8 +45,12 @@ const Home = () => {
         <section className='handover-homepage'> 
             <Container fluid className="p-0" >
                 {/*  ------------------------header ---------------------------------------*/}
-                <Container fluid  style={{ backgroundImage: `url("./main_website.png")`,
-                 backgroundSize: 'cover'}}>
+                <Container fluid 
+                 style={{ 
+                    backgroundImage: `url("./main_website.png")`,
+                 backgroundSize: 'cover',
+                 minHeight:'700px'
+                  }}>
                     <Header page_name="home" />
 
                     {/*  ------------------------First Section ---------------------------------------*/}

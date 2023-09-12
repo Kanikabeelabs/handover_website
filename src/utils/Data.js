@@ -44,19 +44,19 @@ export const AboutUsCardItemData = [
     {
         id: 1, img_url: "./about_us1.png",
         heading: "Our Purpose",
-        desc: "Handover aims to bridge the gaps that exist in the delivery ecosystem. Businesses are doing well but haven’t been able to control their delivery cost. Handover looks to reduce their delivery expenses and allow them to earn more business. With us, businesses can feel free to entertain orders from customers they were denying earlier due to location and other issues. Handover’s hyperlocal delivery partners are ready to deliver at various places in the city.We will continue to impress businesses with our simple, transparent and cost-effective delivery services.We are equally concerned about our delivery partners. After all, our success depends on how efficient and happy they are. We will continue to raise their earnings by allowing them maximum delivery assignments. We may be present in 35 cities of India, currently. But given the momentum and our super energetic team, we will soon commence deliveries in many other cities. We will continue to remove bottlenecks to help businesses flourish."
+        desc: "Businesses are doing well but haven’t been able to control their delivery cost. Handover looks to reduce their delivery expenses and allow them to earn more business. Businesses can deliver stuff to far distant locations in the city with Handover."
     },
     {
         id: 2,
         img_url: "./about_us2.png",
         heading: "Our Vision",
-        desc: "Simple! We want to make all of you (businesses, Handover’s Delivery Partners and the end users) happy with our delivery services. The best part is we are confident of maintaining so with our unwavering commitment, trained delivery staff, smart technology, and much more. We acknowledge that changing times will challenge us. But we will accept challenges, brainstorm and continue to ensure optimum order delivery services."
+        desc: "We want to make businesses, Handover’s Delivery Partners and the end users happy with our delivery services. And we are confident of maintaining so with our unwavering commitment, trained delivery staff, smart technology, and much more."
     },
     {
         id: 3,
         img_url: "./about_us3.png",
         heading: "Our Positioning",
-        desc: "Handover has already gained a significant foothold in India’s logistics space, courtesy of hi-tech delivery management, delivery partners, and its desire to make things better. With a strong presence across 35 cities in India, we have been successfully catering to various logistics demands raised by businesses. Whether it’s about delivering temperature-sensitive products such as food or groceries or fragile products such as furniture, our 360° logistics fleet comprising 2-wheelers, 3-wheelers and trucks ensures the same safely and on time. Getting repeat orders is increasingly becoming a routine for Handover. We would like to thank our technology team and delivery partners for ensuring hassle-free delivery services. Inspired by our success, we look forward to making further inroads in India’s logistics space."
+        desc: "Handover has already gained a significant foothold in India’s logistics space, courtesy of hi-tech delivery management, delivery partners, etc. With a strong presence across 35 cities in India, we have been successfully catering to various logistics demands raised by businesses."
     }
 ]
 

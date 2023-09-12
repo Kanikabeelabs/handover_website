@@ -47,8 +47,8 @@ const Aboutus = () => {
           <div className='col-md-3 d-flex flex-column flex-wrap gap-2 justify-content-center '>
             <h4 className='fw-bold'>About Us</h4>
             <p className='m-0 p-0' style={{ fontWeight: "300" }}>
-            Handover is a low-cost, safe and reliable hyperlocal delivery service provider to businesses across 35 cities of India. It has expanded its logistics fleet by adding trucks, electric vehicles and 3-wheelers, in addition to 2-wheelers for delivery services. Backed by Kutumbh Care Group of Companies, Handover offers impressive last-mile logistics services to food, grocery, bakery, FMCG, pharmacy and heavy goods businesses, etc. It deploys trained staff to pick up and deliver orders to the destination.It all starts with businesses placing orders with Handover for delivery services. Once they place an order, we will send it to a delivery partner located near the place of order creation. The delivery partner will visit shops, restaurants, retail stores, etc. to pick up orders and deliver them to the customers.The process sounds too common! Then why only Handover? B’coz it has revived the interactions between businesses and customers that have taken the backseat now. E-commerce players have left their retail partners behind by interacting with the end users. This is where Handover makes a difference by allowing businesses to interact with users. On the Handover Business App, businesses can click on the ‘Call Customer’ icon to speak to their customers. They can even speak to Handover’s delivery partners by clicking on the ‘Call Rider’ icon. A clear and open communication is what we ensure.
-            </p>
+            Handover is a low-cost, safe and reliable delivery service provider to businesses across 35 cities of India. It has 1000+ registered Delivery Partners who deliver products through an extensive logistics fleet comprising trucks, electric vehicles and 3-wheelers.
+             </p>
           </div>
           <div className='col-md-9 d-flex flex-wrap gap-2 justify-content-evenly' >{
             AboutUsCardItemData.map((item) => {

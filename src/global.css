@@ -80,17 +80,17 @@
 
 .details:hover{
     /* background-color: green; */
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     /* opacity: 0.7; */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     /* text-decoration: none; */
     /* border: 2px solid #ff0000; */
     /* transform: rotate(20deg); */
-    /* background: linear-gradient(to bottom, #ff0000, #00ff00); */
+    background: linear-gradient(to bottom, #ff0000, #00ff00);
 }
 
 .details2:hover{
-    background-color: #0d6efd;
+    background-color: #F48120;
 }
 
 .map_div {
@@ -152,6 +152,12 @@
         top:0px;
         margin-bottom: 150px !important;
     }
+    .delivery_container-partner{
+        justify-content: center !important;
+    }
+}
+.delivery_container-partner{
+    justify-content: flex-end ;
 }
 
 .delivery-fee-form {
@@ -178,8 +184,10 @@
 
 .delivery-fee-second-form {
     position: fixed;
-    bottom: 10px;
-    left: 470px;
+    bottom: 0px;
+    left: 200px;
+    background: white;
+    width: 100%;
 }
 
 .cancel-button{

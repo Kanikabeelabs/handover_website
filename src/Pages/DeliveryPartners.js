@@ -61,16 +61,17 @@ const DeliveryPartners = () =>{
             <Header page_name="delivery_partner" />
                 {/* First Section */}
                 <Container fluid className="p-0" style={{minHeight:"800px"}}>
-                    <Container fluid  className="d-flex justify-content-center p-0"   
-                        style={{background:"#0d6efd",minHeight:"500px",position:"relative"}}>
-                        <div className="contact-us-form-div" style={{position:"absolute",top:"100px"}} >
+                    <Container fluid  className="d-flex p-5 delivery_container-partner"   
+                        style={{
+                            backgroundImage: `url("./deliverypartner.png")`,
+                            backgroundSize:"cover",
+                            minHeight:"600px",position:"relative"}}>
+                        {/* <div className="contact-us-form-div" style={{position:"absolute",top:"100px"}} >
                         <h1 className='fw-bold' style={{color:"#ffffff"}}>Every Mile Earns <span style={{color:'#F6911E'}}>You!</span></h1>
-                        <p style={{width:"300px",color:"#ffffff"}}>Maximise your earnings by choosing multiple locations for order pick-ups. It will help you earn more.</p>
+                        <p style={{width:"300px",color:"#ffffff"}}>Maximise your earnings by choosing multiple locations for order pick-ups. It will help you earn more.</p> */}
                         <div className="handover-shadow-div p-3 d-flex  flex-wrap">
-                            <div style={{height:"300px"}} className='col-md-5 col-12 d-flex mt-5'>
-                                <img src="./delivery_partner_logo.png" alt="ContactUs" width="100%" />
-                            </div>
-                            <div className='col-md-7 col-12 d-flex flex-column p-3'>
+                           
+                            <div className='col-12 d-flex flex-column p-3'>
                                         <h5 className="mb-4">GET IN TOUCH</h5>
                                         <Formik
                                           initialValues={initialValues}
@@ -168,7 +169,6 @@ const DeliveryPartners = () =>{
                                             )}
                                         </Formik>
                             </div>
-                        </div>
                         </div>
                     </Container>
                     
