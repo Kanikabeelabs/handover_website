@@ -178,3 +178,38 @@ export const FAQ = [
         description: ' Visit the ‘Recharge Wallet’ section on the Handover Business App to know the balance left for deliveries. '
     }
 ]
+
+export const Location = [
+    { id: 1, location_name: "patna", link_url: "./patna.png" },
+    { id: 2, location_name: "muzaffarpur", link_url: "./muzaffarpur.png" },
+    { id: 3, location_name: "chandigarh", link_url: "./chandigarh.png" },
+    { id: 4, location_name: "ghaziabad", link_url: "./ghaziabad.png" },
+    { id: 5, location_name: "delhi-ncr", link_url: "./delhi-ncr.png" },
+    { id: 6, location_name: "karnal", link_url: "./karnal.png" },
+    { id: 7, location_name: "ranchi", link_url: "./ranchi.png" },
+    { id: 8, location_name: "jamshedpur", link_url: "./jamshedpur.png" },
+    { id: 9, location_name: "bangalore", link_url: "./bangalore.png" },
+    { id: 10, location_name: "hubli", link_url: "./hubli.png" },
+    { id: 11, location_name: "indore", link_url: "./indore.png" },
+    { id: 12, location_name: "ujjain", link_url: "./ujjain.png" },
+    { id: 13, location_name: "bhopal", link_url: "./bhopal.png" },
+    { id: 14, location_name: "thane", link_url: "./thane.png" },
+    { id: 15, location_name: "mumbai", link_url: "./mumbai.png" },
+    { id: 16, location_name: "navi-mumbai", link_url: "./navi-mumbai.png" },
+    { id: 17, location_name: "nashik", link_url: "./nashik.png" },
+    { id: 18, location_name: "aurangabad", link_url: "./aurangabad.png" },
+    { id: 19, location_name: "pune", link_url: "./pune.png" },
+    { id: 20, location_name: "cuttack", link_url: "./cuttack.png" },
+    { id: 21, location_name: "puri", link_url: "./puri.png" },
+    { id: 22, location_name: "ludhiana", link_url: "./ludhiana.png" },
+    { id: 23, location_name: "jaipur", link_url: "./jaipur.png" },
+    { id: 24, location_name: "hyderabad", link_url: "./hyderabad.png" },
+    { id: 25, location_name: "lucknow", link_url: "./lucknow.png" },
+    { id: 26, location_name: "kanpur", link_url: "./kanpur.png" },
+    { id: 27, location_name: "allahabad", link_url: "./allahabad.png" },
+    { id: 28, location_name: "varanasi", link_url: "./varanasi.png" },
+    { id: 29, location_name: "midnapore", link_url: "./midnapore.png" },
+    { id: 30, location_name: "kharagpur", link_url: "/kharagpur.png" },
+    { id: 31, location_name: "noida", link_url: "./noida.png" },
+
+]
