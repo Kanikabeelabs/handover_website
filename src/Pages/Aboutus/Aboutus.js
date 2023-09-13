@@ -5,8 +5,29 @@ import NoticeSection from '../../Components/NoticeSection';
 import LocationItem from '../../Components/LocationItem';
 import "./Aboutus.css";
 import { AboutUsCardItemData } from "../../utils/Data";
-
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { Location } from "../../utils/Data";
 const Aboutus = () => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
   // const [activeCard, setActiveCard] = useState(0);
   const AboutUsCard = ({ id, imgURL, heading, desc }) => {
     return (<div
@@ -42,7 +63,7 @@ const Aboutus = () => {
         </div>
       </Container>
       {/* Second Section */}
-      <Container className="p-0">
+      <Container className="p-3">
         <div className='row mt-5 mb-5'>
           <div className='col-md-3 d-flex flex-column flex-wrap gap-2 justify-content-center '>
             <h4 className='fw-bold'>About Us</h4>
@@ -103,13 +124,16 @@ const Aboutus = () => {
       </Container>
 
       {/* Location Section */}
-      <Container fluid className="p-0 d-flex flex-column align-items-center justify-content-center">
-        <h3 className='mt-4 mb-4 fw-bold'>Our Offices</h3>
-        <div className='d-flex flex-row flex-wrap gap-1 align-items-center justify-content-center'>
-          {[1, 2, 3, 4, 5].map((item, index) => {
-            return (<LocationItem key={index} />)
-          })}
-        </div>
+      <Container fluid >
+        <h3 className='mt-4 mb-4 fw-bold' style={{ textAlign: 'center' }}>Our Location</h3>
+        <Container>
+          <Carousel responsive={responsive}>
+            {Location.map((item, index) => {
+              return (<LocationItem key={index} item={item} />)
+            })}
+          </Carousel>
+        </Container>
+
       </Container>
 
       {/* News Section */}
