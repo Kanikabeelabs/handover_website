@@ -61,16 +61,19 @@ const Retailer = () =>{
             <Header page_name="retailer" />
                 {/* First Section */}
                 <Container fluid className="p-0" style={{minHeight:"800px"}}>
-                    <Container fluid  className="d-flex justify-content-center p-0"   
-                        style={{background:"#0d6efd",minHeight:"500px",position:"relative"}}>
-                        <div className="contact-us-form-div" style={{position:"absolute",top:"100px"}} >
+                    <Container fluid  className="d-flex p-5 business_container-owner"   
+                    style={{
+                        backgroundImage: 'url("./businessowner.png")',
+                        backgroundSize: "cover",
+                        minHeight:"600px",position:"relative"}}>
+                        {/* <div className="contact-us-form-div" style={{position:"absolute",top:"100px"}} >
                         <h1 className='fw-bold' style={{color:"#ffffff"}}>More Orders, <span style={{color:'#F6911E'}}>More Business Await You!</span></h1>
-                        <p style={{width:"300px",color:"#ffffff"}}>Our impressive delivery services help businesses get orders from both new & existing customers. Now, it’s your turn to gain a healthy business through us.</p>
+                        <p style={{width:"300px",color:"#ffffff"}}>Our impressive delivery services help businesses get orders from both new & existing customers. Now, it’s your turn to gain a healthy business through us.</p> */}
                         <div className="handover-shadow-div p-3 d-flex  flex-wrap">
-                            <div className='col-md-5 col-12 d-flex '>
+                            {/* <div className='col-md-5 col-12 d-flex '>
                                 <img src="./contact_us.png" alt="ContactUs" width="100%" />
-                            </div>
-                            <div className='col-md-7 col-12 d-flex flex-column p-3'>
+                            </div> */}
+                            <div className='col-12 d-flex flex-column p-3'>
                                         <h5 className="mb-4">GET IN TOUCH</h5>
                                         <Formik
                                             initialValues={initialValues}
@@ -145,7 +148,7 @@ const Retailer = () =>{
                                         </Formik>
                             </div>
                         </div>
-                        </div>
+                        {/* </div> */}
                     </Container>
                     
                 </Container>
@@ -195,7 +198,7 @@ const Retailer = () =>{
                      </div>
                      <div className='align-self-start text-start' style={{marginLeft:"100px"}}> 
                         <p style={{fontSize:"27px",color:"#4F4F4F"}}> Find Opportunties for you</p>
-                        <Button variant="primary">Explore Opportunties</Button>
+                        <Button variant="primary">Explore Carrers</Button>
                     </div>
                     <div className='handover-shadow-div p-2 d-none d-md-block' 
                     style={{width:"350px",position:"absolute",bottom:"30px",right:"100px"}}>

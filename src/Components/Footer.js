@@ -25,7 +25,7 @@ const Footer = () => {
                         <li><a href="https://www.instagram.com/handover.in/"><img src="./insta.png" alt="Instagram"></img></a></li>
                     </ul>
                 </div>
-                <div className="d-flex flex-column gap-3 col-md-2" >
+                <div className="d-flex flex-column gap-3 col-md-2" style={{ marginTop: '22px' }}>
                     <p>Customer Service</p>
                     <ul className='d-flex flex-column gap-1'>
                         <li><Link to="">Home</Link></li>
@@ -34,14 +34,14 @@ const Footer = () => {
                         <li><Link to="">Contact US</Link></li>
                     </ul>
                 </div>
-                <div className="d-flex flex-column gap-3 col-md-2" >
+                <div className="d-flex flex-column gap-3 col-md-2"  style={{ marginTop: '22px' }}>
                     <p>Customer Service</p>
                     <ul className='d-flex flex-column gap-1'>
                         <li><Link to="">Food delivery</Link></li>
                         <li><Link to="">Parcel delivery</Link></li>
                     </ul>
                 </div>
-                <div className="d-flex flex-column gap-3 col-md-2" >
+                <div className="d-flex flex-column gap-3 col-md-2"  style={{ marginTop: '22px' }}>
                     <p>Links</p>
                     <ul className='d-flex flex-column gap-1'>
                         <li><Link to="">Pricing</Link></li>
@@ -49,7 +49,7 @@ const Footer = () => {
                         <li><Link to="">FAQ</Link></li>
                     </ul>
                 </div>
-                <div className="d-flex flex-column gap-3 col-md-2" >
+                <div className="d-flex flex-column gap-3 col-md-2"  style={{ marginTop: '22px' }}>
                     <p>Support</p>
                     <ul className='d-flex flex-column gap-1'>
                         <div className='div1'>

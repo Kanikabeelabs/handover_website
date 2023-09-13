@@ -194,15 +194,21 @@
 .div1{
     display: flex;
     margin-top: 10px;
+    gap: 10px;
 }
 
 .div2{
     display: flex;
     margin-top: 10px;
+    gap: 10px;
 }
 
 .div3{
     display: flex;
     margin-top: 10px;
+    gap: 10px;
 }
 
+.business_container-owner{
+    justify-content: flex-end;
+}

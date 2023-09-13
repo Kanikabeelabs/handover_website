@@ -227,7 +227,7 @@ const Home = () => {
                 }}>
                     <img src="./mobile_phone.png" alt="Mobile Phone" />
                 </div>
-               </Container>
+                </Container>
 
                 {/*  ------------------------News Section ---------------------------------------*/}
                 <NoticeSection />
