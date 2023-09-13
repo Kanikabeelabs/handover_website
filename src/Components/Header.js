@@ -1,12 +1,12 @@
-import { Button } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { HeaderMenu } from "../utils/Data";
 import { getCurrentPage } from "../utils/functions";
 const Header = ({ page_name }) => {
     return (
-        <div className='header menu_item p-2 d-flex flex-wrap align-items-center justify-content-around gap-2' >
-            <div className="col-md-3">
-                <Link to="/">
+        <Navbar expand="lg" >
+            <Container fluid className="website-header">
+                <Navbar.Brand as={Link} to="/" style={{ marginRight: "0px" }}>
                     <img src="./handover_logo.png" alt="HandOverLogo" />
                 </Link>
             </div>

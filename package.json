@@ -11,6 +11,7 @@
     "dotenv": "^16.3.1",
     "formik": "^2.4.3",
     "google-map-react": "^2.2.1",
+    "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
@@ -43,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "csso": "^5.0.5"
   }
 }
