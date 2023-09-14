@@ -224,4 +224,8 @@
     .website-header {
         padding: 10px !important;
     }
+
+    .mapDiv {
+        display: none;
+    }
 }
