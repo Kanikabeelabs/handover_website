@@ -173,7 +173,7 @@ const Retailer = () => {
                 </Container>
 
             </Container>
-            {/* Second Section */}
+            {/* Second Section
             <div className='d-flex py-3 flex-column align-items-center justify-content-center'>
                 <h1 style={{ textAlign: 'center', padding: "10px" }}>Handover से जुड़ने के फायदें </h1>
                 <div className='row' style={{ width: "100%" }}>

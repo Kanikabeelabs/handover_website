@@ -2,12 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<<<<<<< HEAD
-## Available Scripts Utsav
-=======
-## Available Scripts kanhaiya
->>>>>>> dcc67d3aa9d438eac093b7562cd572e87e790d13
-
 In the project directory, you can run:
 
 ### `npm start`
