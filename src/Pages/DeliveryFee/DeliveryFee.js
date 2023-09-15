@@ -140,7 +140,7 @@ const DeliveryFee = () => {
                             </Popup>
                         </Marker>
                     </MapContainer> */}
-                        <img src="./background_map.png" alt="Map" width="100%" height="796px" />
+                        <img src="./background_map.PNG" alt="Map" width="100%" height="796px" />
                         {/* <GoogleMapReact
                             bootstrapURLKeys={{ key: '' }} // Replace with your API key
                             defaultCenter={{
