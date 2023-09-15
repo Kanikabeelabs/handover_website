@@ -1,216 +1,207 @@
 * {
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Poppins', sans-serif;
-
+  padding: 0px;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
 }
 
 .header {
-    position: relative;
-    z-index: 1234;
+  position: relative;
+  z-index: 1234;
 }
-<<<<<<< HEAD
-.bg{
-    background-image: url(C:\Users\kanha\OneDrive\Desktop\HandOver\handover_website\public\main_bg.svg);
-    width: 1443.923px;
-    height: 780.273px;
+
+.bg {
+  background-image: url('../public/main_bg.svg');
+  width: 1443.923px;
+  height: 780.273px;
 }
-=======
->>>>>>> 19435d0d4f381a2fe8c380d44ecffe639a8973b5
 
-
-
-*/ .dash {
-    position: absolute;
-    top: 44px;
+.dash {
+  position: absolute;
+  top: 44px;
 }
 
 .media {
-    display: flex;
-    gap: 7px;
+  display: flex;
+  gap: 7px;
 }
 
 .handover-button {
-    min-width: 200px;
-    background-color: #F48120 !important;
-    border: none !important;
-    padding: 15px;
+  min-width: 200px;
+  background-color: #f48120 !important;
+  border: none !important;
+  padding: 15px;
 }
 
 .handover-button-type-2 {
-    background-color: #ffffff !important;
-    border: 1px solid rgb(246 246 246) !important;
-    color: #000000 !important;
+  background-color: #ffffff !important;
+  border: 1px solid rgb(246 246 246) !important;
+  color: #000000 !important;
 }
 
 .menu_item ul {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 .menu_item ul li a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 1rem;
-    font-weight: 600;
-
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .handover-main-heading {
-    font-size: 2.8rem;
-    font-weight: 900;
-    padding: 0px;
-    margin: 0px;
+  font-size: 2.8rem;
+  font-weight: 900;
+  padding: 0px;
+  margin: 0px;
 }
 
 .search-box {
-    background: #ffffff;
-    width: fit-content
+  background: #ffffff;
+  width: fit-content;
 }
 
 .handover-shadow-div {
-    box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
-    -webkit-box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
-    -moz-box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
-    background: #ffffff;
-    border-radius: 11px;
-
+  box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
+  -webkit-box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
+  -moz-box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
+  background: #ffffff;
+  border-radius: 11px;
 }
 
-.details:hover{
-    /* background-color: green; */
-    /* transform: scale(1.2); */
-    /* opacity: 0.7; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-    /* text-decoration: none; */
-    /* border: 2px solid #ff0000; */
-    /* transform: rotate(20deg); */
-    background: linear-gradient(to bottom, #ff0000, #00ff00);
+.details:hover {
+  /* background-color: green; */
+  /* transform: scale(1.2); */
+  /* opacity: 0.7; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  /* text-decoration: none; */
+  /* border: 2px solid #ff0000; */
+  /* transform: rotate(20deg); */
+  background: linear-gradient(to bottom, #ff0000, #00ff00);
 }
 
-.details2:hover{
-    background-color: #F48120;
+.details2:hover {
+  background-color: #f48120;
 }
 
 .map_div {
-    -webkit-box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
-    -moz-box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
-    box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
-    background: #0d6efd;
-    width: 360px;
-    padding: 20px;
-    position: relative;
-    color: #ffffff;
-    border-radius: 11px;
-
+  -webkit-box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
+  -moz-box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
+  box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
+  background: #0d6efd;
+  width: 360px;
+  padding: 20px;
+  position: relative;
+  color: #ffffff;
+  border-radius: 11px;
 }
 
 .custom-form-input {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #dadada;
-    outline: none;
-    width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dadada;
+  outline: none;
+  width: 100%;
 }
 
 .footer-menu-item ul {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 .footer-menu-item li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 300;
-
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .homeover-section {
-    padding: 100px;
+  padding: 100px;
 }
 
 .second-section-heading {
-    max-width: 700px;
-    font-size: 2.6rem;
-    text-align: center;
-    font-weight: 700;
+  max-width: 700px;
+  font-size: 2.6rem;
+  text-align: center;
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 600px) {
-    .homeover-section {
-        padding: 15px;
-    }
+  .homeover-section {
+    padding: 15px;
+  }
 
-    .second-section-heading {
-        font-size: 1.5rem;
-    }
-    .contact-us-form-div{
-        position:relative !important;
-        top:0px;
-        margin-bottom: 150px !important;
-    }
-    .delivery_container-partner{
-        justify-content: center !important;
-    }
+  .second-section-heading {
+    font-size: 1.5rem;
+  }
+  .contact-us-form-div {
+    position: relative !important;
+    top: 0px;
+    margin-bottom: 150px !important;
+  }
+  .delivery_container-partner {
+    justify-content: center !important;
+  }
 }
-.delivery_container-partner{
-    justify-content: flex-end ;
+.delivery_container-partner {
+  justify-content: flex-end;
 }
 
 .delivery-fee-form {
-    position: fixed;
-    background: #ffffff;
-    height: 100vh;
-    width: 350px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    top: 0;
+  position: fixed;
+  background: #ffffff;
+  height: 100vh;
+  width: 350px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  top: 0;
 }
 
 .delivery-fee-form-first-section {
-    border: 1px solid #dadada;
-    border-radius: 11px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+  border: 1px solid #dadada;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .delivery-fee-second-form {
-    position: fixed;
-    bottom: 0px;
-    left: 200px;
-    background: white;
-    width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left: 200px;
+  background: white;
+  width: 100%;
 }
 
-.cancel-button{
-    background: #E3E1E1;
-    border: none;
-    color: black;
-    width: 50%;
+.cancel-button {
+  background: #e3e1e1;
+  border: none;
+  color: black;
+  width: 50%;
 }
 
-.pickup-outer-div{
-    background-color: #ffffff;
-    border-radius: 11px;
+.pickup-outer-div {
+  background-color: #ffffff;
+  border-radius: 11px;
 }
 
 .map-marker {
-    font-size: 24px;
-  }
-
-.form-error{
-    color:red;
-    text-transform: capitalize;
+  font-size: 24px;
 }
 
-.business_container-owner{
-    justify-content: flex-end;
+.form-error {
+  color: red;
+  text-transform: capitalize;
+}
+
+.business_container-owner {
+  justify-content: flex-end;
 }
