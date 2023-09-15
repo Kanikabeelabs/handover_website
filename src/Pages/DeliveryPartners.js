@@ -5,11 +5,33 @@ import Footer from '../Components/Footer';
 import HandOverStatistics from "../Components/HandOverStatistics";
 import LocationItem from "../Components/LocationItem";
 import { Formik, Form, Field } from 'formik';
+import Carousel from 'react-multi-carousel';
+import { Location } from '../utils/Data';
+import 'react-multi-carousel/lib/styles.css';
 // import { useState } from 'react';
 import {DeliveryPartnersData} from "../utils/Data";
 import {contactUsSchemaValidation} from "../utils/Validations";
 import { postRequest } from '../utils/ApiRequest';
 const DeliveryPartners = () =>{
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 4
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 3
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
     const initialValues = {
         option: "",
         user_name: "",
@@ -235,15 +257,16 @@ const DeliveryPartners = () =>{
                     </div>
                 </Container>
                 {/* Location Section */}
-                <Container fluid className="p-0 d-flex flex-column align-items-center justify-content-center">
-                    <h3 className='mt-4 mb-4 fw-bold'>Our Location</h3>
-                    <div className='d-flex flex-row flex-wrap gap-1 align-items-center justify-content-center pb-2'>
-                    {[1, 2, 3, 4, 5].map((item, index) => {
-                        return (<LocationItem key={index} />)
-                    })}
-                    </div>
-                    
-                </Container>
+                <Container fluid className="p-0 d-flex flex-column align-items-center justify-content-center mb-3">
+                <h3 className='mt-4 mb-4 fw-bold'>Our Location</h3>
+                <Container>
+                    <Carousel responsive={responsive}>
+                        {Location.map((item, index) => {
+                            return (<LocationItem key={index} item={item} />)
+                        })}
+                    </Carousel>
+                </Container>
+            </Container>
             <Footer />
      </Container>
   </section>)
