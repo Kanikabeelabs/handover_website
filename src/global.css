@@ -210,3 +210,7 @@
     color:red;
     text-transform: capitalize;
 }
+
+.business_container-owner{
+    justify-content: flex-end;
+}
