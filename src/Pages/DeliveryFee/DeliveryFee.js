@@ -2,10 +2,13 @@ import { Container, Button } from 'react-bootstrap';
 import Header from "../../Components/Header";
 import { Formik, Form, Field } from 'formik';
 // import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getRequest } from '../../utils/ApiRequest';
 
 const DeliveryFee = () => {
     const [manualLocation, setManualLocation] = useState(false);
+    const [state, setState] = useState([]);
+    const [district, setDistrict] = useState([]);
     const [latitude,setLatitude] = useState(28.6130176);
     const [longitude,setLongitude] = useState(77.2308992);
     const initialValues = {
@@ -55,6 +58,20 @@ const DeliveryFee = () => {
             console.log('Geolocation is not supported by this browser.');
           }
     }
+    useEffect(() => {
+        const getState = async () => {
+            let response = await getRequest('/api/v1/map/states');
+            if (response.status === 200)
+                setState(response?.data?.data);
+        }
+        getState();
+    }, []);
+    const getDistrict = async (state) => {
+        let response = await getRequest(`/api/v1/map/districts?states=${state}`);
+        if (response.status === 200)
+            setDistrict(response?.data?.data);
+
+    }
     return (
         <section className='delivery-fee-section'>
             <Header page_name="delivery_fee" />
@@ -70,62 +87,63 @@ const DeliveryFee = () => {
                                 <Button className='handover-button-type-2 rounded-pill' onClick={handleManualLocation}>Search Delivery Location</Button>
                             </div>
 
-                                {manualLocation && <div>
-                                    <Formik
-                                        initialValues={initialValues}
-                                    // validationSchema={userValidationSchema}
-                                    // onSubmit={handleSubmit}
-                                    >
-                                        {({ errors, setFieldValue }) => (
-                                            <Form className="contact-us-form d-flex flex-column gap-3">
-                                                <div className="d-flex flex-column">
-                                                    <select name="option" id="option" className='custom-form-input'>
-                                                        <option value="">Country</option>
-                                                        <option value="saab">Saab</option>
-                                                        <option value="mercedes">Mercedes</option>
-                                                        <option value="audi">Audi</option>
-                                                    </select>
-                                                    {errors.country && <div className="form-error">{errors.country}</div>}
+                            {manualLocation && <div>
+                            <Formik
+                                initialValues={initialValues}
+                            // validationSchema={userValidationSchema}
+                            // onSubmit={handleSubmit}
+                            >
+                                {({ errors, setFieldValue }) => (
+                                    <Form className="contact-us-form d-flex flex-column gap-3">
+                                        <div className="d-flex flex-column">
+                                            <select name="option" id="option" className='custom-form-input'>
+                                                <option value="">Country</option>
+                                                <option value="india">India</option>
+                                            </select>
+                                            {errors.country && <div className="form-error">{errors.country}</div>}
 
-                                                </div>
+                                        </div>
 
-                                                <div className="d-flex flex-column">
-                                                    <select name="option" id="option" className='custom-form-input'>
-                                                        <option value="">State</option>
-                                                        <option value="saab">Saab</option>
-                                                        <option value="mercedes">Mercedes</option>
-                                                        <option value="audi">Audi</option>
-                                                    </select>
-                                                    {errors.state && <div className="form-error">{errors.state}</div>}
+                                        <div className="d-flex flex-column">
+                                            <select name="option" id="option"
+                                                className='custom-form-input'
+                                                onChange={(e) => getDistrict(e.target.value)}>
+                                                <option value="">State</option>
+                                                {state.map((item, index) => {
+                                                    return (
+                                                        <option key={index} value={item}>{item}</option>)
+                                                })}
+                                            </select>
+                                            {errors.state && <div className="form-error">{errors.state}</div>}
 
-                                                </div>
+                                        </div>
 
-                                                <div className="d-flex flex-column">
-                                                    <select name="option" id="option" className='custom-form-input'>
-                                                        <option value="">Distric</option>
-                                                        <option value="saab">Saab</option>
-                                                        <option value="mercedes">Mercedes</option>
-                                                        <option value="audi">Audi</option>
-                                                    </select>
-                                                    {errors.district && <div className="form-error">{errors.district}</div>}
+                                        <div className="d-flex flex-column">
+                                            <select name="option" id="option" className='custom-form-input'>
+                                                <option value="">District</option>
+                                                {district.map((item) => {
+                                                    return (<option key={item._id} value={item.name}>{item.name}</option>)
+                                                })}
+                                            </select>
+                                            {errors.district && <div className="form-error">{errors.district}</div>}
 
-                                                </div>
+                                        </div>
 
-                                                <div className="d-flex flex-column">
-                                                    <Field id="pincode"
-                                                        type="text" placeholder="Pincode"
-                                                        name="pincode"
-                                                        className="custom-form-input" />
-                                                    {errors.pincode && <div className="form-error">{errors.pincode}</div>}
-                                                </div>
+                                        <div className="d-flex flex-column">
+                                            <Field id="pincode"
+                                                type="text" placeholder="Pincode"
+                                                name="pincode"
+                                                className="custom-form-input" />
+                                            {errors.pincode && <div className="form-error">{errors.pincode}</div>}
+                                        </div>
 
-                                                <Button className='handover-button rounded-pill'>See Result</Button>
-                                                <Button className='handover-button-type-2 rounded-pill'>Cities we Serve</Button>
+                                        <Button className='handover-button rounded-pill'>See Result</Button>
+                                        <Button className='handover-button-type-2 rounded-pill'>Cities we Serve</Button>
 
-                                            </Form>
-                                        )}
-                                    </Formik>
-                                </div>}
+                                    </Form>
+                                )}
+                            </Formik>
+                        </div>}
 
                      </div>
                     <div className="col-9" style={{  height: '100vh' }}>
