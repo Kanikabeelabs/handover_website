@@ -4,38 +4,33 @@ import HandOverStatistics from "../../Components/HandOverStatistics";
 import NoticeSection from '../../Components/NoticeSection';
 import Header from "../../Components/Header";
 import Footer from '../../Components/Footer';
-import { HomePageSection2, keyFeatures, whyHandover, FAQ } from "../../utils/Data";
-import { contactUsSchemaValidation } from "../../utils/Validations";
+import { HomePageSection2, keyFeatures, whyHandover } from "../../utils/Data";
+import {contactUsSchemaValidation} from "../../utils/Validations";
 import { postRequest } from '../../utils/ApiRequest';
 import { Formik, Form, Field } from 'formik';
-import { useState } from 'react';
 const Home = () => {
-    const [openItems, setOpenItems] = useState([]);
-
     const initialValues = {
         option: "",
         user_name: "",
         email_address: "",
-        mobile: "",
+        mobile:"",
         description: ""
     }
 
-    const handleSubmit = async (values, { resetForm }) => {
+    const handleSubmit = async(values,{resetForm}) =>{
         let formData = new FormData();
         formData = {
-            name: values.user_name,
-            email: values.email_address,
-            description: values.description,
-            mobile: values.mobile,
-            option: values.option
-
+            name:values.user_name,
+            email:values.email_address,
+            description:values.description,
+            mobile:values.mobile,
+            option:values.option
+            
         }
         try {
             let response = await postRequest("/api/v1/contactus", formData);
-            if (response.status === 201) {
-                alert("You have successfully submitted the form");
-                resetForm();
-            }
+            alert("You have successfully submitted the form");
+            resetForm();
         } catch (err) {
             console.log(err)
         }
@@ -46,39 +41,32 @@ const Home = () => {
     const handleCancel = (resetForm) => {
         resetForm();
     }
-
-
-    const toggleItem = (itemId) => {
-        if (openItems.includes(itemId)) {
-            // If the item is already open, close it
-            setOpenItems(openItems.filter((id) => id !== itemId));
-        } else {
-            // If a new item is opened, close all others and open the new one
-            setOpenItems([itemId]);
-        }
-    };
     return (
-        <section className='handover-homepage'>
+        <section className='handover-homepage'> 
             <Container fluid className="p-0" >
                 {/*  ------------------------header ---------------------------------------*/}
-                <Container fluid style={{
+                <Container fluid 
+                 style={{ 
                     backgroundImage: `url("./main_website.png")`,
-                    backgroundSize: 'cover'
-                }}>
+                 backgroundSize: 'cover',
+                 minHeight:'700px'
+                  }}>
                     <Header page_name="home" />
 
                     {/*  ------------------------First Section ---------------------------------------*/}
-                    <Container style={{ marginTop: "100px", maxWidth: '1600px', postion: "relative" }} >
-
-                        <p style={{ color: "#F6911E" }} className="handover-main-heading">One-stop Solution</p>
-                        <p className="handover-main-heading">for All Your</p>
-                        <p className="handover-main-heading">Delivery Needs</p>
+                    <Container style={{ marginTop: "100px", maxWidth: '1600px' ,postion:"relative"}} >
+                        
+                        <p  className="handover-main-heading">Delivery Tension?</p>
+                        <div className="handover-main-heading-2 d-flex gap-2">
+                            <p style={{ color: "#F6911E" }} className="handover-main-heading  ">#Handover</p>
+                            <p className="handover-main-heading">Karo</p>
+                        </div>
                         <p style={{
                             color: "#3C3C3C",
                             maxWidth: "400px",
                             fontWeight: "300"
-                        }}> Be it food, grocery, cake or any other stuff, Handover delivers all on time!</p>
-                        <div className='search-box-section d-flex align-items-center flex-wrap gap-md-0 gap-2'>
+                        }}> All delivery solutions in one place.</p>
+                        <div className='search-box-section d-flex align-items-center flex-wrap'>
                             <div className='search-box p-2' >
                                 <img src="./location.png" alt="locationLogo" />
                                 <input style={{ border: "none", outline: "none", marginLeft: "5px" }}
@@ -89,28 +77,26 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className='video-section d-flex gap-3 mt-4 pb-3' style={{ flexWrap: 'wrap' }}>
+                        <div className='video-section d-flex gap-3 mt-4 pb-3' style={{ flexWrap: 'wrap'}}>
                             <iframe width="250" title="video1" height="200" src="https://www.youtube.com/embed/AaldFQmUjPA" frameBorder="0" allowFullScreen></iframe>
                             <iframe width="250" height="200" title="video2" src="https://www.youtube.com/embed/IO79wiKGTEc" frameBorder="0" allowFullScreen></iframe>
                         </div>
 
-                        <div className='handover-shadow-div p-2 d-none d-xl-block'
-                            style={{ width: "200px", position: "absolute", top: "100px", right: "150px" }}>
-                            <div className='d-flex gap-2 align-items-center'><img src="./object_icon.png" alt="Object Icon" />
-                                <h5>On-time Delivery</h5>
+                        {/* <div className='handover-shadow-div p-2 d-none d-md-block' 
+                            style={{width:"200px",position:"absolute",top:"100px",right:"150px"}}> 
+                            <div className='d-flex gap-2 align-items-center'><img src="./object_icon.png" alt="Object Icon" /> 
+                            <h5>On-time Delivery</h5>
                             </div>
                             <p className='m-0 p-0'>Ensured via advanced route optimisation software</p>
-                        </div>
+                        </div> */}
 
-                        <div className='handover-shadow-div p-2 d-none d-xl-block' style={{
-                            width: "200px",
-                            position: "absolute", top: "400px", left: "870px"
-                        }}>
-                            <div className='d-flex gap-2 align-items-center'><img src="./location_icon.png" alt="Location Icon" />
-                                <h5>Location Detection</h5>
+                        {/* <div className='handover-shadow-div p-2 d-none d-md-block' style={{width:"200px",
+                            position:"absolute",top:"400px",left:"870px"}}> 
+                            <div className='d-flex gap-2 align-items-center'><img src="./location_icon.png" alt="Location Icon" /> 
+                            <h5>Location Detection</h5>
                             </div>
                             <p className='m-0 p-0'>Know where the shipment is at different points of time</p>
-                        </div>
+                        </div> */}
                     </Container>
                 </Container>
 
@@ -171,78 +157,44 @@ const Home = () => {
                 <div className='handover-faq-and-whyhandover-section pt-5 pb-5' style={{ background: "#F5FCFF" }}>
                     <Container className="d-flex justify-content-between flex-wrap" style={{ maxWidth: "1500px" }}>
                         <div className='col-md-6 d-flex flex-column align-items-center '>
-                            <h3 className='fw-bold' style={{ maxWidth: "350px", textAlign: 'center', height: "80px" }}>
-                                Frequently Asked Questions (FAQs)</h3>
+                            <h3 className='fw-bold' style={{ maxWidth: "350px", textAlign: 'center', height: "80px" }}>Frequently Asked Questions (FAQs)</h3>
                             <img src="./image2.png" alt="Image1" />
                             <div>
-                                {FAQ.map((item) => {
-                                    return (
-                                        <div key={item.id} className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
+                            <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
                                             style={{ maxWidth: "600px" }} >
-                                            <div style={{ fontWeight: "300", maxWidth: "550px" }}>
-                                                <p><b>{item.heading}</b></p>
-                                                {openItems.includes(item.id) ? (
-                                                    <div dangerouslySetInnerHTML={{ __html: item.description }} />
-                                                ) : null}
-                                            </div>
-
-                                            <div style={{ width: "20px", height: "20px", cursor: "pointer" }}
-                                                onClick={() => toggleItem(item.id)}>
+                                            <p style={{ fontWeight: "300", maxWidth: "550px" }}><b>Is Handover Special? How?</b> <br/> Yes, it is! Handover has made the entire delivery system cost-efficient and transparent by reviving interactions between businesses and their customers.</p>
+                                            <div style={{ width: "20px", height: "20px" }}>
                                                 <img src="./show_more.png" alt="ShowMore" />
                                             </div>
                                         </div>
-                                    )
-                                })}
-                                {/* <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
-                                    style={{ maxWidth: "600px" }} >
-                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}>
-                                        <b>Is Handover Special? How?</b>
-                                        <br />
-                                        Yes, it is! Handover has made the entire delivery system cost-efficient and transparent by reviving interactions between businesses and their customers.</p>
-                                    <div style={{ width: "20px", height: "20px" }}>
-                                        <img src="./show_more.png" alt="ShowMore" />
-                                    </div>
-                                </div>
-                                <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
-                                    style={{ maxWidth: "600px" }} >
-                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}>
-                                        <b>How Can Businesses Register with Handover?</b>
-                                        <br /> Businesses can register with Handover on its official website and app.</p>
-                                    <div style={{ width: "20px", height: "20px" }}>
-                                        <img src="./show_more.png" alt="ShowMore" />
-                                    </div>
-                                </div>
-                                <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
-                                    style={{ maxWidth: "600px" }} >
-                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}>
-                                        <b>What is the Registration Process for Businesses with Handover?</b>
-                                        <br />
-                                        <b>On Website</b> <br />Click on the ‘Retailers’ icon<br />Choose ‘Retailer’ from the drop-down<br />Mention your name, email address and mobile number, and click on ‘Send Message’<br />We will verify the details before registering your business for delivery services<br /><br /><b>On App</b><br />Download the Handover Business App from the Google Play Store<br />After giving location permission access and doing mobile number authentication, enter your name, the business name, the type of business, etc.<br />After successful verification of these details, we will get you registered for delivery services.
-                                    </p>
-                                    <div style={{ width: "20px", height: "20px" }}>
-                                        <img src="./show_more.png" alt="ShowMore" />
-                                    </div>
-                                </div>
-                                <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
-                                    style={{ maxWidth: "600px" }} >
-                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}>
-                                        <b>
-                                            Do I Need to Recharge the Wallet for Delivery Services?
-                                        </b> <br />
-                                        Yes! Businesses must recharge their wallets for uninterrupted delivery services. Delivery charges are automatically deducted from the wallet.</p>
-                                    <div style={{ width: "20px", height: "20px" }}>
-                                        <img src="./show_more.png" alt="ShowMore" />
-                                    </div>
-                                </div>
-                                <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
-                                    style={{ maxWidth: "600px" }} >
-                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}>
-                                        <b>How Do I Know My Wallet Recharge Status?</b> <br />
-                                        Visit the ‘Recharge Wallet’ section on the Handover Business App to know the balance left for deliveries. </p>
-                                    <div style={{ width: "20px", height: "20px" }}>
-                                        <img src="./show_more.png" alt="ShowMore" />
-                                    </div>
-                                </div> */}
+                                        <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
+                                            style={{ maxWidth: "600px" }} >
+                                            <p style={{ fontWeight: "300", maxWidth: "550px" }}><b>How Can Businesses Register with Handover?</b> <br/> Businesses can register with Handover on its official website and app.</p>
+                                            <div style={{ width: "20px", height: "20px" }}>
+                                                <img src="./show_more.png" alt="ShowMore" />
+                                            </div>
+                                        </div>
+                                        <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
+                                            style={{ maxWidth: "600px" }} >
+                                            <p style={{ fontWeight: "300", maxWidth: "550px" }}><b>What is the Registration Process for Businesses with Handover?</b> <br/><b>On Website</b> <br/>Click on the ‘Retailers’ icon<br/>Choose ‘Retailer’ from the drop-down<br/>Mention your name, email address and mobile number, and click on ‘Send Message’<br/>We will verify the details before registering your business for delivery services<br/><br/><b>On App</b><br/>Download the Handover Business App from the Google Play Store<br/>After giving location permission access and doing mobile number authentication, enter your name, the business name, the type of business, etc.<br/>After successful verification of these details, we will get you registered for delivery services.</p>
+                                            <div style={{ width: "20px", height: "20px" }}>
+                                                <img src="./show_more.png" alt="ShowMore" />
+                                            </div>
+                                        </div>
+                                        <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
+                                            style={{ maxWidth: "600px" }} >
+                                            <p style={{ fontWeight: "300", maxWidth: "550px" }}><b>Do I Need to Recharge the Wallet for Delivery Services?</b> <br/> Yes! Businesses must recharge their wallets for uninterrupted delivery services. Delivery charges are automatically deducted from the wallet.</p>
+                                            <div style={{ width: "20px", height: "20px" }}>
+                                                <img src="./show_more.png" alt="ShowMore" />
+                                            </div>
+                                        </div>
+                                        <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
+                                            style={{ maxWidth: "600px" }} >
+                                            <p style={{ fontWeight: "300", maxWidth: "550px" }}><b>How Do I Know My Wallet Recharge Status?</b> <br/> Visit the ‘Recharge Wallet’ section on the Handover Business App to know the balance left for deliveries. </p>
+                                            <div style={{ width: "20px", height: "20px" }}>
+                                                <img src="./show_more.png" alt="ShowMore" />
+                                            </div>
+                                        </div>
 
                             </div>
                         </div>
@@ -265,32 +217,31 @@ const Home = () => {
                     </Container>
                 </div>
 
-                <Container className='d-flex align-items-center' fluid style={{ height: "600px", position: "relative" }}>
-                    <Container className='p-5' style={{ background: "#ECF8FF", borderRadius: "11px" }}>
-                        <p>Lorem ipsum is placeholder text commonly used in the <br></br> graphic,
-                            print, and publishing industries for previewing <br></br>layouts and visual mockups.
-                        </p>
-                        <h5 className='mt-3'>Download the Handover Mobile App For Free</h5>
-                        <a href="https://play.google.com/store/apps/details?id=com.handover.retailer" className='mt-3'>
-                            <img src="./playstore.png" alt="PlayStore" />
-                        </a>
-                    </Container>
-                    <div className="d-md-block d-none" style={{
-                        position: "absolute",
-                        right: "238px"
-                    }}>
-                        <img src="./mobile_phone.png" alt="Mobile Phone" />
-                    </div>
+                <Container className='d-flex align-items-center' fluid style={{ height: "600px" ,position:"relative"}}>
+                <Container className='p-5' style={{ background: "#ECF8FF", borderRadius: "11px" }}>
+                    <p>Lorem ipsum is placeholder text commonly used in the <br></br> graphic,
+                        print, and publishing industries for previewing <br></br>layouts and visual mockups.
+                    </p>
+                    <h5 className='mt-3'>Download the Handover Mobile App For Free</h5>
+                    <a href="https://play.google.com/store/apps/details?id=com.handover.retailer" className='mt-3'>
+                        <img src="./playstore.png" alt="PlayStore"/>
+                    </a>
                 </Container>
+                <div className="d-md-block d-none" style={{
+                    position: "absolute",
+                    right: "238px"
+                }}>
+                    <img src="./mobile_phone.png" alt="Mobile Phone" />
+                </div>
+               </Container>
 
                 {/*  ------------------------News Section ---------------------------------------*/}
                 <NoticeSection />
 
                 {/*  ------------------------Contact Us Section ---------------------------------------*/}
                 <Container className='handover-contact-us-section pt-5 pb-5'>
-                    <Container className="row" style={{
-                        maxWidth: "1400px", margin: "0px"
-                    }}>
+                    <Container className="row" style={{ 
+                        maxWidth: "1400px",margin:"0px" }}>
                         <div className='col-md-6 d-flex flex-column align-items-end'>
                             <img src="./contact_us.png" alt="ContactUs" width="100%" />
                         </div>
@@ -301,12 +252,12 @@ const Home = () => {
                                 validationSchema={contactUsSchemaValidation}
                                 onSubmit={handleSubmit}
                             >
-                                {({ errors, values, setFieldValue, resetForm }) => (
+                                {({ errors, values,setFieldValue ,resetForm}) => (
                                     <Form className="contact-us-form d-flex flex-column gap-3">
                                         <div className="d-flex flex-column">
                                             <label htmlFor="option">Choose a option</label>
-                                            <select name="option"
-                                                id="option" className='custom-form-input'
+                                            <select name="option" 
+                                                id="option" className='custom-form-input' 
                                                 onChange={(event) => setFieldValue("option", event.target.value)}
                                                 value={values.option}>
                                                 <option value="">Choose an Option</option>
@@ -357,8 +308,8 @@ const Home = () => {
                                         </div>
 
                                         <div className='d-flex justify-content-center gap-4'>
-                                            <Button variant="secondary" className='cancel-button' type="button" onClick={() => handleCancel(resetForm)}>Cancel</Button>
-                                            <Button variant="primary" type="submit" style={{ width: "50%" }}>Submit</Button>
+                                            <Button variant="secondary" className='cancel-button' type="button" onClick={()=>handleCancel(resetForm)}>Cancel</Button>
+                                            <Button variant="primary" type="submit" style={{width:"50%"}}>Send Message</Button>
                                         </div>
                                     </Form>
                                 )}
