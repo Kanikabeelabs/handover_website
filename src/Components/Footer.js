@@ -28,9 +28,9 @@ const Footer = () => {
                 <div className="d-flex flex-column gap-3 col-md-2" style={{ marginTop: '22px' }}>
                     <p>Customer Service</p>
                     <ul className='d-flex flex-column gap-1'>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about-us">About us</Link></li>
-                        <li><Link to="/blogs">Blog</Link></li>
+                        <li><Link to="">Home</Link></li>
+                        <li><Link to="">About us</Link></li>
+                        <li><Link to="">Blog</Link></li>
                         <li><Link to="">Contact US</Link></li>
                     </ul>
                 </div>
@@ -46,7 +46,7 @@ const Footer = () => {
                     <ul className='d-flex flex-column gap-1'>
                         <li><Link to="">Pricing</Link></li>
                         <li><Link to="">Services</Link></li>
-                        <li><Link to="/">FAQ</Link></li>
+                        <li><Link to="">FAQ</Link></li>
                     </ul>
                 </div>
                 <div className="d-flex flex-column gap-3 col-md-2"  style={{ marginTop: '22px' }}>
@@ -72,4 +72,4 @@ const Footer = () => {
             background: "#3D3D3D", height: "50px"
         }}></div></>)
 }
-export default Footer;
+export default Footer;
