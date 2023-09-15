@@ -25,28 +25,45 @@ const Footer = () => {
                         <li><a href="https://www.instagram.com/handover.in/"><img src="./insta.png" alt="Instagram"></img></a></li>
                     </ul>
                 </div>
-                <div className="d-flex flex-column gap-3 col-md-2" >
+                <div className="d-flex flex-column gap-3 col-md-2" style={{ marginTop: '22px' }}>
                     <p>Customer Service</p>
                     <ul className='d-flex flex-column gap-1'>
-                        <li><Link to="">Home</Link></li>
-                        <li><Link to="">About us</Link></li>
-                        <li><Link to="">Blog</Link></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about-us">About us</Link></li>
+                        <li><Link to="/blogs">Blog</Link></li>
                         <li><Link to="">Contact US</Link></li>
                     </ul>
                 </div>
-                <div className="d-flex flex-column gap-3 col-md-2" >
+                <div className="d-flex flex-column gap-3 col-md-2"  style={{ marginTop: '22px' }}>
                     <p>Customer Service</p>
                     <ul className='d-flex flex-column gap-1'>
                         <li><Link to="">Food delivery</Link></li>
                         <li><Link to="">Parcel delivery</Link></li>
                     </ul>
                 </div>
-                <div className="d-flex flex-column gap-3 col-md-2" >
+                <div className="d-flex flex-column gap-3 col-md-2"  style={{ marginTop: '22px' }}>
                     <p>Links</p>
                     <ul className='d-flex flex-column gap-1'>
                         <li><Link to="">Pricing</Link></li>
                         <li><Link to="">Services</Link></li>
-                        <li><Link to="">FAQ</Link></li>
+                        <li><Link to="/">FAQ</Link></li>
+                    </ul>
+                </div>
+                <div className="d-flex flex-column gap-3 col-md-2"  style={{ marginTop: '22px' }}>
+                    <p>Support</p>
+                    <ul className='d-flex flex-column gap-1'>
+                        <div className='div1'>
+                            <img className='imagee1' src="./imagee1.png"></img>
+                            <li><Link to="">handover123@gmail.com</Link></li>
+                        </div>    
+                        <div className='div2'>
+                            <img className='imagee2' src="./imagee2.png"></img>
+                            <li><Link to="">+83  837837897</Link></li>
+                        </div>    
+                        <div className='div3'>
+                                <img className='imagee3' src="./imagee3.png"></img>
+                                <img className='imagee4' src="./imagee4.png"></img>  
+                </div>    
                     </ul>
                 </div>
             </Container>
