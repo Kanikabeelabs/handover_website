@@ -4,11 +4,14 @@ import HandOverStatistics from "../../Components/HandOverStatistics";
 import NoticeSection from '../../Components/NoticeSection';
 import Header from "../../Components/Header";
 import Footer from '../../Components/Footer';
-import { HomePageSection2, keyFeatures, whyHandover } from "../../utils/Data";
+import { HomePageSection2, keyFeatures, whyHandover, FAQ } from "../../utils/Data";
 import { contactUsSchemaValidation } from "../../utils/Validations";
 import { postRequest } from '../../utils/ApiRequest';
 import { Formik, Form, Field } from 'formik';
+import { useState } from 'react';
 const Home = () => {
+    const [openItems, setOpenItems] = useState([]);
+
     const initialValues = {
         option: "",
         user_name: "",
@@ -43,6 +46,17 @@ const Home = () => {
     const handleCancel = (resetForm) => {
         resetForm();
     }
+
+
+    const toggleItem = (itemId) => {
+        if (openItems.includes(itemId)) {
+            // If the item is already open, close it
+            setOpenItems(openItems.filter((id) => id !== itemId));
+        } else {
+            // If a new item is opened, close all others and open the new one
+            setOpenItems([itemId]);
+        }
+    };
     return (
         <section className='handover-homepage'>
             <Container fluid className="p-0" >
@@ -153,44 +167,78 @@ const Home = () => {
                 <div className='handover-faq-and-whyhandover-section pt-5 pb-5' style={{ background: "#F5FCFF" }}>
                     <Container className="d-flex justify-content-between flex-wrap" style={{ maxWidth: "1500px" }}>
                         <div className='col-md-6 d-flex flex-column align-items-center '>
-                            <h3 className='fw-bold' style={{ maxWidth: "350px", textAlign: 'center', height: "80px" }}>Frequently Asked Questions (FAQs)</h3>
+                            <h3 className='fw-bold' style={{ maxWidth: "350px", textAlign: 'center', height: "80px" }}>
+                                Frequently Asked Questions (FAQs)</h3>
                             <img src="./image2.png" alt="Image1" />
                             <div>
-                                <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
+                                {FAQ.map((item) => {
+                                    return (
+                                        <div key={item.id} className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
+                                            style={{ maxWidth: "600px" }} >
+                                            <div style={{ fontWeight: "300", maxWidth: "550px" }}>
+                                                <p><b>{item.heading}</b></p>
+                                                {openItems.includes(item.id) ? (
+                                                    <div dangerouslySetInnerHTML={{ __html: item.description }} />
+                                                ) : null}
+                                            </div>
+
+                                            <div style={{ width: "20px", height: "20px", cursor: "pointer" }}
+                                                onClick={() => toggleItem(item.id)}>
+                                                <img src="./show_more.png" alt="ShowMore" />
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                                {/* <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
                                     style={{ maxWidth: "600px" }} >
-                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}><b>Is Handover Special? How?</b> <br /> Yes, it is! Handover has made the entire delivery system cost-efficient and transparent by reviving interactions between businesses and their customers.</p>
+                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}>
+                                        <b>Is Handover Special? How?</b>
+                                        <br />
+                                        Yes, it is! Handover has made the entire delivery system cost-efficient and transparent by reviving interactions between businesses and their customers.</p>
                                     <div style={{ width: "20px", height: "20px" }}>
                                         <img src="./show_more.png" alt="ShowMore" />
                                     </div>
                                 </div>
                                 <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
                                     style={{ maxWidth: "600px" }} >
-                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}><b>How Can Businesses Register with Handover?</b> <br /> Businesses can register with Handover on its official website and app.</p>
+                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}>
+                                        <b>How Can Businesses Register with Handover?</b>
+                                        <br /> Businesses can register with Handover on its official website and app.</p>
                                     <div style={{ width: "20px", height: "20px" }}>
                                         <img src="./show_more.png" alt="ShowMore" />
                                     </div>
                                 </div>
                                 <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
                                     style={{ maxWidth: "600px" }} >
-                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}><b>What is the Registration Process for Businesses with Handover?</b> <br /><b>On Website</b> <br />Click on the ‘Retailers’ icon<br />Choose ‘Retailer’ from the drop-down<br />Mention your name, email address and mobile number, and click on ‘Send Message’<br />We will verify the details before registering your business for delivery services<br /><br /><b>On App</b><br />Download the Handover Business App from the Google Play Store<br />After giving location permission access and doing mobile number authentication, enter your name, the business name, the type of business, etc.<br />After successful verification of these details, we will get you registered for delivery services.</p>
+                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}>
+                                        <b>What is the Registration Process for Businesses with Handover?</b>
+                                        <br />
+                                        <b>On Website</b> <br />Click on the ‘Retailers’ icon<br />Choose ‘Retailer’ from the drop-down<br />Mention your name, email address and mobile number, and click on ‘Send Message’<br />We will verify the details before registering your business for delivery services<br /><br /><b>On App</b><br />Download the Handover Business App from the Google Play Store<br />After giving location permission access and doing mobile number authentication, enter your name, the business name, the type of business, etc.<br />After successful verification of these details, we will get you registered for delivery services.
+                                    </p>
                                     <div style={{ width: "20px", height: "20px" }}>
                                         <img src="./show_more.png" alt="ShowMore" />
                                     </div>
                                 </div>
                                 <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
                                     style={{ maxWidth: "600px" }} >
-                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}><b>Do I Need to Recharge the Wallet for Delivery Services?</b> <br /> Yes! Businesses must recharge their wallets for uninterrupted delivery services. Delivery charges are automatically deducted from the wallet.</p>
+                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}>
+                                        <b>
+                                            Do I Need to Recharge the Wallet for Delivery Services?
+                                        </b> <br />
+                                        Yes! Businesses must recharge their wallets for uninterrupted delivery services. Delivery charges are automatically deducted from the wallet.</p>
                                     <div style={{ width: "20px", height: "20px" }}>
                                         <img src="./show_more.png" alt="ShowMore" />
                                     </div>
                                 </div>
                                 <div className='handover-shadow-div p-4 mb-2 d-flex justify-content-between'
                                     style={{ maxWidth: "600px" }} >
-                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}><b>How Do I Know My Wallet Recharge Status?</b> <br /> Visit the ‘Recharge Wallet’ section on the Handover Business App to know the balance left for deliveries. </p>
+                                    <p style={{ fontWeight: "300", maxWidth: "550px" }}>
+                                        <b>How Do I Know My Wallet Recharge Status?</b> <br />
+                                        Visit the ‘Recharge Wallet’ section on the Handover Business App to know the balance left for deliveries. </p>
                                     <div style={{ width: "20px", height: "20px" }}>
                                         <img src="./show_more.png" alt="ShowMore" />
                                     </div>
-                                </div>
+                                </div> */}
 
                             </div>
                         </div>

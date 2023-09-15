@@ -194,6 +194,29 @@
     text-transform: capitalize;
 }
 
+
+
+.div1{
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.div2{
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.div3{
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.business_container-owner{
+    justify-content: flex-end;
+}
 .website-header {
     padding: 0px 100px !important;
 }
@@ -219,5 +242,9 @@
 
     .website-header {
         padding: 10px !important;
+    }
+
+    .mapDiv {
+        display: none;
     }
 }

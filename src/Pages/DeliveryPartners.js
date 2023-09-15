@@ -9,7 +9,29 @@ import { Formik, Form, Field } from 'formik';
 import { DeliveryPartnersData } from "../utils/Data";
 import { contactUsSchemaValidation } from "../utils/Validations";
 import { postRequest } from '../utils/ApiRequest';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { Location } from '../utils/Data';
 const DeliveryPartners = () => {
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 4
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 3
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
     const initialValues = {
         option: "",
         user_name: "",
@@ -210,14 +232,78 @@ const DeliveryPartners = () => {
                         </div>
                     </div>
                 </Container>
-                {/* Location Section */}
-                <Container fluid className="p-0 d-flex flex-column align-items-center justify-content-center">
-                    <h3 className='mt-4 mb-4 fw-bold'>Our Location</h3>
-                    <div className='d-flex flex-row flex-wrap gap-1 align-items-center justify-content-center pb-2'>
-                    {[1, 2, 3, 4, 5].map((item, index) => {
-                        return (<LocationItem key={index} />)
-                    })}
+
+            {/* Second Section */}
+            <div className='d-flex flex-column align-items-center justify-content-center'>
+                <h1 style={{ textAlign: 'center', padding: "10px" }}>Handover में Delivery Partner बनने के फायदे </h1>
+                <div className='row' style={{ width: "100%" }}>
+                    <div className='d-flex flex-column gap-3 align-items-center col-md-4 col-12 '>
+                        {DeliveryPartnersData.slice(0, 3).map((item, index) => {
+                            return (<DeliveryPartnerItems
+                                key={item.id}
+                                img_url={item.img_url}
+                                heading={item.heading}
+                                description={item.description}
+                                link={item.link_url} />)
+                        })}
+                    </div>
+                    <div className='col-md-4 col-12'>
+                        <div style={{ width: "100%" }}>
+                            <img src="./smartphone.png" alt="SmartPhone" width="100%" /></div>
+                    </div>
+                    <div className='d-flex flex-column gap-3 align-items-center col-md-4 col-12 '>
+                        {DeliveryPartnersData.slice(3, 7).map((item, index) => {
+                            return (<DeliveryPartnerItems
+                                key={item.id}
+                                img_url={item.img_url}
+                                heading={item.heading}
+                                description={item.description}
+                                link={item.link_url} />)
+                        })}
+                    </div>
                 </div>
+            </div>
+            {/* Statistics Section */}
+            <HandOverStatistics />
+            {/* Careers */}
+            <Container className="d-flex flex-column gap-2 align-items-center p-3" style={{ position: "relative" }}>
+                <h3 className='mt-4 mb-4 fw-bold'>Careers @Handover</h3>
+                <p>Besides offering a promising ‘Delivery Partner’ job, Handover, as a brand, has many more opportunities up for grabs. These could be in operations, finance, technology, etc. So, if you know how to deliver multiple tasks and are a problem-solver, we would like to talk to you! Send your resume now!</p>
+                <div className='mt-2'>
+                    <div style={{ width: "100%" }}>
+                        <img src="./career_banner.png" alt="Career Banner" style={{ width: "100%" }} />
+                    </div>
+                </div>
+                <div className="d-none d-md-block" style={{ position: "absolute", bottom: "110px", left: "80px" }}>
+                    <img src="./handover_logo.png" alt="HandOver Logo" width="200px" />
+                </div>
+                <div className='opportunity-div align-self-start text-start'>
+                    <p style={{ fontSize: "27px", color: "#4F4F4F" }}> Find Opportunties for you</p>
+                    <Button variant="primary">Explore Opportunties</Button>
+                </div>
+                <div className='handover-shadow-div contact-us-form-div p-2 d-none d-md-block'
+                    style={{ width: "350px", position: "absolute", bottom: "30px", right: "100px" }}>
+                    <div className='d-flex flex-row gap-2'>
+                        <img src="./retailer_profile.png" alt="HandOver Profile" width="80px" height="80px" />
+                        <div>
+                            <h5>WHAT OUR PEOPLE SAY</h5>
+                            <p>Lorem ipsum dolor sit amet .
+                                The graphic and typographic operators know
+                                this well, in reality.</p>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+            {/* Location Section */}
+            <Container fluid className="p-0 d-flex flex-column align-items-center justify-content-center mb-3">
+                <h3 className='mt-4 mb-4 fw-bold'>Our Location</h3>
+                <Container>
+                    <Carousel responsive={responsive}>
+                        {Location.map((item, index) => {
+                            return (<LocationItem key={index} item={item} />)
+                        })}
+                    </Carousel>
+                </Container>
 
             </Container>
             <Footer />

@@ -75,16 +75,16 @@ const DeliveryFee = () => {
     return (
         <section className='delivery-fee-section'>
             <Header page_name="delivery_fee" />
-            <Container fluid className='p-0' style={{height:"100vh"}}>
-                 <div className='d-flex'>
-                    <div className="col-3 p-3 d-flex flex-column gap-3" style={{background:"#ffffff",height:"95vh"}}>
-                          <div className='delivery-fee-form-first-section p-3' >
-                                <img src="./delivery_fee_logo.png" alt="Delivery Fee Logo" />
-                                <h5>Welcome to HandOver</h5>
-                                <span style={{ fontSize: "16px", textAlign: "center", color: "#4D606A" }}>Please provide your delivery location to see products at nearby</span>
-                                <Button className='handover-button rounded-pill' onClick={handleDetectLocation}>Detect Location</Button>
-                                <Button className='handover-button-type-2 rounded-pill' onClick={handleManualLocation}>Search Delivery Location</Button>
-                            </div>
+            <Container fluid className='p-0' style={{ height: "100vh" }}>
+                <div className='d-flex'>
+                    <div className="col-md-3 col-12 p-3 d-flex flex-column gap-3" style={{ background: "#ffffff", height: "95vh" }}>
+                        <div className='delivery-fee-form-first-section p-3' >
+                            <img src="./delivery_fee_logo.png" alt="Delivery Fee Logo" />
+                            <h5>Welcome to HandOver</h5>
+                            <span style={{ fontSize: "16px", textAlign: "center", color: "#4D606A" }}>Please provide your delivery location to see products at nearby</span>
+                            <Button className='handover-button rounded-pill' onClick={handleDetectLocation}>Detect Location</Button>
+                            <Button className='handover-button-type-2 rounded-pill' onClick={handleManualLocation}>Search Delivery Location</Button>
+                        </div>
 
                         {manualLocation && <div>
                             <Formik
@@ -145,7 +145,7 @@ const DeliveryFee = () => {
                         </div>}
 
                     </div>
-                    <div className="col-9" style={{ height: '100vh' }}>
+                    <div className="mapDiv col-9" style={{ height: '100vh' }}>
                         {/* <MapContainer center={[latitude,longitude]} zoom={2} style={{ height: '100vh' }}>
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
