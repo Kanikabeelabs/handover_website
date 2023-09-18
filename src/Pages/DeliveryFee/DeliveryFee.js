@@ -9,8 +9,8 @@ const DeliveryFee = () => {
     const [manualLocation, setManualLocation] = useState(false);
     const [state, setState] = useState([]);
     const [district, setDistrict] = useState([]);
-    const [latitude,setLatitude] = useState(28.6130176);
-    const [longitude,setLongitude] = useState(77.2308992);
+    const [latitude, setLatitude] = useState(28.6130176);
+    const [longitude, setLongitude] = useState(77.2308992);
     const initialValues = {
         country: "",
         state: "",
@@ -21,42 +21,42 @@ const DeliveryFee = () => {
 
 
 
-    const DeliveryFeeSecondFormDiv = ({ heading, desc, data ,image }) => {
+    const DeliveryFeeSecondFormDiv = ({ heading, desc, data, image }) => {
         return (
-        <div className='handover-shadow-div' style={{ borderRadius: "11px", minHeight: "150px", width: "250px", background: "#ffffff" }}>
-            <div style={{height: "150px", }}>
-                <img  src={image} alt={heading} width={"100%"} />
-            </div>
-            <div className='content p-2' >
-                <h6><b>{heading}</b></h6>
-                <p style={{ fontSize: 14, color: "#676767",fontFamily: "Poppins" }}>{desc}</p>
-            </div>
-        </div>)
+            <div className='handover-shadow-div' style={{ borderRadius: "11px", minHeight: "150px", width: "250px", background: "#ffffff" }}>
+                <div style={{ height: "150px", }}>
+                    <img src={image} alt={heading} width={"100%"} />
+                </div>
+                <div className='content p-2' >
+                    <h6><b>{heading}</b></h6>
+                    <p style={{ fontSize: 14, color: "#676767", fontFamily: "Poppins" }}>{desc}</p>
+                </div>
+            </div>)
     }
 
     const handleManualLocation = () => {
         setManualLocation(!manualLocation)
     }
 
-    const handleDetectLocation = ()=>{
+    const handleDetectLocation = () => {
         if (navigator.geolocation) {
             // Get current position
             navigator.geolocation.getCurrentPosition(
-              position => {
-                setLatitude(position.coords.latitude);
-                setLongitude(position.coords.longitude);
-                // console.log(position.coords.latitude)
-                // console.log(position.coords.longitude)
+                position => {
+                    setLatitude(position.coords.latitude);
+                    setLongitude(position.coords.longitude);
+                    // console.log(position.coords.latitude)
+                    // console.log(position.coords.longitude)
 
-              },
-              error => {
-                console.log(error.message)
-                alert("Please give the required permission to fetch the location");
-              }
+                },
+                error => {
+                    console.log(error.message)
+                    alert("Please give the required permission to fetch the location");
+                }
             );
-          } else {
+        } else {
             console.log('Geolocation is not supported by this browser.');
-          }
+        }
     }
     useEffect(() => {
         const getState = async () => {
@@ -75,19 +75,20 @@ const DeliveryFee = () => {
     return (
         <section className='delivery-fee-section'>
             <Header page_name="delivery_fee" />
-            <Container fluid className='p-0' style={{height:"100vh"}}>
-                 <div className='d-flex'>
-                    <div className="col-3 p-3 d-flex flex-column gap-3" style={{
-                        background:"#ffffff",height:"95vh",zIndex:'89080'}}>
-                          <div className='delivery-fee-form-first-section p-3' >
-                                <img src="./delivery_fee_logo.png" alt="Delivery Fee Logo" />
-                                <h5>Welcome to HandOver</h5>
-                                <span style={{ fontSize: "16px", textAlign: "center", color: "#4D606A" }}>Please provide your delivery location to see products at nearby</span>
-                                <Button className='handover-button rounded-pill' onClick={handleDetectLocation}>Detect Location</Button>
-                                <Button className='handover-button-type-2 rounded-pill' onClick={handleManualLocation}>Search Delivery Location</Button>
-                            </div>
+            <Container fluid className='p-0' style={{ height: "100vh" }}>
+                <div className='d-flex'>
+                    <div className="col-md-3 col-12 p-3 d-flex flex-column gap-3" style={{
+                        background: "#ffffff", height: "95vh", zIndex: '89080'
+                    }}>
+                        <div className='delivery-fee-form-first-section p-3' >
+                            <img src="./delivery_fee_logo.png" alt="Delivery Fee Logo" />
+                            <h5>Welcome to HandOver</h5>
+                            <span style={{ fontSize: "16px", textAlign: "center", color: "#4D606A" }}>Please provide your delivery location to see products at nearby</span>
+                            <Button className='handover-button rounded-pill' onClick={handleDetectLocation}>Detect Location</Button>
+                            <Button className='handover-button-type-2 rounded-pill' onClick={handleManualLocation}>Search Delivery Location</Button>
+                        </div>
 
-                            {manualLocation && <div>
+                        {manualLocation && <div>
                             <Formik
                                 initialValues={initialValues}
                             // validationSchema={userValidationSchema}
@@ -145,9 +146,9 @@ const DeliveryFee = () => {
                             </Formik>
                         </div>}
 
-                     </div>
-                    <div className="col-9" style={{  height: '100vh' }}>
-                    {/* <MapContainer center={[latitude,longitude]} zoom={2} style={{ height: '100vh' }}>
+                    </div>
+                    <div className="col-9 d-md-block d-none " style={{ height: '100vh' }}>
+                        {/* <MapContainer center={[latitude,longitude]} zoom={2} style={{ height: '100vh' }}>
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -174,23 +175,23 @@ const DeliveryFee = () => {
                             <MapMarker lat={latitude} lng={longitude} /> 
                         </GoogleMapReact> */}
                     </div>
-                 </div>
-                
-            <div className='delivery-fee-second-form '>
-               <Container className='p-2' style={{maxWidth:"800px"}}>
-               <div className='head '>
-                    <h5><b>Roz Ki Delivery Handover Banaye Easy With Affordable Delivery Fee</b></h5>
                 </div>
-                <div className='d-flex gap-3'>
-                    <DeliveryFeeSecondFormDiv heading="2-wheeler Delivery Fleet" image="./2wheeler.png" desc={"Seeking hyperlocal delivery services at a low cost? Trust Handover’s two-wheeler delivery fleet that delivers orders to your customers on time."}/>
-                    <DeliveryFeeSecondFormDiv heading="3-wheeler Delivery Fleet" image="./3wheeler.png" desc={"Want a 3-wheeler delivery fleet to deliver cartons of fruits and vegetables, light construction materials and alike? Contact Handover!"}/>
-                    <DeliveryFeeSecondFormDiv heading="4-wheeler Delivery Fleet" image="./4wheeler.png" desc={"Want a 4-wheeler delivery fleet to deliver cartons of fruits and vegetables, light construction materials and alike? Contact Handover!"}/>
+
+                <div className='delivery-fee-second-form d-md-block d-none '>
+                    <Container className='p-2' style={{ maxWidth: "800px" }}>
+                        <div className='head '>
+                            <h5><b>Roz Ki Delivery Handover Banaye Easy With Affordable Delivery Fee</b></h5>
+                        </div>
+                        <div className='d-flex gap-3'>
+                            <DeliveryFeeSecondFormDiv heading="2-wheeler Delivery Fleet" image="./2wheeler.png" desc={"Seeking hyperlocal delivery services at a low cost? Trust Handover’s two-wheeler delivery fleet that delivers orders to your customers on time."} />
+                            <DeliveryFeeSecondFormDiv heading="3-wheeler Delivery Fleet" image="./3wheeler.png" desc={"Want a 3-wheeler delivery fleet to deliver cartons of fruits and vegetables, light construction materials and alike? Contact Handover!"} />
+                            <DeliveryFeeSecondFormDiv heading="4-wheeler Delivery Fleet" image="./4wheeler.png" desc={"Want a 4-wheeler delivery fleet to deliver cartons of fruits and vegetables, light construction materials and alike? Contact Handover!"} />
+                        </div>
+                    </Container>
                 </div>
-               </Container>
-            </div>
-               
+
             </Container>
-            
+
         </section>)
 }
 export default DeliveryFee;

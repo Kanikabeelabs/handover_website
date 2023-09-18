@@ -213,3 +213,5 @@ export const Location = [
     { id: 31, location_name: "noida", link_url: "./noida.png" },
 
 ]
+
+
