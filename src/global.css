@@ -25,19 +25,19 @@
   gap: 7px;
 }
 
-.div1{
-    display: flex;
-    gap: 10px;
+.div1 {
+  display: flex;
+  gap: 10px;
 }
 
-.div2{
-    display: flex;
-    gap: 10px;
+.div2 {
+  display: flex;
+  gap: 10px;
 }
 
-.div3{
-    display: flex;
-    gap: 10px;
+.div3 {
+  display: flex;
+  gap: 10px;
 }
 
 .handover-button {
@@ -135,7 +135,7 @@
 }
 
 .homeover-section {
-  padding: 100px;
+  padding: 100px 0px;
 }
 
 .second-section-heading {
@@ -153,15 +153,18 @@
   .second-section-heading {
     font-size: 1.5rem;
   }
+
   .contact-us-form-div {
     position: relative !important;
     top: 0px;
     margin-bottom: 150px !important;
   }
+
   .delivery_container-partner {
     justify-content: center !important;
   }
 }
+
 .delivery_container-partner {
   justify-content: flex-end;
 }
@@ -219,4 +222,9 @@
 
 .business_container-owner {
   justify-content: flex-end;
+}
+
+.location_info p {
+  font-weight: 300;
+  color: #3C3C3C
 }

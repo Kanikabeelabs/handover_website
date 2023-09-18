@@ -5,7 +5,7 @@ import NoticeSection from '../../Components/NoticeSection';
 import Header from "../../Components/Header";
 import Footer from '../../Components/Footer';
 import { HomePageSection2, keyFeatures, whyHandover, FAQ } from "../../utils/Data";
-import {contactUsSchemaValidation} from "../../utils/Validations";
+import { contactUsSchemaValidation } from "../../utils/Validations";
 import { postRequest } from '../../utils/ApiRequest';
 import { useState } from 'react';
 import { Formik, Form, Field } from 'formik';
@@ -15,19 +15,19 @@ const Home = () => {
         option: "",
         user_name: "",
         email_address: "",
-        mobile:"",
+        mobile: "",
         description: ""
     }
 
-    const handleSubmit = async(values,{resetForm}) =>{
+    const handleSubmit = async (values, { resetForm }) => {
         let formData = new FormData();
         formData = {
-            name:values.user_name,
-            email:values.email_address,
-            description:values.description,
-            mobile:values.mobile,
-            option:values.option
-            
+            name: values.user_name,
+            email: values.email_address,
+            description: values.description,
+            mobile: values.mobile,
+            option: values.option
+
         }
         try {
             let response = await postRequest("/api/v1/contactus", formData);
@@ -51,28 +51,27 @@ const Home = () => {
         } else {
             // If a new item is opened, close all others and open the new one
             setOpenItems([itemId]);
-        }
-    };
+        }
+    };
     return (
-        <section className='handover-homepage'> 
+        <section className='handover-homepage'>
+            <Header page_name="home" />
             <Container fluid className="p-0" >
                 {/*  ------------------------header ---------------------------------------*/}
-                <Container fluid 
-                 style={{ 
-                    backgroundImage: `url("./main_website.png")`,
-                 backgroundSize: 'cover',
-                 minHeight:'700px'
-                  }}>
-                    <Header page_name="home" />
+                <Container fluid
+                    style={{
+                        backgroundImage: `url("./main_website.png")`,
+                        backgroundSize: 'cover',
+                        minHeight: '700px'
+                    }}>
 
                     {/*  ------------------------First Section ---------------------------------------*/}
-                    <Container style={{ marginTop: "100px", maxWidth: '1600px' ,postion:"relative"}} >
-                        
-                        <p  className="handover-main-heading">Delivery Tension?</p>
-                        <div className="handover-main-heading-2 d-flex gap-2">
-                            <p style={{ color: "#F6911E" }} className="handover-main-heading  ">#Handover</p>
-                            <p className="handover-main-heading">Karo</p>
-                        </div>
+                    <Container style={{ paddingTop: "100px", maxWidth: '1800px', postion: "relative" }} >
+
+                        <p className="handover-main-heading">Delivery Tension?</p>
+                        <span style={{ color: "#F6911E" }} className="handover-main-heading">#Handover </span>
+                        <span className="handover-main-heading">Karo</span>
+
                         <p style={{
                             color: "#3C3C3C",
                             maxWidth: "400px",
@@ -89,7 +88,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className='video-section d-flex gap-3 mt-4 pb-3' style={{ flexWrap: 'wrap'}}>
+                        <div className='video-section d-flex gap-3 mt-4 pb-3' style={{ flexWrap: 'wrap' }}>
                             <iframe width="250" title="video1" height="200" src="https://www.youtube.com/embed/AaldFQmUjPA" frameBorder="0" allowFullScreen></iframe>
                             <iframe width="250" height="200" title="video2" src="https://www.youtube.com/embed/IO79wiKGTEc" frameBorder="0" allowFullScreen></iframe>
                         </div>
@@ -279,15 +278,16 @@ const Home = () => {
                     }}>
                         <img src="./mobile_phone.png" alt="Mobile Phone" />
                     </div>
-                </Container>
+                </Container>
 
                 {/*  ------------------------News Section ---------------------------------------*/}
                 <NoticeSection />
 
                 {/*  ------------------------Contact Us Section ---------------------------------------*/}
                 <Container className='handover-contact-us-section pt-5 pb-5'>
-                    <Container className="row" style={{ 
-                        maxWidth: "1400px",margin:"0px" }}>
+                    <Container className="row" style={{
+                        maxWidth: "1400px", margin: "0px"
+                    }}>
                         <div className='col-md-6 d-flex flex-column align-items-end'>
                             <img src="./contact_us.png" alt="ContactUs" width="100%" />
                         </div>
@@ -298,12 +298,12 @@ const Home = () => {
                                 validationSchema={contactUsSchemaValidation}
                                 onSubmit={handleSubmit}
                             >
-                                {({ errors, values,setFieldValue ,resetForm}) => (
+                                {({ errors, values, setFieldValue, resetForm }) => (
                                     <Form className="contact-us-form d-flex flex-column gap-3">
                                         <div className="d-flex flex-column">
                                             <label htmlFor="option">Choose a option</label>
-                                            <select name="option" 
-                                                id="option" className='custom-form-input' 
+                                            <select name="option"
+                                                id="option" className='custom-form-input'
                                                 onChange={(event) => setFieldValue("option", event.target.value)}
                                                 value={values.option}>
                                                 <option value="">Choose an Option</option>
@@ -354,8 +354,8 @@ const Home = () => {
                                         </div>
 
                                         <div className='d-flex justify-content-center gap-4'>
-                                            <Button variant="secondary" className='cancel-button' type="button" onClick={()=>handleCancel(resetForm)}>Cancel</Button>
-                                            <Button variant="primary" type="submit" style={{width:"50%"}}>Send Message</Button>
+                                            <Button variant="secondary" className='cancel-button' type="button" onClick={() => handleCancel(resetForm)}>Cancel</Button>
+                                            <Button variant="primary" type="submit" style={{ width: "50%" }}>Send Message</Button>
                                         </div>
                                     </Form>
                                 )}
