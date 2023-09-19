@@ -54,7 +54,7 @@ const Footer = () => {
                     <ul className='d-flex flex-column gap-1'>
                         <div className='div1'>
                             <img className='imagee1' src="./imagee1.png"></img>
-                            <li><Link to="">handover123@gmail.com</Link></li>
+                            <li><Link to="">info@handover.in</Link></li>
                         </div>
                         <div className='div2'>
                             <img className='imagee2' src="./imagee2.png"></img>

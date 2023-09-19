@@ -178,14 +178,14 @@ const DeliveryFee = () => {
                 </div>
 
                 <div className='delivery-fee-second-form d-md-block d-none '>
-                    <Container className='p-2' style={{ maxWidth: "800px" }}>
+                    <Container className='p-2' style={{ maxWidth: "1200px" }}>
                         <div className='head '>
-                            <h5><b>Roz Ki Delivery Handover Banaye Easy With Affordable Delivery Fee</b></h5>
+                            <h5 style={{ textAlign: "center" }}><b>Roz Ki Delivery Handover Banaye Easy With Affordable Delivery Fee</b></h5>
                         </div>
-                        <div className='d-flex gap-3'>
+                        <div className='d-flex justify-content-between'>
                             <DeliveryFeeSecondFormDiv heading="2-wheeler Delivery Fleet" image="./2wheeler.png" desc={"Seeking hyperlocal delivery services at a low cost? Trust Handover’s two-wheeler delivery fleet that delivers orders to your customers on time."} />
                             <DeliveryFeeSecondFormDiv heading="3-wheeler Delivery Fleet" image="./3wheeler.png" desc={"Want a 3-wheeler delivery fleet to deliver cartons of fruits and vegetables, light construction materials and alike? Contact Handover!"} />
-                            <DeliveryFeeSecondFormDiv heading="4-wheeler Delivery Fleet" image="./4wheeler.png" desc={"Want a 4-wheeler delivery fleet to deliver cartons of fruits and vegetables, light construction materials and alike? Contact Handover!"} />
+                            <DeliveryFeeSecondFormDiv heading="4-wheeler Delivery Fleet" image="./4wheeler.png" desc={"Want trucks to deliver heavy goods from your shop or warehouse to another business? Choose from an extensive 4-wheeler delivery fleet."} />
                         </div>
                     </Container>
                 </div>

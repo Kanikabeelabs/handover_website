@@ -48,7 +48,7 @@ const DeliveryPartners = () => {
         <Container fluid className="p-0">
             <Header page_name="delivery_partner" />
             {/* First Section */}
-            <Container fluid className="p-0" style={{ minHeight: "800px" }}>
+            <Container fluid className="p-0" >
                 <Container fluid className="d-flex p-md-5 p-3 delivery_container-partner"
                     style={{
                         backgroundImage: `url("./deliverypartner.png")`,
@@ -163,7 +163,7 @@ const DeliveryPartners = () => {
 
             </Container>
             {/* Second Section */}
-            <div className='d-flex flex-column align-items-center justify-content-center'>
+            <div className='d-flex py-5 flex-column align-items-center justify-content-center'>
                 <h1>Handover में Delivery Partner बनने के फायदे</h1>
                 <div className='row my-4' style={{ width: "100%" }}>
                     <div className='d-flex flex-column gap-3 align-items-center col-md-4 col-12 '>
@@ -210,7 +210,7 @@ const DeliveryPartners = () => {
                     <p style={{ fontSize: "27px", color: "#4F4F4F" }}> Find Opportunties for you</p>
                     <Button variant="primary">Explore Opportunties</Button>
                 </div>
-                <div className='handover-shadow-div contact-us-form-div p-2 d-none d-md-block'
+                {/* <div className='handover-shadow-div contact-us-form-div p-2 d-none d-md-block'
                     style={{ width: "350px", position: "absolute", bottom: "30px", right: "100px" }}>
                     <div className='d-flex flex-row gap-2'>
                         <img src="./retailer_profile.png" alt="HandOver Profile" width="80px" height="80px" />
@@ -221,7 +221,7 @@ const DeliveryPartners = () => {
                                 this well, in reality.</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </Container>
             {/* Location Section */}
             <OurLocation />
