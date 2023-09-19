@@ -12,10 +12,10 @@ const Footer = () => {
                     <p style={{
                         fontWeight: "300",
                         maxWidth: "300px"
-                    }}>HANDOVER MOBILITY PRIVATE LIMITED <br/>
-                        U52219DL2023PTC412868 <br/>
-                        216-A, IV/F, L/S GAUTAM NAGAR New Delhi <br/>
-                        Delhi 110049<br/>
+                    }}>HANDOVER MOBILITY PRIVATE LIMITED <br />
+                        U52219DL2023PTC412868 <br />
+                        216-A, IV/F, L/S GAUTAM NAGAR New Delhi <br />
+                        Delhi 110049<br />
                         Contact – 093113 39816
                     </p>
                     <ul className="media">
@@ -36,6 +36,8 @@ const Footer = () => {
                 </div>
                 <div className="d-flex flex-column gap-3 col-md-2"  style={{ marginTop: '22px' }}>
                     <p>Our Services</p>
+
+               
                     <ul className='d-flex flex-column gap-1'>
                         <li><Link to="">Apparels & Lifestyle</Link></li>
                         <li><Link to="">Bakery & Confectioneries</Link></li>
@@ -50,7 +52,7 @@ const Footer = () => {
                         <li><Link to="">Utilities Services</Link></li>
                     </ul>
                 </div>
-                <div className="d-flex flex-column gap-3 col-md-2"  style={{ marginTop: '22px' }}>
+                <div className="d-flex flex-column gap-3 col-md-2" style={{ marginTop: '22px' }}>
                     <p>Links</p>
                     <ul className='d-flex flex-column gap-1'>
                         <li><Link to="">Pricing</Link></li>
@@ -58,21 +60,23 @@ const Footer = () => {
                         <li><Link to="">FAQ</Link></li>
                     </ul>
                 </div>
-                <div className="d-flex flex-column gap-3 col-md-2"  style={{ marginTop: '22px' }}>
+                <div className="d-flex flex-column gap-3 col-md-2" style={{ marginTop: '22px' }}>
                     <p>Support</p>
                     <ul className='d-flex flex-column gap-1'>
                         <div className='div1'>
                             <img className='imagee1' src="./imagee1.png"></img>
                             <li><Link to="">info@handover.in</Link></li>
-                        </div>    
+                     
+                        </div>
                         <div className='div2'>
                             <img className='imagee2' src="./imagee2.png"></img>
-                            <li><Link to="">+91 93113 39816</Link></li>
-                        </div>    
+                            <li><Link to="">+91 837837897</Link></li>
+                        </div>
+                        
                         <div className='div3'>
-                                <img className='imagee3' src="./imagee3.png"></img>
-                                <img className='imagee4' src="./imagee4.png"></img>  
-                </div>    
+                            <img className='imagee3' src="./imagee3.png"></img>
+                            <img className='imagee4' src="./imagee4.png"></img>
+                        </div>
                     </ul>
                 </div>
             </Container>
@@ -81,4 +85,4 @@ const Footer = () => {
             background: "#3D3D3D", height: "50px"
         }}></div></>)
 }
-export default Footer;
+export default Footer;

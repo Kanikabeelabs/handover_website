@@ -2,32 +2,11 @@ import { Container } from 'react-bootstrap';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import NoticeSection from '../../Components/NoticeSection';
-import LocationItem from '../../Components/LocationItem';
 import "./Aboutus.css";
 import { AboutUsCardItemData } from "../../utils/Data";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import { Location } from "../../utils/Data";
+import OurLocation from "../../Components/OurLocation";
 const Aboutus = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 3
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+
   // const [activeCard, setActiveCard] = useState(0);
   const AboutUsCard = ({ id, imgURL, heading, desc }) => {
     return (<div
@@ -68,7 +47,7 @@ const Aboutus = () => {
           <div className='col-md-3 d-flex flex-column flex-wrap gap-2 justify-content-center '>
             <h4 className='fw-bold'>About Us</h4>
             <p className='m-0 p-0' style={{ fontWeight: "300" }}>
-            handover is a low-cost, safe and reliable delivery service provider to businesses across 35 cities of India. It has 1000+ registered Delivery Partners who deliver products through an extensive logistics fleet comprising trucks, electric vehicles and 3-wheelers.
+              Handover is a low-cost, safe and reliable delivery service provider to businesses across 35 cities of India. It has 1000+ registered Delivery Partners who deliver products through an extensive logistics fleet comprising trucks, electric vehicles and 3-wheelers.
             </p>
           </div>
           <div className='col-md-9 d-flex flex-wrap gap-2 justify-content-evenly' >{
@@ -124,18 +103,7 @@ const Aboutus = () => {
       </Container>
 
       {/* Location Section */}
-      <Container fluid className="mb-2">
-        <h3 className='mt-4 mb-4 fw-bold' style={{ textAlign: 'center' }}>Our Location</h3>
-        <Container>
-          <Carousel responsive={responsive}>
-            {Location.map((item, index) => {
-              return (<LocationItem key={index} item={item} />)
-            })}
-          </Carousel>
-        </Container>
-
-      </Container>
-
+      <OurLocation />
       {/* News Section */}
       {/* <NoticeSection /> */}
 
@@ -143,4 +111,4 @@ const Aboutus = () => {
     </section>)
 }
 
-export default Aboutus;
+export default Aboutus;

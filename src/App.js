@@ -8,12 +8,13 @@ import Aboutus from "./Pages/Aboutus/Aboutus";
 import "./global.css";
 import Blogs from "./Pages/blogs/Blogs";
 import Description from "./Pages/blogs/Description";
+import LocationInfo from "./Components/LocationInfo";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-       
+
         <Route path="/" element={<Home />} />
         <Route path="/retailer" element={<Retailer />} />
         <Route path="/delivery-partner" element={<DeliveryPartners />} />
@@ -22,7 +23,7 @@ function App() {
         <Route path="/about-us" element={<Aboutus />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog-description" element={<Description />} />
-
+        <Route path="/location-info/:location?" element={<LocationInfo />} />
       </Routes>
     </BrowserRouter>
   );
