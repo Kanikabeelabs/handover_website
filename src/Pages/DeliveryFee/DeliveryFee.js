@@ -64,7 +64,7 @@ const DeliveryFee = () => {
                         background:"#ffffff",height:"95vh",zIndex:'89080'}}>
                           <div className='delivery-fee-form-first-section p-3' >
                                 <img src="./delivery_fee_logo.png" alt="Delivery Fee Logo" />
-                                <h5>Welcome to HandOver</h5>
+                                <h5>Welcome to handOver</h5>
                                 <span style={{ fontSize: "16px", textAlign: "center", color: "#4D606A" }}>Please provide your delivery location to see products at nearby</span>
                                 <Button className='handover-button rounded-pill' onClick={handleDetectLocation}>Detect Location</Button>
                                 <Button className='handover-button-type-2 rounded-pill' onClick={handleManualLocation}>Search Delivery Location</Button>
@@ -161,7 +161,7 @@ const DeliveryFee = () => {
             <div className='delivery-fee-second-form '>
                <Container className='p-2' style={{maxWidth:"800px"}}>
                <div className='head '>
-                    <h5><b>Roz Ki Delivery Handover Banaye Easy With Affordable Delivery Fee</b></h5>
+                    <h5><b>Roz Ki Delivery handover Banaye Easy With Affordable Delivery Fee</b></h5>
                 </div>
                 <div className='d-flex gap-3'>
                     <DeliveryFeeSecondFormDiv heading="2-wheeler Delivery Fleet" image="./2wheeler.png" desc={"Seeking hyperlocal delivery services at a low cost? Trust Handover’s two-wheeler delivery fleet that delivers orders to your customers on time."}/>

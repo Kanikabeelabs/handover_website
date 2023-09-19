@@ -30,13 +30,13 @@ export const keyFeatures = [
 
 export const whyHandover = [
     {
-        id: 1, heading: "The Freedom to Order Anytime", desc: "Handover allows you to place orders with it anytime."
+        id: 1, heading: "The Freedom to Order Anytime", desc: "handover allows you to place orders with it anytime."
     },
     {
         id: 2, heading: "No Need to Call Anyone for Deliveries", desc: "The hi-tech delivery management system ensures a seamless process from order creation to order delivery, eliminating the need for businesses to call anyone."
     },
     {
-        id: 3, heading: "Delivery Partners Can Maximise Earnings", desc: "Handover allows its delivery partners to choose multiple locations for delivery services. As a result, they can get more orders to enhance their earnings."
+        id: 3, heading: "Delivery Partners Can Maximise Earnings", desc: "handover allows its delivery partners to choose multiple locations for delivery services. As a result, they can get more orders to enhance their earnings."
     }
 ]
 
@@ -44,19 +44,19 @@ export const AboutUsCardItemData = [
     {
         id: 1, img_url: "./about_us1.png",
         heading: "Our Purpose",
-        desc: "Businesses are doing well but haven’t been able to control their delivery cost. Handover looks to reduce their delivery expenses and allow them to earn more business. Businesses can deliver stuff to far distant locations in the city with Handover."
+        desc: "Businesses are doing well but haven’t been able to control their delivery cost. handover looks to reduce their delivery expenses and allow them to earn more business. Businesses can deliver stuff to far distant locations in the city with handover."
     },
     {
         id: 2,
         img_url: "./about_us2.png",
         heading: "Our Vision",
-        desc: "We want to make businesses, Handover’s Delivery Partners and the end users happy with our delivery services. And we are confident of maintaining so with our unwavering commitment, trained delivery staff, smart technology, and much more."
+        desc: "We want to make businesses, handover’s Delivery Partners and the end users happy with our delivery services. And we are confident of maintaining so with our unwavering commitment, trained delivery staff, smart technology, and much more."
     },
     {
         id: 3,
         img_url: "./about_us3.png",
         heading: "Our Positioning",
-        desc: "Handover has already gained a significant foothold in India’s logistics space, courtesy of hi-tech delivery management, delivery partners, etc. With a strong presence across 35 cities in India, we have been successfully catering to various logistics demands raised by businesses."
+        desc: "handover has already gained a significant foothold in India’s logistics space, courtesy of hi-tech delivery management, delivery partners, etc. With a strong presence across 35 cities in India, we have been successfully catering to various logistics demands raised by businesses."
     }
 ]
 
@@ -65,14 +65,14 @@ export const RetailersData = [
         id: 1,
         img_url: "./delivery_partner_1.png",
         heading: "आपके Customer रहेंगे हमारी On-time Delivery से खुश",
-        description: "Handover के Delivery Partners हैं Time के पक्के। वह आएंगे आपकी दुकान पर, सामान उठाएंगे और पंहुचा देंगे उसे आपके Customers के पास Time पर। On-time Delivery से आपके Customers रहेंगे आपसे खुश।",
+        description: "handover के Delivery Partners हैं Time के पक्के। वह आएंगे आपकी दुकान पर, सामान उठाएंगे और पंहुचा देंगे उसे आपके Customers के पास Time पर। On-time Delivery से आपके Customers रहेंगे आपसे खुश।",
         link_url: ""
     },
     {
         id: 2,
         img_url: "./delivery_partner_2.png",
         heading: "फिजूल Delivery खर्चों पर लगाए BREAK",
-        description: "भले ही आप अपनी मुस्कुराहट से अपने दर्द को छिपा रहे हो, लेकिन हम जानते हैं आप को कुछ दिक्कतें तो हैं। आपकी Salary वाली Delivery Force आप पर बोझ बन रही हैं। Delivery Time पर हो ना हो, Time पर Salary ज़रूर ले रहे हैं। Handover दे रहा हैं आपको Delivery Force सिर्फ Delivery Basis पर। इससे आप फिजूल खर्चों से बच सकेंगे।",
+        description: "भले ही आप अपनी मुस्कुराहट से अपने दर्द को छिपा रहे हो, लेकिन हम जानते हैं आप को कुछ दिक्कतें तो हैं। आपकी Salary वाली Delivery Force आप पर बोझ बन रही हैं। Delivery Time पर हो ना हो, Time पर Salary ज़रूर ले रहे हैं। handover दे रहा हैं आपको Delivery Force सिर्फ Delivery Basis पर। इससे आप फिजूल खर्चों से बच सकेंगे।",
         link_url: ""
     },
     {
@@ -100,7 +100,7 @@ export const RetailersData = [
         id: 6,
         img_url: "./delivery_partner_6.png",
         heading: "Delivery Service जल्द ही Start हो जाएगा",
-        description: "Handover के साथ आप तुरंत अपने Customers को Deliver कर पाएंगे। आप Handover App या हमारे Website पर आकर Register कर सकते हैं। Registration करने के लिए आपको अपना नाम, Mobile Number, Email ID Mention करना होगा Form पर।  Once Registration Done, Delivery is On!",
+        description: "handover के साथ आप तुरंत अपने Customers को Deliver कर पाएंगे। आप handover App या हमारे Website पर आकर Register कर सकते हैं। Registration करने के लिए आपको अपना नाम, Mobile Number, Email ID Mention करना होगा Form पर।  Once Registration Done, Delivery is On!",
         link_url: ""
     }
 ]
@@ -154,18 +154,18 @@ export const DeliveryPartnersData = [
 export const FAQ = [
     {
         id: 1,
-        heading: 'Is Handover Special? How?',
-        description: ' Yes, it is! Handover has made the entire delivery system cost-efficient and transparent by reviving interactions between businesses and their customers.'
+        heading: 'Is handover Special? How?',
+        description: ' Yes, it is! handover has made the entire delivery system cost-efficient and transparent by reviving interactions between businesses and their customers.'
     },
     {
         id: 2,
-        heading: 'How Can Businesses Register with Handover?',
-        description: 'Businesses can register with Handover on its official website and app.'
+        heading: 'How Can Businesses Register with handover?',
+        description: 'Businesses can register with handover on its official website and app.'
     },
     {
         id: 3,
-        heading: 'What is the Registration Process for Businesses with Handover?',
-        description: '<b>On Website</b> <br />Click on the ‘Retailers’ icon<br />Choose ‘Retailer’ from the drop-down<br />Mention your name, email address and mobile number, and click on ‘Send Message’<br />We will verify the details before registering your business for delivery services<br /><br /><b>On App</b><br />Download the Handover Business App from the Google Play Store<br />After giving location permission access and doing mobile number authentication, enter your name, the business name, the type of business, etc.<br />After successful verification of these details, we will get you registered for delivery services.'
+        heading: 'What is the Registration Process for Businesses with handover?',
+        description: '<b>On Website</b> <br />Click on the ‘Retailers’ icon<br />Choose ‘Retailer’ from the drop-down<br />Mention your name, email address and mobile number, and click on ‘Send Message’<br />We will verify the details before registering your business for delivery services<br /><br /><b>On App</b><br />Download the handover Business App from the Google Play Store<br />After giving location permission access and doing mobile number authentication, enter your name, the business name, the type of business, etc.<br />After successful verification of these details, we will get you registered for delivery services.'
     },
     {
         id: 4,
@@ -175,7 +175,7 @@ export const FAQ = [
     {
         id: 5,
         heading: 'How Do I Know My Wallet Recharge Status?',
-        description: ' Visit the ‘Recharge Wallet’ section on the Handover Business App to know the balance left for deliveries. '
+        description: ' Visit the ‘Recharge Wallet’ section on the handover Business App to know the balance left for deliveries. '
     }
 ]
 
@@ -213,3 +213,4 @@ export const Location = [
     { id: 31, location_name: "noida", link_url: "./noida.png" },
 
 ]
+

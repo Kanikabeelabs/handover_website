@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap"
 const HandOverStatistics = () => {
-    return (<div className='retailer-statistics pt-5 pb-5' style={{ background: "#0d6efd" }}>
+    return (<div className='retailer-statistics pt-5 pb-5' style={{ background: "#007DC4" }}>
         <div style={{
             width: "fit - content",
             margin: " 0 auto",
@@ -18,21 +18,21 @@ const HandOverStatistics = () => {
 
             <div className='col-md-6 col-12 d-flex justify-content-center align-items-center'>
                 <div className='map_div'>
-                    <p style={{ fontSize: "20px", textAlign: 'center' }}>Handover Retailers Statistics</p>
+                    <p style={{ fontSize: "20px", textAlign: 'center' }}>handover Retailers Statistics</p>
                     <div className='d-flex  justify-content-between'>
                         <div>
-                            <h2>65100+</h2>
+                            <h2>4500+</h2>
                             <p>RETAILERS</p>
                         </div>
                         <div>
-                            <h2>1000+</h2>
+                            <h2>500+</h2>
                             <p>PINCODES</p>
                         </div>
                     </div>
                     <div style={{ position: "absolute", top: 50 }}><img width="320px" src="./dash.png" alt="DashedLine" /></div>
                     <div className='d-flex  justify-content-between'>
                         <div>
-                            <h2>84370+</h2>
+                            <h2>25000+</h2>
                             <p>ORDER DELIVERED</p>
                         </div>
                         <div>
@@ -49,12 +49,12 @@ const HandOverStatistics = () => {
 
         </Container>
 
-        <p style={{
+        {/* <p style={{
             color: "#ffffff",
             maxWidth: "950px",
             margin: "0 auto",
             textAlign: "center"
-        }}>We are serving in Delhi NCR, Bengaluru, Mumbai, Hyderabad, Ahmedabad, Jaipur, Pune, Kolkata, Surat, Chennai, Coimbatore, Indore, Nagpur, Chandigarh, Lucknow, Vadodara, Ludhiana, Kochi, and Nashik.</p>
+        }}>We are serving in Delhi NCR, Bengaluru, Mumbai, Hyderabad, Ahmedabad, Jaipur, Pune, Kolkata, Surat, Chennai, Coimbatore, Indore, Nagpur, Chandigarh, Lucknow, Vadodara, Ludhiana, Kochi, and Nashik.</p> */}
 
     </div>)
 }
