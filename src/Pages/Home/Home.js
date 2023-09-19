@@ -67,10 +67,9 @@ const Home = () => {
                     }}>
 
                     {/*  ------------------------First Section ---------------------------------------*/}
-                    <Container style={{ paddingTop: "100px", maxWidth: '1800px', postion: "relative" }} >
-
+                    <Container style={{ paddingTop: "100px", maxWidth: '1600px' ,postion:"relative"}} >
                         <p className="handover-main-heading">Delivery Tension?</p>
-                        <span style={{ color: "#F6911E" }} className="handover-main-heading">#Handover </span>
+                        <span style={{ color: "#F6911E" }} className="handover-main-heading">#handover </span>
                         <span className="handover-main-heading">Karo</span>
 
                         <p style={{
@@ -116,7 +115,7 @@ const Home = () => {
                     {/*  ------------------------Second Section ---------------------------------------*/}
                     <div className='second-section'>
                         <div className='d-flex flex-column align-items-center justify-content-center homeover-section' >
-                            <p className='second-section-heading'>So Many Order Delivery Needs, One Solution Handover</p>
+                            <p className='second-section-heading'>So Many Order Delivery Needs, One Solution handover</p>
                             <Container className='d-flex gap-3 justify-content-around mt-5 flex-wrap' style={{ maxWidth: "1600px" }}>
                                 {HomePageSection2.map((item, index) => {
                                     return <CategoryItem key={index} imgURL={item.img} heading={item.heading} desc={item.desc} />
@@ -139,7 +138,7 @@ const Home = () => {
                     <Container className="d-flex justify-content-between flex-wrap" style={{ maxWidth: "1500px" }}>
                         <div className='col-md-6 col-12'>
                             <h1 className='fw-bold'>Key Features</h1>
-                            <p style={{ maxWidth: "350px", fontWeight: "300" }}>Handover’s Delivery Partners can choose multiple locations to get maximum orders, which will help them earn more.</p>
+                            <p style={{ maxWidth: "350px", fontWeight: "300" }}>handover’s Delivery Partners can choose multiple locations to get maximum orders, which will help them earn more.</p>
                             <div style={{ width: "80%" }}><img src="./key_features.png" width="100%" alt="KeyFeature" /></div>
                         </div>
                         <div className='col-md-6  col-12'>
@@ -245,7 +244,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className='col-md-6 d-flex flex-column align-items-center'>
-                            <h3 className='fw-bold' style={{ maxWidth: "350px", textAlign: 'center', height: "80px" }}>Why Handover</h3>
+                            <h3 className='fw-bold' style={{ maxWidth: "350px", textAlign: 'center', height: "80px" }}>Why handover</h3>
                             <img src="./image2.png" alt="Image2" />
                             <div>
                                 {whyHandover.map((item, index) => {
@@ -265,10 +264,15 @@ const Home = () => {
 
                 <Container className='d-flex align-items-center' fluid style={{ height: "600px", position: "relative" }}>
                     <Container className='p-5' style={{ background: "#ECF8FF", borderRadius: "11px" }}>
-                        <p>Lorem ipsum is placeholder text commonly used in the <br></br> graphic,
-                            print, and publishing industries for previewing <br></br>layouts and visual mockups.
+                        <p>Our Retailer App caters to local businesses across various categories,
+                            including food, grocery, and apparels.<br></br> Whether you run a small café,
+                            a neighborhood grocery store, a boutique, a bulk distributor of FMCG
+                            products<br></br> or doing business from home, our app is designed to meet your specific needs. We offer delivery via
+                            <br></br>Two-Wheelers, Three-Wheelers, Four-Wheelers, Trucks at nominal charges. Streamline your delivery process through
+                            <br></br>our intuitive platform, gain Visibility to get more orders and list your product for our end users in Handover
+                            <br></br>Business app.
                         </p>
-                        <h5 className='mt-3'>Download the Handover Mobile App For Free</h5>
+                        <h5 className='mt-3'>Download the handover Mobile App For Free</h5>
                         <a href="https://play.google.com/store/apps/details?id=com.handover.retailer" className='mt-3'>
                             <img src="./playstore.png" alt="PlayStore" />
                         </a>
@@ -282,7 +286,7 @@ const Home = () => {
                 </Container>
 
                 {/*  ------------------------News Section ---------------------------------------*/}
-                <NoticeSection />
+                {/* <NoticeSection /> */}
 
                 {/*  ------------------------Contact Us Section ---------------------------------------*/}
                 <Container className='handover-contact-us-section pt-5 pb-5'>

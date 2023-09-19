@@ -34,11 +34,22 @@ const Footer = () => {
                         <li><Link to="">Contact US</Link></li>
                     </ul>
                 </div>
-                <div className="d-flex flex-column gap-3 col-md-2" style={{ marginTop: '22px' }}>
-                    <p>Customer Service</p>
+                <div className="d-flex flex-column gap-3 col-md-2"  style={{ marginTop: '22px' }}>
+                    <p>Our Services</p>
+
+               
                     <ul className='d-flex flex-column gap-1'>
-                        <li><Link to="">Food delivery</Link></li>
-                        <li><Link to="">Parcel delivery</Link></li>
+                        <li><Link to="">Apparels & Lifestyle</Link></li>
+                        <li><Link to="">Bakery & Confectioneries</Link></li>
+                        <li><Link to="">Cooked Food</Link></li>
+                        <li><Link to="">Electronic Items</Link></li>
+                        <li><Link to="">Frozen Food & Vegetables</Link></li>
+                        <li><Link to="">Furniture</Link></li>
+                        <li><Link to="">Gifts & Flowers</Link></li>
+                        <li><Link to="">Groceries</Link></li>
+                        <li><Link to="">Pharmacy</Link></li>
+                        <li><Link to="">Stationery</Link></li>
+                        <li><Link to="">Utilities Services</Link></li>
                     </ul>
                 </div>
                 <div className="d-flex flex-column gap-3 col-md-2" style={{ marginTop: '22px' }}>
@@ -55,11 +66,13 @@ const Footer = () => {
                         <div className='div1'>
                             <img className='imagee1' src="./imagee1.png"></img>
                             <li><Link to="">info@handover.in</Link></li>
+                     
                         </div>
                         <div className='div2'>
                             <img className='imagee2' src="./imagee2.png"></img>
                             <li><Link to="">+91 837837897</Link></li>
                         </div>
+                        
                         <div className='div3'>
                             <img className='imagee3' src="./imagee3.png"></img>
                             <img className='imagee4' src="./imagee4.png"></img>

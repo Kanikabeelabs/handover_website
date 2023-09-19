@@ -140,6 +140,7 @@ const Retailer = () => {
                     {/* </div> */}
                 </Container>
 
+
             </Container>
             {/* Second Section */}
             <div className='d-flex py-5 flex-column align-items-center justify-content-center'>
@@ -189,7 +190,7 @@ const Retailer = () => {
                     <p style={{ fontSize: "27px", color: "#4F4F4F" }}> Find Opportunties for you</p>
                     <Button variant="primary">Explore Carrers</Button>
                 </div>
-                <div className='handover-shadow-div p-2 d-none d-md-block'
+                {/* <div className='handover-shadow-div p-2 d-none d-md-block'
                     style={{ width: "350px", position: "absolute", bottom: "30px", right: "100px" }}>
                     <div className='d-flex flex-row gap-2'>
                         <img src="./retailer_profile.png" alt="HandOver Profile" width="80px" height="80px" />
@@ -200,7 +201,7 @@ const Retailer = () => {
                                 this well, in reality.</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </Container>
             {/* Location Section */}
             <OurLocation />

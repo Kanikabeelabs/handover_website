@@ -34,7 +34,7 @@ const Aboutus = () => {
           top: "10%",
           left: "10%"
         }}>
-          <h1 className='fw-bold'>Handover</h1>
+          <h1 className='fw-bold'>handover</h1>
           <h1 className='fw-bold' style={{ color: "#F6911E" }}>Your Delivery Partner</h1>
         </div>
         <div style={{ width: "100%" }}>
@@ -105,7 +105,7 @@ const Aboutus = () => {
       {/* Location Section */}
       <OurLocation />
       {/* News Section */}
-      <NoticeSection />
+      {/* <NoticeSection /> */}
 
       <Footer />
     </section>)
