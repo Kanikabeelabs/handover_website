@@ -4,14 +4,14 @@ import Footer from '../Components/Footer';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Location } from "../utils/Data";
+import { LocationInfoData } from "../utils/Data";
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 const LocationInfo = () => {
-    const location28 = Location.find(location => location.id === 28);
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const location_name = queryParams.get('location_name');
+    const locationData = LocationInfoData.find(locations => locations.location === location_name);
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -19,7 +19,7 @@ const LocationInfo = () => {
 
     return (
         <section className='location_info_section'>
-            {console.log(location28)}
+            {console.log(locationData)}
             {console.log(location_name)}
             {/* ---------------------------Header--------------------------- */}
             <Header />
@@ -29,15 +29,12 @@ const LocationInfo = () => {
                     <div className='col-md-8 col-12'>
                         <div>
                             <h1>Deilvery service in</h1>
-                            <h1 style={{ color: "#F6911E" }}>Muzaffarpur</h1>
+                            <h1 style={{ color: "#F6911E", textTransform: "capitalize" }}>{location_name}</h1>
                         </div>
                         {/* <div dangerouslySetInnerHTML={{ __html: item.description }} /> */}
-                        <p>#1 Choice for All Your Delivery Needs – Food Delivery, Grocery Delivery
-                            & More in Muzaffarpur.</p>
-                        <p>Looking for people who can deliver goods to the customers on time in
-                            Muzaffarpur? Or are searching for delivery jobs in Muzaffarpur? Handover
-                            welcomes both of you. We ensure food delivery jobs, grocery delivery jobs and related work in the city.</p>
-                        <p>As a shopkeeper, you can now feel free to entertain maximum orders to boost your sales. Handover Champs are there to deliver across Muzaffarpur. For us, the size of the business does not matter. Small or big business, we support all through our delivery services. Join Handover, take its services and share your views on the same.</p>
+                        <p>{locationData?.heading1}</p>
+                        <p>{locationData?.des1}</p>
+                        <p>{locationData?.des2}</p>
 
                         <div>
                             <img src='./location-details.png' alt="Location_detail" width="100%"></img>
@@ -45,12 +42,11 @@ const LocationInfo = () => {
 
                         <div>
                             <h1>Exploring</h1>
-                            <h1 style={{ color: "#F6911E" }}>Muzaffarpur</h1>
+                            <h1 style={{ color: "#F6911E", textTransform: "capitalize" }}>{location_name}</h1>
                         </div>
 
-                        <p>Let’s Check Out Muzaffarpur and Its Specialties</p>
-                        <p>Muzaffarpur, a popular city in the state of Bihar, is known for its Litchis.
-                            Once it was the part of glorious civilisation of ancient India and has now become the economic hub of modern Bihar. Muzaffarpur has been the 3rd most populous district of Bihar. Moreover, the city has been ruled by different dynasties till independence. But the modern Muzaffarpur city was established by the British empire in 1875 and named after its revenue officer Muzaffar Khan. There are numerous historical places in Muzaffarpur where visitors come every year.</p>
+                        <p>{locationData?.subheading2}</p>
+                        <p>{locationData?.des3}</p>
 
                         <div>
                             <img src='./location-details.png' alt="Location_detail" width="100%"></img>
@@ -60,15 +56,15 @@ const LocationInfo = () => {
                             <h6>Interesting facts</h6>
                             <Col className='d-flex flex-column gap-4 mt-3'>
                                 <div>
-                                    <span><b>Population:  </b></span> <span style={{ fontWeight: "300" }}>4870000 (approx.)</span>
+                                    <span><b>Population:  </b></span> <span style={{ fontWeight: "300" }}>{locationData?.population}</span>
                                 </div>
                                 <div>
                                     <span><b>Popular sites: </b></span>
-                                    <span style={{ fontWeight: "300" }}>Ashoka Pillar, Litchi gardens,Ramna Devi andir,etc. </span>
+                                    <span style={{ fontWeight: "300" }}>{locationData?.popularsites} </span>
                                 </div>
                             </Col>
                             <Col>
-                                <img src='./location-map.png' alt="Location_map" width="100%"></img>
+                                <img src={`./${location_name}_map.png`} alt="Location_map" width="100%"></img>
                             </Col>
                         </Row>
                     </div>
