@@ -32,7 +32,7 @@ const Header = ({ page_name }) => {
                             <h6 className="m-0">WhatsApp</h6>
                         </a>
 
-                        <a href="">
+                        <a href="https://play.google.com/store/apps/details?id=com.handover.retailer" target="_blank">
                             <img src="./GooglePlayLogo.png" alt="Playstore" />
                         </a>
                     </div>

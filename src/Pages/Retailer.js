@@ -30,7 +30,7 @@ const Retailer = () => {
 
         }
         try {
-            let response = await postRequest("http://3.108.127.83:3001/api/v1/contactus", formData);
+            let response = await postRequest("/api/v1/contactus", formData);
             alert("You have successfully submitted the form");
             resetForm();
         } catch (err) {
@@ -48,7 +48,7 @@ const Retailer = () => {
         <Container fluid className="p-0">
             <Header page_name="retailer" />
             {/* First Section */}
-            <Container fluid className="p-0" style={{ minHeight: "800px" }}>
+            <Container fluid className="p-0" >
                 <Container fluid className="d-flex p-md-5 p-3 business_container-owner"
                     style={{
                         backgroundImage: 'url("./businessowner.png")',
@@ -142,7 +142,7 @@ const Retailer = () => {
 
             </Container>
             {/* Second Section */}
-            <div className='d-flex py-3 flex-column align-items-center justify-content-center'>
+            <div className='d-flex py-5 flex-column align-items-center justify-content-center'>
                 <h1>Handover से जुड़ने के फायदें </h1>
                 <div className='row d-flex align-items-center' style={{ width: "100%" }}>
                     <div className='d-flex flex-column gap-3 align-items-center col-md-4 col-12 '>

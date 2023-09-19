@@ -31,6 +31,7 @@ const Home = () => {
         }
         try {
             let response = await postRequest("/api/v1/contactus", formData);
+            console.log(response)
             alert("You have successfully submitted the form");
             resetForm();
         } catch (err) {
@@ -170,7 +171,7 @@ const Home = () => {
                         <div className='col-md-6 d-flex flex-column align-items-center '>
                             <h3 className='fw-bold' style={{ maxWidth: "350px", textAlign: 'center', height: "80px" }}>
                                 Frequently Asked Questions (FAQs)</h3>
-                            <img src="./image2.png" alt="Image1" />
+                            <img src="./faq_image.png" alt="Image1" />
                             <div>
                                 {FAQ.map((item) => {
                                     return (
