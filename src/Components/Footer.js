@@ -70,9 +70,9 @@ const Footer = () => {
                         </div>
                         <div className='div2'>
                             <img className='imagee2' src="./imagee2.png"></img>
-                            <li><Link to="">+91 837837897</Link></li>
+                            <li><Link to="">+91 93113 39816</Link></li>
                         </div>
-                        
+
                         <div className='div3'>
                             <img className='imagee3' src="./imagee3.png"></img>
                             <img className='imagee4' src="./imagee4.png"></img>

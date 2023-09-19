@@ -47,7 +47,7 @@ const Aboutus = () => {
           <div className='col-md-3 d-flex flex-column flex-wrap gap-2 justify-content-center '>
             <h4 className='fw-bold'>About Us</h4>
             <p className='m-0 p-0' style={{ fontWeight: "300" }}>
-              Handover is a low-cost, safe and reliable delivery service provider to businesses across 35 cities of India. It has 1000+ registered Delivery Partners who deliver products through an extensive logistics fleet comprising trucks, electric vehicles and 3-wheelers.
+              handover is a low-cost, safe and reliable delivery service provider to businesses across 35 cities of India. It has 1000+ registered Delivery Partners who deliver products through an extensive logistics fleet comprising trucks, electric vehicles and 3-wheelers.
             </p>
           </div>
           <div className='col-md-9 d-flex flex-wrap gap-2 justify-content-evenly' >{

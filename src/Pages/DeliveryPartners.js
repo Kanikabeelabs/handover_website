@@ -165,7 +165,7 @@ const DeliveryPartners = () => {
             </Container>
             {/* Second Section */}
             <div className='d-flex py-5 flex-column align-items-center justify-content-center'>
-                <h1>Handover में Delivery Partner बनने के फायदे</h1>
+                <h1>handover में Delivery Partner बनने के फायदे</h1>
                 <div className='row my-4' style={{ width: "100%" }}>
                     <div className='d-flex flex-column gap-3 align-items-center col-md-4 col-12 '>
                         {DeliveryPartnersData.slice(0, 3).map((item, index) => {
@@ -197,8 +197,8 @@ const DeliveryPartners = () => {
             <HandOverStatistics />
             {/* Careers */}
             <Container className="p-0 d-flex flex-column gap-2 align-items-center " style={{ position: "relative" }}>
-                <h3 className='mt-4 mb-4 fw-bold'>Careers @Handover</h3>
-                <p>Besides offering a promising ‘Delivery Partner’ job, Handover, as a brand, has many more opportunities up for grabs. These could be in operations, finance, technology, etc. So, if you know how to deliver multiple tasks and are a problem-solver, we would like to talk to you! Send your resume now!</p>
+                <h3 className='mt-4 mb-4 fw-bold'>Careers @handover</h3>
+                <p>Besides offering a promising ‘Delivery Partner’ job, handover, as a brand, has many more opportunities up for grabs. These could be in operations, finance, technology, etc. So, if you know how to deliver multiple tasks and are a problem-solver, we would like to talk to you! Send your resume now!</p>
                 <div className='mt-2'>
                     <div style={{ width: "100%" }}>
                         <img src="./career_banner.png" alt="Career Banner" style={{ width: "100%" }} />
