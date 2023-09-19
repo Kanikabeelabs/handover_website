@@ -161,6 +161,7 @@ const DeliveryPartners = () => {
                     </div>
                 </Container>
 
+
             </Container>
             {/* Second Section */}
             <div className='d-flex py-5 flex-column align-items-center justify-content-center'>
