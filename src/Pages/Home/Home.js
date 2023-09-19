@@ -67,7 +67,7 @@ const Home = () => {
                     }}>
 
                     {/*  ------------------------First Section ---------------------------------------*/}
-                    <Container style={{ paddingTop: "100px", maxWidth: '1600px' ,postion:"relative"}} >
+                    <Container style={{ paddingTop: "100px", maxWidth: '1600px', postion: "relative" }} >
                         <p className="handover-main-heading">Delivery Tension?</p>
                         <span style={{ color: "#F6911E" }} className="handover-main-heading">#handover </span>
                         <span className="handover-main-heading">Karo</span>
@@ -264,20 +264,20 @@ const Home = () => {
 
                 <Container className='d-flex align-items-center' fluid style={{ height: "600px", position: "relative" }}>
                     <Container className='p-5' style={{ background: "#ECF8FF", borderRadius: "11px" }}>
-                        <p>Our Retailer App caters to local businesses across various categories,
-                            including food, grocery, and apparels.<br></br> Whether you run a small café,
-                            a neighborhood grocery store, a boutique, a bulk distributor of FMCG
-                            products<br></br> or doing business from home, our app is designed to meet your specific needs. We offer delivery via
-                            <br></br>Two-Wheelers, Three-Wheelers, Four-Wheelers, Trucks at nominal charges. Streamline your delivery process through
-                            <br></br>our intuitive platform, gain Visibility to get more orders and list your product for our end users in Handover
-                            <br></br>Business app.
-                        </p>
+                        <p style={{ maxWidth: "900px" }}>Handover Business App caters to local businesses across various categories,
+                            including food, grocery and apparels. Whether you run a small café, a neighbourhood
+                            grocery store, a boutique, a bulk distributor of FMCG products or doing business
+                            from home, our app is designed to meet your specific needs. We deliver via Two-Wheelers,
+                            Three-Wheelers, Four-Wheelers, Trucks at nominal charges. Streamline your delivery
+                            process through our intuitive platform, gain Visibility to get more orders and
+                            list your products for our end users on Handover Business app.</p>
+
                         <h5 className='mt-3'>Download the handover Mobile App For Free</h5>
                         <a href="https://play.google.com/store/apps/details?id=com.handover.retailer" className='mt-3'>
                             <img src="./playstore.png" alt="PlayStore" />
                         </a>
                     </Container>
-                    <div className="d-md-block d-none" style={{
+                    <div className="d-xl-block d-none" style={{
                         position: "absolute",
                         right: "238px"
                     }}>
