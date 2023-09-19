@@ -3,9 +3,11 @@ import Header from "../../Components/Header";
 import Footer from '../../Components/Footer';
 import BlogDiv from './Components/BlogDiv';
 import React from 'react';
-
+import { useEffect } from 'react';
 const Blogs = () => {
-
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <section className='Handover_blogpage'>
             {/* ---------------------------Header--------------------------- */}

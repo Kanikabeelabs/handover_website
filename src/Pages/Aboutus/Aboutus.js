@@ -5,7 +5,11 @@ import NoticeSection from '../../Components/NoticeSection';
 import "./Aboutus.css";
 import { AboutUsCardItemData } from "../../utils/Data";
 import OurLocation from "../../Components/OurLocation";
+import { useEffect } from 'react';
 const Aboutus = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   // const [activeCard, setActiveCard] = useState(0);
   const AboutUsCard = ({ id, imgURL, heading, desc }) => {
