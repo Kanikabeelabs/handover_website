@@ -178,7 +178,7 @@ const DeliveryFee = () => {
                 </div>
 
                 <div className='delivery-fee-second-form d-md-block d-none '>
-                    <Container className='p-2' style={{ maxWidth: "1200px" }}>
+                    <Container className='p-2' style={{ maxWidth: "1100px" }}>
                         <div className='head '>
                             <h5 style={{ textAlign: "center" }}><b>Roz Ki Delivery Handover Banaye Easy With Affordable Delivery Fee</b></h5>
                         </div>

@@ -9,6 +9,7 @@ import "./global.css";
 import Blogs from "./Pages/blogs/Blogs";
 import Description from "./Pages/blogs/Description";
 import LocationInfo from "./Components/LocationInfo";
+import TermsAndConditions from "./Pages/TermsAndConditions";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog-description" element={<Description />} />
         <Route path="/location-info/:location?" element={<LocationInfo />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       </Routes>
     </BrowserRouter>
   );
