@@ -28,11 +28,12 @@ const LocationInfo = () => {
                 <Row>
                     <div className='col-md-8 col-12'>
                         <div>
-                            <h1>Deilvery service in</h1>
-                            <h1 style={{ color: "#F6911E", textTransform: "capitalize" }}>{location_name}</h1>
+                            <h1>Deilvery service in {location_name}</h1>
+                            <h1 style={{ color: "#F6911E", textTransform: "capitalize" }}></h1>
                         </div>
                         {/* <div dangerouslySetInnerHTML={{ __html: item.description }} /> */}
-                        <p>{locationData?.heading1}</p>
+                        <h4>{locationData?.heading1}</h4>
+                        <h4 style={{ color: "#F6911E", textTransform: "capitalize" }}></h4>
                         <p>{locationData?.des1}</p>
                         <p>{locationData?.des2}</p>
 

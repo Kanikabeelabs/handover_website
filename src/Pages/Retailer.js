@@ -53,7 +53,7 @@ const Retailer = () => {
                     style={{
                         backgroundImage: 'url("./businessowner.png")',
                         backgroundSize: "cover",
-                        minHeight: "600px", position: "relative"
+                        minHeight: "700px", position: "relative"
                     }}>
                     {/* <div className="contact-us-form-div" style={{position:"absolute",top:"100px"}} >
                         <h1 className='fw-bold' style={{color:"#ffffff"}}>More Orders, <span style={{color:'#F6911E'}}>More Business Await You!</span></h1>
