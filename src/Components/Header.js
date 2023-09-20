@@ -5,7 +5,7 @@ import { getCurrentPage } from "../utils/functions";
 const Header = ({ page_name }) => {
     return (
         <Navbar expand="lg" >
-            <Container fluid className="website-header">
+            <Container fluid className="website-header" style={{backgroundColor: "#FFFFFF"}}>
                 <Navbar.Brand as={Link} to="/" style={{ marginRight: "0px" }}>
                     <img src="./handover_logo.png" alt="HandOverLogo" />
                 </Navbar.Brand>
@@ -27,7 +27,7 @@ const Header = ({ page_name }) => {
                
             {(page_name === "home" || page_name === "about-us" || 
             page_name === "delivery_partner" || page_name === "retailer") && <Button className='handover-button'>Get it on google play link</Button>}
-            {(page_name === "delivery_fee" || page_name === "delivery_fee_form") && <Button className='rounded-pill handover-button' >Cities We Serve</Button>}
+            {(page_name === "delivery_fee" || page_name === "delivery_fee_form") && <Button  className='rounded-pill handover-button'>Cities We Serve</Button>}
         </Navbar.Collapse>
            
             
