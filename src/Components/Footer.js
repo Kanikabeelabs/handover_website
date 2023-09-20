@@ -23,6 +23,8 @@ const Footer = () => {
                             <img src="./facebook.png" alt="Facebook"></img></a></li>
                         <li><a href="https://twitter.com/"><img src="./twitter.png" alt="Twitter"></img></a></li>
                         <li><a href="https://www.instagram.com/handover.in/"><img src="./insta.png" alt="Instagram"></img></a></li>
+                        <li><a href="https://www.linkedin.com/company/handoverin/"><img src="./linkedin.png" alt="LinkedIn"></img></a></li>
+                        <li><a href="https://www.youtube.com/@handoverdelivery"><img src="./youtube.png" alt="Youtube"></img></a></li>
                     </ul>
                 </div>
                 <div className="d-flex flex-column gap-3 col-md-2" style={{ marginTop: '22px' }}>
