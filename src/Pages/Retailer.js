@@ -80,7 +80,6 @@ const Retailer = () => {
                                                     value={values.option}>
                                                     <option value="">Choose an Option</option>
                                                     <option value="delivery_partner">Delivery Partner</option>
-                                                    <option value="retailer">Retailer</option>
                                                     <option value="customer">Customer</option>
                                                     <option value="other">Other</option>
                                                 </select>
