@@ -25,19 +25,19 @@
   gap: 7px;
 }
 
-.div1{
-    display: flex;
-    gap: 10px;
+.div1 {
+  display: flex;
+  gap: 10px;
 }
 
-.div2{
-    display: flex;
-    gap: 10px;
+.div2 {
+  display: flex;
+  gap: 10px;
 }
 
-.div3{
-    display: flex;
-    gap: 10px;
+.div3 {
+  display: flex;
+  gap: 10px;
 }
 
 .handover-button {
@@ -87,7 +87,7 @@
 }
 
 .details:hover {
-  background-color:  #f48120;
+  background-color: #f48120;
   /* transform: scale(1.2); */
   /* opacity: 0.7; */
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
@@ -102,10 +102,10 @@
 }
 
 .map_div {
-  -webkit-box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
-  -moz-box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
-  box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
-  background: #0d6efd;
+  /* -webkit-box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1);
+  -moz-box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1); */
+  /* box-shadow: -1px 5px 16px 0px rgba(14, 97, 219, 1); */
+  background: #198ACA;
   width: 360px;
   padding: 20px;
   position: relative;
@@ -135,7 +135,7 @@
 }
 
 .homeover-section {
-  padding: 100px;
+  padding: 100px 0px;
 }
 
 .second-section-heading {
@@ -153,15 +153,18 @@
   .second-section-heading {
     font-size: 1.5rem;
   }
+
   .contact-us-form-div {
     position: relative !important;
     top: 0px;
     margin-bottom: 150px !important;
   }
+
   .delivery_container-partner {
     justify-content: center !important;
   }
 }
+
 .delivery_container-partner {
   justify-content: flex-end;
 }
@@ -219,4 +222,17 @@
 
 .business_container-owner {
   justify-content: flex-end;
+}
+
+.location_info p {
+  font-weight: 300;
+  color: #3C3C3C
+}
+
+.terms-and-condition-description {
+  font-weight: 300;
+}
+
+.sub-heading {
+  font-size: 14px;
 }

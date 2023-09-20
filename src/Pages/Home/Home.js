@@ -5,7 +5,7 @@ import NoticeSection from '../../Components/NoticeSection';
 import Header from "../../Components/Header";
 import Footer from '../../Components/Footer';
 import { HomePageSection2, keyFeatures, whyHandover, FAQ } from "../../utils/Data";
-import {contactUsSchemaValidation} from "../../utils/Validations";
+import { contactUsSchemaValidation } from "../../utils/Validations";
 import { postRequest } from '../../utils/ApiRequest';
 import { useState } from 'react';
 import { Formik, Form, Field } from 'formik';
@@ -15,22 +15,23 @@ const Home = () => {
         option: "",
         user_name: "",
         email_address: "",
-        mobile:"",
+        mobile: "",
         description: ""
     }
 
-    const handleSubmit = async(values,{resetForm}) =>{
+    const handleSubmit = async (values, { resetForm }) => {
         let formData = new FormData();
         formData = {
-            name:values.user_name,
-            email:values.email_address,
-            description:values.description,
-            mobile:values.mobile,
-            option:values.option
-            
+            name: values.user_name,
+            email: values.email_address,
+            description: values.description,
+            mobile: values.mobile,
+            option: values.option
+
         }
         try {
             let response = await postRequest("/api/v1/contactus", formData);
+            console.log(response)
             alert("You have successfully submitted the form");
             resetForm();
         } catch (err) {
@@ -51,28 +52,26 @@ const Home = () => {
         } else {
             // If a new item is opened, close all others and open the new one
             setOpenItems([itemId]);
-        }
-    };
+        }
+    };
     return (
-        <section className='handover-homepage'> 
+        <section className='handover-homepage'>
+            <Header page_name="home" />
             <Container fluid className="p-0" >
                 {/*  ------------------------header ---------------------------------------*/}
-                <Container fluid 
-                 style={{ 
-                    backgroundImage: `url("./main_website.png")`,
-                 backgroundSize: 'cover',
-                 minHeight:'700px'
-                  }}>
-                    <Header page_name="home" />
+                <Container fluid
+                    style={{
+                        backgroundImage: `url("./main_website.png")`,
+                        backgroundSize: 'cover',
+                        minHeight: '700px'
+                    }}>
 
                     {/*  ------------------------First Section ---------------------------------------*/}
-                    <Container style={{ marginTop: "100px", maxWidth: '1600px' ,postion:"relative"}} >
-                        
-                        <p  className="handover-main-heading">Delivery Tension?</p>
-                        <div className="handover-main-heading-2 d-flex gap-2">
-                            <p style={{ color: "#F6911E" }} className="handover-main-heading  ">#Handover</p>
-                            <p className="handover-main-heading">Karo</p>
-                        </div>
+                    <Container style={{ paddingTop: "100px", maxWidth: '1600px', postion: "relative" }} >
+                        <p className="handover-main-heading">Delivery Tension?</p>
+                        <span style={{ color: "#F6911E" }} className="handover-main-heading">#handover </span>
+                        <span className="handover-main-heading">Karo</span>
+
                         <p style={{
                             color: "#3C3C3C",
                             maxWidth: "400px",
@@ -89,7 +88,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className='video-section d-flex gap-3 mt-4 pb-3' style={{ flexWrap: 'wrap'}}>
+                        <div className='video-section d-flex gap-3 mt-4 pb-3' style={{ flexWrap: 'wrap' }}>
                             <iframe width="250" title="video1" height="200" src="https://www.youtube.com/embed/AaldFQmUjPA" frameBorder="0" allowFullScreen></iframe>
                             <iframe width="250" height="200" title="video2" src="https://www.youtube.com/embed/IO79wiKGTEc" frameBorder="0" allowFullScreen></iframe>
                         </div>
@@ -116,7 +115,7 @@ const Home = () => {
                     {/*  ------------------------Second Section ---------------------------------------*/}
                     <div className='second-section'>
                         <div className='d-flex flex-column align-items-center justify-content-center homeover-section' >
-                            <p className='second-section-heading'>So Many Order Delivery Needs, One Solution Handover</p>
+                            <p className='second-section-heading'>So Many Order Delivery Needs, One Solution handover</p>
                             <Container className='d-flex gap-3 justify-content-around mt-5 flex-wrap' style={{ maxWidth: "1600px" }}>
                                 {HomePageSection2.map((item, index) => {
                                     return <CategoryItem key={index} imgURL={item.img} heading={item.heading} desc={item.desc} />
@@ -139,7 +138,7 @@ const Home = () => {
                     <Container className="d-flex justify-content-between flex-wrap" style={{ maxWidth: "1500px" }}>
                         <div className='col-md-6 col-12'>
                             <h1 className='fw-bold'>Key Features</h1>
-                            <p style={{ maxWidth: "350px", fontWeight: "300" }}>Handover’s Delivery Partners can choose multiple locations to get maximum orders, which will help them earn more.</p>
+                            <p style={{ maxWidth: "350px", fontWeight: "300" }}>handover’s Delivery Partners can choose multiple locations to get maximum orders, which will help them earn more.</p>
                             <div style={{ width: "80%" }}><img src="./key_features.png" width="100%" alt="KeyFeature" /></div>
                         </div>
                         <div className='col-md-6  col-12'>
@@ -171,7 +170,7 @@ const Home = () => {
                         <div className='col-md-6 d-flex flex-column align-items-center '>
                             <h3 className='fw-bold' style={{ maxWidth: "350px", textAlign: 'center', height: "80px" }}>
                                 Frequently Asked Questions (FAQs)</h3>
-                            <img src="./image2.png" alt="Image1" />
+                            <img src="./faq_image.png" alt="Image1" />
                             <div>
                                 {FAQ.map((item) => {
                                     return (
@@ -245,7 +244,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className='col-md-6 d-flex flex-column align-items-center'>
-                            <h3 className='fw-bold' style={{ maxWidth: "350px", textAlign: 'center', height: "80px" }}>Why Handover</h3>
+                            <h3 className='fw-bold' style={{ maxWidth: "350px", textAlign: 'center', height: "80px" }}>Why handover</h3>
                             <img src="./image2.png" alt="Image2" />
                             <div>
                                 {whyHandover.map((item, index) => {
@@ -265,29 +264,35 @@ const Home = () => {
 
                 <Container className='d-flex align-items-center' fluid style={{ height: "600px", position: "relative" }}>
                     <Container className='p-5' style={{ background: "#ECF8FF", borderRadius: "11px" }}>
-                        <p>Lorem ipsum is placeholder text commonly used in the <br></br> graphic,
-                            print, and publishing industries for previewing <br></br>layouts and visual mockups.
-                        </p>
-                        <h5 className='mt-3'>Download the Handover Mobile App For Free</h5>
+                        <p style={{ maxWidth: "900px" }}>Handover Business App caters to local businesses across various categories,
+                            including food, grocery and apparels. Whether you run a small café, a neighbourhood
+                            grocery store, a boutique, a bulk distributor of FMCG products or doing business
+                            from home, our app is designed to meet your specific needs. We deliver via Two-Wheelers,
+                            Three-Wheelers, Four-Wheelers, Trucks at nominal charges. Streamline your delivery
+                            process through our intuitive platform, gain Visibility to get more orders and
+                            list your products for our end users on Handover Business app.</p>
+
+                        <h5 className='mt-3'>Download the handover Mobile App For Free</h5>
                         <a href="https://play.google.com/store/apps/details?id=com.handover.retailer" className='mt-3'>
                             <img src="./playstore.png" alt="PlayStore" />
                         </a>
                     </Container>
-                    <div className="d-md-block d-none" style={{
+                    <div className="d-xl-block d-none" style={{
                         position: "absolute",
                         right: "238px"
                     }}>
                         <img src="./mobile_phone.png" alt="Mobile Phone" />
                     </div>
-                </Container>
+                </Container>
 
                 {/*  ------------------------News Section ---------------------------------------*/}
-                <NoticeSection />
+                {/* <NoticeSection /> */}
 
                 {/*  ------------------------Contact Us Section ---------------------------------------*/}
                 <Container className='handover-contact-us-section pt-5 pb-5'>
-                    <Container className="row" style={{ 
-                        maxWidth: "1400px",margin:"0px" }}>
+                    <Container className="row" style={{
+                        maxWidth: "1400px", margin: "0px"
+                    }}>
                         <div className='col-md-6 d-flex flex-column align-items-end'>
                             <img src="./contact_us.png" alt="ContactUs" width="100%" />
                         </div>
@@ -298,12 +303,12 @@ const Home = () => {
                                 validationSchema={contactUsSchemaValidation}
                                 onSubmit={handleSubmit}
                             >
-                                {({ errors, values,setFieldValue ,resetForm}) => (
+                                {({ errors, values, setFieldValue, resetForm }) => (
                                     <Form className="contact-us-form d-flex flex-column gap-3">
                                         <div className="d-flex flex-column">
                                             <label htmlFor="option">Choose a option</label>
-                                            <select name="option" 
-                                                id="option" className='custom-form-input' 
+                                            <select name="option"
+                                                id="option" className='custom-form-input'
                                                 onChange={(event) => setFieldValue("option", event.target.value)}
                                                 value={values.option}>
                                                 <option value="">Choose an Option</option>
@@ -354,8 +359,8 @@ const Home = () => {
                                         </div>
 
                                         <div className='d-flex justify-content-center gap-4'>
-                                            <Button variant="secondary" className='cancel-button' type="button" onClick={()=>handleCancel(resetForm)}>Cancel</Button>
-                                            <Button variant="primary" type="submit" style={{width:"50%"}}>Send Message</Button>
+                                            <Button variant="secondary" className='cancel-button' type="button" onClick={() => handleCancel(resetForm)}>Cancel</Button>
+                                            <Button variant="primary" type="submit" style={{ width: "50%" }}>Send Message</Button>
                                         </div>
                                     </Form>
                                 )}
