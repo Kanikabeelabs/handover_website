@@ -3,17 +3,17 @@ export const HeaderMenu = [
     { id: 2, menu_name: "BUSINESS OWNER", link_url: "/retailer" },
     { id: 3, menu_name: "DELIVERY PARTNERS", link_url: "/delivery-partner" },
     { id: 4, menu_name: "ABOUT US", link_url: "/about-us" },
-    { id: 5, menu_name: "BLOGS", link_url: "/blogs" }
+    // { id: 5, menu_name: "BLOGS", link_url: "/blogs" }
 ]
 export const HomePageSection2 = [
     {
         id: 1, img: "./section21.png", heading: "Easy Registration Process", desc: "Both businesses and delivery partners can register by mentioning their names and contact details."
     },
     {
-        id: 2, img: "./section22.png", heading: "Order Delivery", desc: "Order delivery services for businesses will begin soon after registering with Handover. Whereas delivery partners can maximise earnings by choosing multiple zones within a city for delivery work."
+        id: 2, img: "./section22.png", heading: "Order Delivery", desc: "While businesses enjoy low-cost and on-time delivery services, delivery partners earn more with us."
     },
     {
-        id: 3, img: "./section23.png", heading: "Delivery updates", desc: "We’ll provide businesses with updates such as order booking, order pick-up, order delivery, etc., hence allowing them to concentrate on their business.        "
+        id: 3, img: "./section23.png", heading: "Delivery updates", desc: "We’ll provide businesses with updates such as order booking, order pick-up, order delivery, etc."
     }
 ]
 export const keyFeatures = [
@@ -25,7 +25,11 @@ export const keyFeatures = [
     },
     {
         id: 3, img: "./key_features3.png", heading: "Growing Delivery Network", desc: "Our delivery network is expanding at a rapid pace. Currently, we are serving in 35 cities across India."
+    },
+    {
+        id: 4, img: "./key_features3.png", heading: "Increased Earnings for Delivery Partners", desc: "Handover’s Delivery Partners can choose multiple locations to get maximum orders, which will help them earn more."
     }
+
 ]
 
 export const whyHandover = [
@@ -36,7 +40,10 @@ export const whyHandover = [
         id: 2, heading: "No Need to Call Anyone for Deliveries", desc: "The hi-tech delivery management system ensures a seamless process from order creation to order delivery, eliminating the need for businesses to call anyone."
     },
     {
-        id: 3, heading: "Delivery Partners Can Maximise Earnings", desc: "handover allows its delivery partners to choose multiple locations for delivery services. As a result, they can get more orders to enhance their earnings."
+        id: 3, heading: "Trained Staff for Delivery Services", desc: "Handover’s trained delivery staff can safely deliver temperature-sensitive and fragile products."
+    },
+    {
+        id: 4, heading: "Our Presence", desc: "We are currently delivering in 35 cities across India, and will soon be available in many other cities."
     }
 ]
 
@@ -154,7 +161,7 @@ export const DeliveryPartnersData = [
 export const FAQ = [
     {
         id: 1,
-        heading: 'Is handover Special? How?',
+        heading: 'What Special About handover?',
         description: ' Yes, it is! handover has made the entire delivery system cost-efficient and transparent by reviving interactions between businesses and their customers.'
     },
     {

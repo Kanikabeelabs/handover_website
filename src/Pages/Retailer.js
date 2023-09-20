@@ -53,7 +53,8 @@ const Retailer = () => {
                     style={{
                         backgroundImage: 'url("./businessowner.png")',
                         backgroundSize: "cover",
-                        minHeight: "700px", position: "relative"
+                        // minHeight: "700px", 
+                        position: "relative"
                     }}>
                     {/* <div className="contact-us-form-div" style={{position:"absolute",top:"100px"}} >
                         <h1 className='fw-bold' style={{color:"#ffffff"}}>More Orders, <span style={{color:'#F6911E'}}>More Business Await You!</span></h1>
@@ -73,14 +74,14 @@ const Retailer = () => {
                                     <Form className=" d-flex flex-column  gap-3">
                                         <div className="row">
                                             <div className="d-flex flex-column col-md-6 col-12">
-                                                <label htmlFor="option">Choose a option</label>
+                                                <label htmlFor="option">Business Name</label>
                                                 <select name="option"
                                                     id="option" className='custom-form-input mt-2'
                                                     onChange={(event) => setFieldValue("option", event.target.value)}
                                                     value={values.option}>
-                                                    <option value="">Choose an Option</option>
+                                                    <option value="">Choose business name</option>
                                                     <option value="delivery_partner">Delivery Partner</option>
-                                                    <option value="retailer">Retailer</option>
+                                                    {/* <option value="retailer">Retailer</option> */}
                                                     <option value="customer">Customer</option>
                                                     <option value="other">Other</option>
                                                 </select>

@@ -53,7 +53,8 @@ const DeliveryPartners = () => {
                     style={{
                         backgroundImage: `url("./deliverypartner.png")`,
                         backgroundSize: "cover",
-                        minHeight: "700px", position: "relative"
+                        // minHeight: "700px", 
+                        position: "relative"
                     }}>
                     {/* <div className="contact-us-form-div" style={{position:"absolute",top:"100px"}} >
                         <h1 className='fw-bold' style={{color:"#ffffff"}}>Every Mile Earns <span style={{color:'#F6911E'}}>You!</span></h1>
