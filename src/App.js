@@ -10,6 +10,9 @@ import Blogs from "./Pages/blogs/Blogs";
 import Description from "./Pages/blogs/Description";
 import LocationInfo from "./Components/LocationInfo";
 import TermsAndConditions from "./Pages/TermsAndConditions";
+import HandoverBusinessApp from "./Pages/HandoverBusinessApp";
+import HandoverRiderApp from "./Pages/HandoverRiderApp";
+import BusinessAndRetailers from "./Pages/BusinessAndRetailers";
 
 function App() {
   return (
@@ -25,7 +28,10 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog-description" element={<Description />} />
         <Route path="/location-info/:location?" element={<LocationInfo />} />
-        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/rider-terms-condition" element={<TermsAndConditions />} />
+        <Route path="/privacy-policy-handover-business-app" element={<HandoverBusinessApp />} />
+        <Route path="/privacy-policy-handover-rider-app" element={<HandoverRiderApp />} />
+        <Route path="/terms-business-retailers" element={<BusinessAndRetailers />} />
       </Routes>
     </BrowserRouter>
   );

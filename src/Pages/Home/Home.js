@@ -67,7 +67,7 @@ const Home = () => {
                     }}>
 
                     {/*  ------------------------First Section ---------------------------------------*/}
-                    <Container style={{ paddingTop: "100px", maxWidth: '1600px', postion: "relative" }} >
+                    <Container style={{ paddingTop: "100px", maxWidth: '1750px', postion: "relative" }} >
                         <p className="handover-main-heading">Delivery Tension?</p>
                         <span style={{ color: "#F6911E" }} className="handover-main-heading">#handover </span>
                         <span className="handover-main-heading">Karo</span>
