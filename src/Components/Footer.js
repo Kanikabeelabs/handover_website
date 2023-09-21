@@ -30,10 +30,11 @@ const Footer = () => {
                 <div className="d-flex flex-column gap-3 col-md-2" style={{ marginTop: '22px' }}>
                     <p>Customer Service</p>
                     <ul className='d-flex flex-column gap-1'>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about-us">About us</Link></li>
-                        <li><Link to="/blogs">Blog</Link></li>
-                        <li><Link to="">Contact us</Link></li>
+                        <li><Link to="">Home</Link></li>
+                        <li><Link to="">About us</Link></li>
+                        {/* <li><Link to="">Blog</Link></li>
+                        <li><Link to="">Contact US</Link></li> */}
+
                     </ul>
                 </div>
                 {/* <div className="d-flex flex-column gap-3 col-md-2" style={{ marginTop: '22px' }}>
@@ -65,11 +66,16 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="d-flex flex-column gap-3 col-md-2" style={{ marginTop: '22px' }}>
-                    <p>Links</p>
+                    <p>Our Apps</p>
                     <ul className='d-flex flex-column gap-1'>
-                        <li><Link to="">Pricing</Link></li>
-                        <li><Link to="">Services</Link></li>
-                        <li><Link to="">FAQ</Link></li>
+                        <li><Link to="https://play.google.com/store/apps/details?id=com.handover.retailer">
+                          HandOver Business
+                            </Link></li>
+                            <li><Link to="https://play.google.com/store/apps/details?id=com.handover.rider">
+                          HandOver Partner
+                            </Link></li>
+                        {/* <li><Link to="">Services</Link></li>
+                        <li><Link to="">FAQ</Link></li> */}
                     </ul>
                 </div>
                 <div className="d-flex flex-column gap-3 col-md-2" style={{ marginTop: '22px' }}>

@@ -27,15 +27,15 @@ const LocationInfo = () => {
             <Container className="p-5 location_info">
                 <Row>
                     <div className='col-md-8 col-12'>
-                        <div className='d-flex gap-3'>
-                            <h1>Deilvery service in </h1>
-                            <h1 style={{ color: "#F6911E", textTransform: "capitalize" }}>{location_name}</h1>
-                        </div><br></br>
+                        <div>
+                            <h1>Deilvery service in {location_name}</h1>
+                            <h1 style={{ color: "#F6911E", textTransform: "capitalize" }}></h1>
+                        </div>
                         {/* <div dangerouslySetInnerHTML={{ __html: item.description }} /> */}
-                        <h3 style={{color: "#F6911E"}}>{locationData?.heading1}</h3><br></br><br></br>
-                        <p><b><b>{locationData?.des1}</b></b></p><br></br><br></br><br></br>
+                        <h4>{locationData?.heading1}</h4>
+                        <h4 style={{ color: "#F6911E", textTransform: "capitalize" }}></h4>
+                        <p>{locationData?.des1}</p>
                         <p>{locationData?.des2}</p>
-
                         <div>
                             <img src='./location-details.png' alt="Location_detail" width="100%"></img>
                         </div>
