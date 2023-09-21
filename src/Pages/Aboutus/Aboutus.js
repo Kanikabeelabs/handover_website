@@ -5,7 +5,11 @@ import NoticeSection from '../../Components/NoticeSection';
 import "./Aboutus.css";
 import { AboutUsCardItemData } from "../../utils/Data";
 import OurLocation from "../../Components/OurLocation";
+import { useEffect } from 'react';
 const Aboutus = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   // const [activeCard, setActiveCard] = useState(0);
   const AboutUsCard = ({ id, imgURL, heading, desc }) => {
@@ -29,13 +33,9 @@ const Aboutus = () => {
     <section className='about-us-section'>
       <Header page_name="about-us" />
       <Container fluid className="p-0" style={{ position: "relative" }}>
-        <div style={{
-          position: "absolute",
-          top: "10%",
-          left: "10%"
-        }}>
-          <h1 className='fw-bold'>handover</h1>
-          <h1 className='fw-bold' style={{ color: "#F6911E" }}>Your Delivery Partner</h1>
+        <div className="aboutUsTextSection" >
+          <h1 className='fw-bold about-us-heading'>handover</h1>
+          <h1 className='fw-bold about-us-heading' style={{ color: "#F6911E" }}>Your Delivery Partner</h1>
         </div>
         <div style={{ width: "100%" }}>
           <img src="./aboutus-banner.png" alt="About us banner" width="100%" />

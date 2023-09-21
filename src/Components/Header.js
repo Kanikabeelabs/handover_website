@@ -4,8 +4,9 @@ import { HeaderMenu } from "../utils/Data";
 import { getCurrentPage } from "../utils/functions";
 const Header = ({ page_name }) => {
     return (
+
         <Navbar expand="lg" >
-            <Container fluid className="website-header">
+            <Container fluid className="website-header" style={{backgroundColor: "#FFFFFF"}}>
                 <Navbar.Brand as={Link} to="/" style={{ marginRight: "0px" }}>
                     <img src="./handover_logo.png" alt="HandOverLogo" />
                 </Navbar.Brand>

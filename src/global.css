@@ -149,6 +149,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .aboutUsTextSection {
+    top: 2% !important;
+  }
+
   .homeover-section {
     padding: 15px;
   }
@@ -165,6 +169,11 @@
 
   .delivery_container-partner {
     justify-content: center !important;
+  }
+
+  .about-us-heading {
+    font-size: 16px !important;
+    margin: 0px !important;
   }
 }
 
@@ -230,4 +239,26 @@
 .location_info p {
   font-weight: 300;
   color: #3C3C3C
+}
+
+.terms-and-condition-description {
+  font-weight: 300;
+}
+
+.sub-heading {
+  font-size: 14px;
+}
+
+.aboutUsTextSection {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.website-header-wrapper {
+  background: #ffffff;
+}
+
+.terms-content p {
+  font-weight: 300;
 }
